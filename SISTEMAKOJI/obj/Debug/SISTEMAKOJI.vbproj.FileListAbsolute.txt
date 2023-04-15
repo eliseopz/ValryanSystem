@@ -1,0 +1,17 @@
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbproj.AssemblyReference.cache
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbproj.SuggestedBindingRedirects.cache
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmUsuarios.resources
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.Resources.resources
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbproj.GenerateResource.cache
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbproj.CoreCompileInputs.cache
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.exe.config
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.exe
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.pdb
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.xml
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.exe
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.xml
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.pdb
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmEntrada.resources
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmSalidas.resources
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmCategoria.resources
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmProductos.resources
