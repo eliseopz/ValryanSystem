@@ -2,7 +2,7 @@
  * ER/Studio Data Architect SQL Code Generation
  * Project :      ERDiagramKoji.DM1
  *
- * Date Created : Friday, April 28, 2023 16:29:48
+ * Date Created : Friday, May 12, 2023 17:55:25
  * Target DBMS : Microsoft SQL Server 2017
  */
 
@@ -14,7 +14,6 @@ CREATE TABLE Categoría(
     idCategoria             int              NOT NULL,
     nombreCategoria         nvarchar(50)     NOT NULL,
     descripciónCategoría    nvarchar(100)    NOT NULL,
-    idUsuario               int              NULL,
     CONSTRAINT PK3 PRIMARY KEY NONCLUSTERED (idCategoria)
 )
 go
@@ -124,16 +123,6 @@ IF OBJECT_ID('Usuarios') IS NOT NULL
 ELSE
     PRINT '<<< FAILED CREATING TABLE Usuarios >>>'
 go
-
-/* 
- * TABLE: Categoría 
- */
-
-ALTER TABLE Categoría ADD CONSTRAINT RefUsuarios12 
-    FOREIGN KEY (idUsuario)
-    REFERENCES Usuarios(idUsuario)
-go
-
 
 /* 
  * TABLE: Entradas 
