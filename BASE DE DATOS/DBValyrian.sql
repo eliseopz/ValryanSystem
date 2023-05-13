@@ -10,6 +10,36 @@
  * TABLE: Categoría 
  */
 
+ create database BDValyrian
+ go
+
+ use BDValyrian
+ go
+
+ CREATE TABLE Usuarios(
+    idUsuario            int             NOT NULL,
+    passwordUsuario      nvarchar(50)    NOT NULL,
+    primerNomUsuario     nvarchar(50)    NOT NULL,
+    segundoNomUsuario    nvarchar(50)    NOT NULL,
+    primerApeUsuario     nvarchar(50)    NOT NULL,
+    segundoApeUsuario    nvarchar(50)    NOT NULL,
+    fechaNacimiento      datetime        NOT NULL,
+    telefonoUsuario      varchar(8)      NOT NULL,
+    cedula               varchar(20)     NOT NULL,
+    rol                  bit             DEFAULT 'true' NOT NULL,
+    sexo                 bit             DEFAULT 'true' NOT NULL,
+    CONSTRAINT PK1 PRIMARY KEY NONCLUSTERED (idUsuario)
+)
+go
+
+
+
+IF OBJECT_ID('Usuarios') IS NOT NULL
+    PRINT '<<< CREATED TABLE Usuarios >>>'
+ELSE
+    PRINT '<<< FAILED CREATING TABLE Usuarios >>>'
+go
+
 CREATE TABLE Categoría(
     idCategoria             int              NOT NULL,
     nombreCategoria         nvarchar(50)     NOT NULL,
@@ -24,6 +54,26 @@ IF OBJECT_ID('Categoría') IS NOT NULL
     PRINT '<<< CREATED TABLE Categoría >>>'
 ELSE
     PRINT '<<< FAILED CREATING TABLE Categoría >>>'
+go
+
+CREATE TABLE Productos(
+    idProducto              int              NOT NULL,
+    nombreProducto          nvarchar(50)     NOT NULL,
+    precioProducto          float            NOT NULL,
+    unidadesProducto        int              NOT NULL,
+    unidadMedidaProducto    nvarchar(50)     NOT NULL,
+    descripciónProducto     nvarchar(100)    NOT NULL,
+    idCategoria             int              NULL,
+    CONSTRAINT PK2 PRIMARY KEY NONCLUSTERED (idProducto)
+)
+go
+
+
+
+IF OBJECT_ID('Productos') IS NOT NULL
+    PRINT '<<< CREATED TABLE Productos >>>'
+ELSE
+    PRINT '<<< FAILED CREATING TABLE Productos >>>'
 go
 
 /* 
@@ -53,25 +103,7 @@ go
  * TABLE: Productos 
  */
 
-CREATE TABLE Productos(
-    idProducto              int              NOT NULL,
-    nombreProducto          nvarchar(50)     NOT NULL,
-    precioProducto          float            NOT NULL,
-    unidadesProducto        int              NOT NULL,
-    unidadMedidaProducto    nvarchar(50)     NOT NULL,
-    descripciónProducto     nvarchar(100)    NOT NULL,
-    idCategoria             int              NULL,
-    CONSTRAINT PK2 PRIMARY KEY NONCLUSTERED (idProducto)
-)
-go
 
-
-
-IF OBJECT_ID('Productos') IS NOT NULL
-    PRINT '<<< CREATED TABLE Productos >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Productos >>>'
-go
 
 /* 
  * TABLE: Salida 
@@ -96,37 +128,7 @@ ELSE
     PRINT '<<< FAILED CREATING TABLE Salida >>>'
 go
 
-/* 
- * TABLE: Usuarios 
- */
 
-CREATE TABLE Usuarios(
-    idUsuario            int             NOT NULL,
-    passwordUsuario      nvarchar(50)    NOT NULL,
-    primerNomUsuario     nvarchar(50)    NOT NULL,
-    segundoNomUsuario    nvarchar(50)    NOT NULL,
-    primerApeUsuario     nvarchar(50)    NOT NULL,
-    segundoApeUsuario    nvarchar(50)    NOT NULL,
-    fechaNacimiento      datetime        NOT NULL,
-    telefonoUsuario      varchar(8)      NOT NULL,
-    cedula               varchar(20)     NOT NULL,
-    rol                  bit             DEFAULT true NOT NULL,
-    sexo                 bit             DEFAULT true NOT NULL,
-    CONSTRAINT PK1 PRIMARY KEY NONCLUSTERED (idUsuario)
-)
-go
-
-
-
-IF OBJECT_ID('Usuarios') IS NOT NULL
-    PRINT '<<< CREATED TABLE Usuarios >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Usuarios >>>'
-go
-
-/* 
- * TABLE: Entradas 
- */
 
 ALTER TABLE Entradas ADD CONSTRAINT RefProductos2 
     FOREIGN KEY (idProducto)
