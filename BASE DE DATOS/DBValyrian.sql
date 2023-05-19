@@ -40,20 +40,20 @@ ELSE
     PRINT '<<< FAILED CREATING TABLE Usuarios >>>'
 go
 
-CREATE TABLE Categoría(
+CREATE TABLE Categoria(
     idCategoria             int              NOT NULL,
     nombreCategoria         nvarchar(50)     NOT NULL,
-    descripciónCategoría    nvarchar(100)    NOT NULL,
+    descripcionCategoria    nvarchar(100)    NOT NULL,
     CONSTRAINT PK3 PRIMARY KEY NONCLUSTERED (idCategoria)
 )
 go
 
 
 
-IF OBJECT_ID('Categoría') IS NOT NULL
-    PRINT '<<< CREATED TABLE Categoría >>>'
+IF OBJECT_ID('Categoria') IS NOT NULL
+    PRINT '<<< CREATED TABLE Categoria >>>'
 ELSE
-    PRINT '<<< FAILED CREATING TABLE Categoría >>>'
+    PRINT '<<< FAILED CREATING TABLE Categoria >>>'
 go
 
 CREATE TABLE Productos(
@@ -145,9 +145,9 @@ go
  * TABLE: Productos 
  */
 
-ALTER TABLE Productos ADD CONSTRAINT RefCategoría8 
+ALTER TABLE Productos ADD CONSTRAINT RefCategoria8 
     FOREIGN KEY (idCategoria)
-    REFERENCES Categoría(idCategoria)
+    REFERENCES Categoria(idCategoria)
 go
 
 
