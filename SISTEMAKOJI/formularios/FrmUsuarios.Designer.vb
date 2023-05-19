@@ -51,15 +51,19 @@ Partial Class FrmUsuarios
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.DgvUsuarios = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.DgvUsuarios, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(695, 14)
+        Me.PictureBox1.Location = New System.Drawing.Point(1045, 14)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(225, 134)
@@ -76,7 +80,7 @@ Partial Class FrmUsuarios
         Me.GroupBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox1.Size = New System.Drawing.Size(676, 134)
+        Me.GroupBox1.Size = New System.Drawing.Size(1026, 134)
         Me.GroupBox1.TabIndex = 2
         Me.GroupBox1.TabStop = False
         '
@@ -132,7 +136,7 @@ Partial Class FrmUsuarios
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox2.Size = New System.Drawing.Size(907, 462)
+        Me.GroupBox2.Size = New System.Drawing.Size(1257, 427)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos del usuario"
@@ -141,7 +145,7 @@ Partial Class FrmUsuarios
         '
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(629, 369)
+        Me.Button3.Location = New System.Drawing.Point(803, 360)
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(179, 57)
@@ -153,7 +157,7 @@ Partial Class FrmUsuarios
         '
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(391, 369)
+        Me.Button2.Location = New System.Drawing.Point(565, 360)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(179, 57)
@@ -165,7 +169,7 @@ Partial Class FrmUsuarios
         '
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(127, 369)
+        Me.Button1.Location = New System.Drawing.Point(301, 360)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(179, 57)
@@ -176,7 +180,7 @@ Partial Class FrmUsuarios
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(127, 300)
+        Me.ComboBox2.Location = New System.Drawing.Point(134, 306)
         Me.ComboBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(281, 32)
@@ -185,7 +189,7 @@ Partial Class FrmUsuarios
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(11, 306)
+        Me.Label12.Location = New System.Drawing.Point(18, 312)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(56, 24)
         Me.Label12.TabIndex = 19
@@ -194,7 +198,7 @@ Partial Class FrmUsuarios
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(629, 300)
+        Me.ComboBox1.Location = New System.Drawing.Point(874, 303)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(267, 32)
@@ -203,7 +207,7 @@ Partial Class FrmUsuarios
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(456, 300)
+        Me.Label11.Location = New System.Drawing.Point(701, 303)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(43, 24)
         Me.Label11.TabIndex = 16
@@ -211,7 +215,7 @@ Partial Class FrmUsuarios
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(629, 235)
+        Me.TextBox7.Location = New System.Drawing.Point(874, 238)
         Me.TextBox7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(267, 30)
@@ -220,7 +224,7 @@ Partial Class FrmUsuarios
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(456, 238)
+        Me.Label10.Location = New System.Drawing.Point(701, 241)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(73, 24)
         Me.Label10.TabIndex = 14
@@ -228,7 +232,7 @@ Partial Class FrmUsuarios
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(629, 170)
+        Me.TextBox6.Location = New System.Drawing.Point(874, 173)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(267, 30)
@@ -238,7 +242,7 @@ Partial Class FrmUsuarios
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(443, 174)
+        Me.Label9.Location = New System.Drawing.Point(688, 177)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(166, 24)
         Me.Label9.TabIndex = 12
@@ -246,7 +250,7 @@ Partial Class FrmUsuarios
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(132, 238)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(139, 244)
         Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(276, 30)
@@ -255,7 +259,7 @@ Partial Class FrmUsuarios
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(5, 238)
+        Me.Label8.Location = New System.Drawing.Point(12, 244)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(114, 48)
         Me.Label8.TabIndex = 10
@@ -263,7 +267,7 @@ Partial Class FrmUsuarios
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(127, 174)
+        Me.TextBox5.Location = New System.Drawing.Point(134, 180)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(281, 30)
@@ -272,7 +276,7 @@ Partial Class FrmUsuarios
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(12, 162)
+        Me.Label7.Location = New System.Drawing.Point(19, 168)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(86, 48)
         Me.Label7.TabIndex = 8
@@ -280,7 +284,7 @@ Partial Class FrmUsuarios
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(629, 98)
+        Me.TextBox4.Location = New System.Drawing.Point(874, 101)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(267, 30)
@@ -289,7 +293,7 @@ Partial Class FrmUsuarios
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(443, 102)
+        Me.Label6.Location = New System.Drawing.Point(688, 105)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(165, 24)
         Me.Label6.TabIndex = 6
@@ -297,7 +301,7 @@ Partial Class FrmUsuarios
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(127, 102)
+        Me.TextBox3.Location = New System.Drawing.Point(134, 108)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(281, 30)
@@ -306,7 +310,7 @@ Partial Class FrmUsuarios
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 94)
+        Me.Label5.Location = New System.Drawing.Point(19, 100)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(85, 48)
         Me.Label5.TabIndex = 4
@@ -314,7 +318,7 @@ Partial Class FrmUsuarios
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(629, 36)
+        Me.TextBox2.Location = New System.Drawing.Point(874, 42)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(267, 30)
@@ -323,7 +327,7 @@ Partial Class FrmUsuarios
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(452, 39)
+        Me.Label4.Location = New System.Drawing.Point(697, 45)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(111, 24)
         Me.Label4.TabIndex = 2
@@ -331,7 +335,7 @@ Partial Class FrmUsuarios
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(127, 36)
+        Me.TextBox1.Location = New System.Drawing.Point(134, 42)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(281, 30)
@@ -340,18 +344,39 @@ Partial Class FrmUsuarios
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(5, 39)
+        Me.Label3.Location = New System.Drawing.Point(12, 45)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(75, 24)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Codigo:"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.BackColor = System.Drawing.SystemColors.Info
+        Me.GroupBox3.Controls.Add(Me.DgvUsuarios)
+        Me.GroupBox3.Location = New System.Drawing.Point(13, 611)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(1257, 230)
+        Me.GroupBox3.TabIndex = 4
+        Me.GroupBox3.TabStop = False
+        '
+        'DgvUsuarios
+        '
+        Me.DgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvUsuarios.Location = New System.Drawing.Point(16, 22)
+        Me.DgvUsuarios.Name = "DgvUsuarios"
+        Me.DgvUsuarios.RowHeadersWidth = 51
+        Me.DgvUsuarios.RowTemplate.Height = 24
+        Me.DgvUsuarios.Size = New System.Drawing.Size(1235, 202)
+        Me.DgvUsuarios.TabIndex = 0
         '
         'FrmUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlText
-        Me.ClientSize = New System.Drawing.Size(932, 653)
+        Me.ClientSize = New System.Drawing.Size(1282, 853)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox1)
@@ -365,6 +390,8 @@ Partial Class FrmUsuarios
         Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        CType(Me.DgvUsuarios, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -396,4 +423,6 @@ Partial Class FrmUsuarios
     Friend WithEvents Label12 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Label11 As Label
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents DgvUsuarios As DataGridView
 End Class

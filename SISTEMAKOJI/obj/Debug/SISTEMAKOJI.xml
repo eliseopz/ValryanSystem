@@ -22,5 +22,150 @@ SISTEMAKOJI
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.CategoríaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.EntradasDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.ProductosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.SalidaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.UsuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.CategoríaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.EntradasRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.ProductosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.SalidaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.UsuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.CategoríaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.EntradasRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.ProductosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.SalidaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSet.UsuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSetTableAdapters.CategoríaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSetTableAdapters.EntradasTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSetTableAdapters.ProductosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSetTableAdapters.SalidaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSetTableAdapters.UsuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSetTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:SISTEMAKOJI.BDValyrianDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(SISTEMAKOJI.BDValyrianDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:SISTEMAKOJI.BDValyrianDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(SISTEMAKOJI.BDValyrianDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:SISTEMAKOJI.BDValyrianDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(SISTEMAKOJI.BDValyrianDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:SISTEMAKOJI.BDValyrianDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:SISTEMAKOJI.BDValyrianDataSetTableAdapters.TableAdapterManager.UpdateAll(SISTEMAKOJI.BDValyrianDataSet)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.BDValyrianDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>

@@ -52,31 +52,31 @@ Partial Class FrmPrincipal
         'ProductosToolStripMenuItem
         '
         Me.ProductosToolStripMenuItem.Name = "ProductosToolStripMenuItem"
-        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ProductosToolStripMenuItem.Size = New System.Drawing.Size(157, 26)
         Me.ProductosToolStripMenuItem.Text = "Usuario"
         '
         'CategoriaToolStripMenuItem
         '
         Me.CategoriaToolStripMenuItem.Name = "CategoriaToolStripMenuItem"
-        Me.CategoriaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.CategoriaToolStripMenuItem.Size = New System.Drawing.Size(157, 26)
         Me.CategoriaToolStripMenuItem.Text = "Categoria"
         '
         'ProductoToolStripMenuItem
         '
         Me.ProductoToolStripMenuItem.Name = "ProductoToolStripMenuItem"
-        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.ProductoToolStripMenuItem.Size = New System.Drawing.Size(157, 26)
         Me.ProductoToolStripMenuItem.Text = "Producto"
         '
         'EntradaToolStripMenuItem
         '
         Me.EntradaToolStripMenuItem.Name = "EntradaToolStripMenuItem"
-        Me.EntradaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.EntradaToolStripMenuItem.Size = New System.Drawing.Size(157, 26)
         Me.EntradaToolStripMenuItem.Text = "Entrada"
         '
         'SalidaToolStripMenuItem
         '
         Me.SalidaToolStripMenuItem.Name = "SalidaToolStripMenuItem"
-        Me.SalidaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SalidaToolStripMenuItem.Size = New System.Drawing.Size(157, 26)
         Me.SalidaToolStripMenuItem.Text = "Salida"
         '
         'FrmPrincipal
@@ -88,7 +88,7 @@ Partial Class FrmPrincipal
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "FrmPrincipal"
-        Me.Text = "FrmPrincipal"
+        Me.Text = "Menú Principal"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
