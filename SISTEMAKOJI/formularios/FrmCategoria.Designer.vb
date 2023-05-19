@@ -39,12 +39,12 @@ Partial Class FrmCategoria
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.DgvCategoria = New System.Windows.Forms.DataGridView()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DgvCategoria, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'PictureBox1
@@ -201,22 +201,22 @@ Partial Class FrmCategoria
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.SystemColors.Info
-        Me.GroupBox3.Controls.Add(Me.DataGridView1)
+        Me.GroupBox3.Controls.Add(Me.DgvCategoria)
         Me.GroupBox3.Location = New System.Drawing.Point(13, 512)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(957, 329)
         Me.GroupBox3.TabIndex = 7
         Me.GroupBox3.TabStop = False
         '
-        'DataGridView1
+        'DgvCategoria
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(6, 90)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(945, 233)
-        Me.DataGridView1.TabIndex = 0
+        Me.DgvCategoria.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvCategoria.Location = New System.Drawing.Point(6, 90)
+        Me.DgvCategoria.Name = "DgvCategoria"
+        Me.DgvCategoria.RowHeadersWidth = 51
+        Me.DgvCategoria.RowTemplate.Height = 24
+        Me.DgvCategoria.Size = New System.Drawing.Size(945, 233)
+        Me.DgvCategoria.TabIndex = 0
         '
         'FrmCategoria
         '
@@ -236,7 +236,7 @@ Partial Class FrmCategoria
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DgvCategoria, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -257,5 +257,5 @@ Partial Class FrmCategoria
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents DgvCategoria As DataGridView
 End Class

@@ -78,6 +78,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>BDValyrianDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dao\DCategoria.vb" />
     <Compile Include="dao\DUsuarios.vb" />
     <Compile Include="Entidades\Categoria.vb" />
     <Compile Include="Entidades\Usuarios.vb" />
