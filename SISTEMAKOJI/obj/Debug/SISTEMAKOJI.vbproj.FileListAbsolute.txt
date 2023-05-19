@@ -31,3 +31,4 @@ C:\Users\Isi11\Desktop\DBD\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbpro
 C:\Users\Isi11\Desktop\DBD\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.exe
 C:\Users\Isi11\Desktop\DBD\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.xml
 C:\Users\Isi11\Desktop\DBD\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.pdb
+C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmPrincipal.resources

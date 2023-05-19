@@ -56,7 +56,7 @@ Partial Class FrmEntrada
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(667, 134)
+        Me.GroupBox1.Size = New System.Drawing.Size(698, 134)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -84,7 +84,7 @@ Partial Class FrmEntrada
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(686, 13)
+        Me.PictureBox1.Location = New System.Drawing.Point(717, 13)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(203, 134)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -113,7 +113,7 @@ Partial Class FrmEntrada
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(13, 174)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(876, 364)
+        Me.GroupBox2.Size = New System.Drawing.Size(907, 467)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos de la entrada"
@@ -122,7 +122,7 @@ Partial Class FrmEntrada
         '
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(356, 297)
+        Me.Button3.Location = New System.Drawing.Point(355, 378)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(182, 52)
         Me.Button3.TabIndex = 8
@@ -133,7 +133,7 @@ Partial Class FrmEntrada
         '
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(596, 297)
+        Me.Button2.Location = New System.Drawing.Point(595, 378)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(182, 52)
         Me.Button2.TabIndex = 9
@@ -144,7 +144,7 @@ Partial Class FrmEntrada
         '
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(111, 296)
+        Me.Button1.Location = New System.Drawing.Point(110, 377)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(182, 53)
         Me.Button1.TabIndex = 7
@@ -153,7 +153,7 @@ Partial Class FrmEntrada
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(544, 158)
+        Me.TextBox3.Location = New System.Drawing.Point(583, 220)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(258, 119)
@@ -163,7 +163,7 @@ Partial Class FrmEntrada
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(409, 166)
+        Me.Label9.Location = New System.Drawing.Point(448, 228)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(123, 19)
         Me.Label9.TabIndex = 14
@@ -171,7 +171,7 @@ Partial Class FrmEntrada
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(111, 158)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(111, 224)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(258, 30)
         Me.DateTimePicker1.TabIndex = 5
@@ -179,7 +179,7 @@ Partial Class FrmEntrada
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(111, 97)
+        Me.ComboBox3.Location = New System.Drawing.Point(111, 132)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(258, 32)
         Me.ComboBox3.TabIndex = 3
@@ -187,7 +187,7 @@ Partial Class FrmEntrada
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(12, 163)
+        Me.Label8.Location = New System.Drawing.Point(12, 229)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(64, 24)
         Me.Label8.TabIndex = 11
@@ -195,7 +195,7 @@ Partial Class FrmEntrada
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(544, 97)
+        Me.TextBox4.Location = New System.Drawing.Point(583, 134)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(258, 30)
         Me.TextBox4.TabIndex = 4
@@ -203,7 +203,7 @@ Partial Class FrmEntrada
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(439, 97)
+        Me.Label6.Location = New System.Drawing.Point(478, 128)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(94, 24)
         Me.Label6.TabIndex = 7
@@ -212,7 +212,7 @@ Partial Class FrmEntrada
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 94)
+        Me.Label5.Location = New System.Drawing.Point(12, 129)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(80, 24)
         Me.Label5.TabIndex = 5
@@ -221,14 +221,14 @@ Partial Class FrmEntrada
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(544, 35)
+        Me.ComboBox1.Location = New System.Drawing.Point(583, 31)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(258, 32)
         Me.ComboBox1.TabIndex = 2
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(538, 39)
+        Me.TextBox2.Location = New System.Drawing.Point(577, 35)
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(0, 30)
         Me.TextBox2.TabIndex = 3
@@ -236,7 +236,7 @@ Partial Class FrmEntrada
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(439, 42)
+        Me.Label4.Location = New System.Drawing.Point(478, 38)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(93, 24)
         Me.Label4.TabIndex = 2
@@ -263,7 +263,7 @@ Partial Class FrmEntrada
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlText
-        Me.ClientSize = New System.Drawing.Size(901, 550)
+        Me.ClientSize = New System.Drawing.Size(932, 653)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
