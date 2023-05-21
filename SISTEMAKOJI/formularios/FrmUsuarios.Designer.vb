@@ -52,6 +52,12 @@ Partial Class FrmUsuarios
         Me.DgvUsuarios = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.TextBox8 = New System.Windows.Forms.TextBox()
+        Me.TextBox9 = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.TextBox10 = New System.Windows.Forms.TextBox()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -73,6 +79,12 @@ Partial Class FrmUsuarios
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Info
+        Me.GroupBox2.Controls.Add(Me.TextBox10)
+        Me.GroupBox2.Controls.Add(Me.Label14)
+        Me.GroupBox2.Controls.Add(Me.TextBox9)
+        Me.GroupBox2.Controls.Add(Me.TextBox8)
+        Me.GroupBox2.Controls.Add(Me.Label13)
+        Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Button1)
@@ -101,7 +113,7 @@ Partial Class FrmUsuarios
         Me.GroupBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Padding = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.GroupBox2.Size = New System.Drawing.Size(1257, 427)
+        Me.GroupBox2.Size = New System.Drawing.Size(1257, 491)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos del usuario"
@@ -110,11 +122,11 @@ Partial Class FrmUsuarios
         '
         Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
         Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(803, 360)
+        Me.Button3.Location = New System.Drawing.Point(803, 430)
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(179, 57)
-        Me.Button3.TabIndex = 13
+        Me.Button3.TabIndex = 16
         Me.Button3.Text = "Eliminar"
         Me.Button3.UseVisualStyleBackColor = True
         '
@@ -122,11 +134,11 @@ Partial Class FrmUsuarios
         '
         Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
         Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(565, 360)
+        Me.Button2.Location = New System.Drawing.Point(565, 430)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(179, 57)
-        Me.Button2.TabIndex = 12
+        Me.Button2.TabIndex = 15
         Me.Button2.Text = "Nuevo"
         Me.Button2.UseVisualStyleBackColor = True
         '
@@ -134,27 +146,27 @@ Partial Class FrmUsuarios
         '
         Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
         Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(301, 360)
+        Me.Button1.Location = New System.Drawing.Point(301, 430)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(179, 57)
-        Me.Button1.TabIndex = 11
+        Me.Button1.TabIndex = 14
         Me.Button1.Text = "Agregar"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(134, 306)
+        Me.ComboBox2.Location = New System.Drawing.Point(869, 318)
         Me.ComboBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(281, 32)
-        Me.ComboBox2.TabIndex = 9
+        Me.ComboBox2.Size = New System.Drawing.Size(294, 32)
+        Me.ComboBox2.TabIndex = 12
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(18, 312)
+        Me.Label12.Location = New System.Drawing.Point(688, 318)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(56, 24)
         Me.Label12.TabIndex = 19
@@ -163,16 +175,16 @@ Partial Class FrmUsuarios
         'ComboBox1
         '
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(874, 303)
+        Me.ComboBox1.Location = New System.Drawing.Point(130, 377)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(267, 32)
-        Me.ComboBox1.TabIndex = 10
+        Me.ComboBox1.Size = New System.Drawing.Size(281, 32)
+        Me.ComboBox1.TabIndex = 13
         '
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(701, 303)
+        Me.Label11.Location = New System.Drawing.Point(7, 385)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(43, 24)
         Me.Label11.TabIndex = 16
@@ -180,51 +192,51 @@ Partial Class FrmUsuarios
         '
         'TextBox7
         '
-        Me.TextBox7.Location = New System.Drawing.Point(874, 238)
+        Me.TextBox7.Location = New System.Drawing.Point(130, 193)
         Me.TextBox7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(267, 30)
-        Me.TextBox7.TabIndex = 8
+        Me.TextBox7.Size = New System.Drawing.Size(281, 30)
+        Me.TextBox7.TabIndex = 7
         '
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(701, 241)
+        Me.Label10.Location = New System.Drawing.Point(7, 191)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(73, 24)
+        Me.Label10.Size = New System.Drawing.Size(86, 48)
         Me.Label10.TabIndex = 14
-        Me.Label10.Text = "Cédula:"
+        Me.Label10.Text = "Segundo" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Apellido:"
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(874, 173)
+        Me.TextBox6.Location = New System.Drawing.Point(869, 124)
         Me.TextBox6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(267, 30)
+        Me.TextBox6.Size = New System.Drawing.Size(294, 30)
         Me.TextBox6.TabIndex = 6
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(688, 177)
+        Me.Label9.Location = New System.Drawing.Point(683, 128)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(166, 24)
+        Me.Label9.Size = New System.Drawing.Size(148, 24)
         Me.Label9.TabIndex = 12
-        Me.Label9.Text = "Segundo Apellido:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label9.Text = "Primer Apellido:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(139, 244)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(874, 191)
         Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(276, 30)
-        Me.DateTimePicker1.TabIndex = 7
+        Me.DateTimePicker1.Size = New System.Drawing.Size(289, 30)
+        Me.DateTimePicker1.TabIndex = 8
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(12, 244)
+        Me.Label8.Location = New System.Drawing.Point(688, 173)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(114, 48)
         Me.Label8.TabIndex = 10
@@ -232,7 +244,7 @@ Partial Class FrmUsuarios
         '
         'TextBox5
         '
-        Me.TextBox5.Location = New System.Drawing.Point(134, 180)
+        Me.TextBox5.Location = New System.Drawing.Point(130, 125)
         Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(281, 30)
@@ -241,32 +253,32 @@ Partial Class FrmUsuarios
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(19, 168)
+        Me.Label7.Location = New System.Drawing.Point(2, 107)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(86, 48)
+        Me.Label7.Size = New System.Drawing.Size(90, 48)
         Me.Label7.TabIndex = 8
-        Me.Label7.Text = "Primer" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Apellido:"
+        Me.Label7.Text = "Segundo" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " Nombre:"
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(874, 101)
+        Me.TextBox4.Location = New System.Drawing.Point(869, 71)
         Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(267, 30)
+        Me.TextBox4.Size = New System.Drawing.Size(294, 30)
         Me.TextBox4.TabIndex = 4
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(688, 105)
+        Me.Label6.Location = New System.Drawing.Point(688, 74)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(165, 24)
+        Me.Label6.Size = New System.Drawing.Size(147, 24)
         Me.Label6.TabIndex = 6
-        Me.Label6.Text = "Segundo Nombre:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
+        Me.Label6.Text = "Primer Nombre:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10)
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(134, 108)
+        Me.TextBox3.Location = New System.Drawing.Point(130, 68)
         Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(281, 30)
@@ -275,32 +287,32 @@ Partial Class FrmUsuarios
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(19, 100)
+        Me.Label5.Location = New System.Drawing.Point(2, 71)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(85, 48)
+        Me.Label5.Size = New System.Drawing.Size(111, 24)
         Me.Label5.TabIndex = 4
-        Me.Label5.Text = "Primer" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Nombre:"
+        Me.Label5.Text = "Contraseña:"
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(874, 42)
+        Me.TextBox2.Location = New System.Drawing.Point(869, 22)
         Me.TextBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(267, 30)
+        Me.TextBox2.Size = New System.Drawing.Size(294, 30)
         Me.TextBox2.TabIndex = 2
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(697, 45)
+        Me.Label4.Location = New System.Drawing.Point(692, 25)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(111, 24)
+        Me.Label4.Size = New System.Drawing.Size(155, 24)
         Me.Label4.TabIndex = 2
-        Me.Label4.Text = "Contraseña:"
+        Me.Label4.Text = "Nombre Usuario:"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(134, 42)
+        Me.TextBox1.Location = New System.Drawing.Point(130, 22)
         Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(281, 30)
@@ -309,7 +321,7 @@ Partial Class FrmUsuarios
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 45)
+        Me.Label3.Location = New System.Drawing.Point(2, 25)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(75, 24)
         Me.Label3.TabIndex = 0
@@ -319,20 +331,20 @@ Partial Class FrmUsuarios
         '
         Me.GroupBox3.BackColor = System.Drawing.SystemColors.Info
         Me.GroupBox3.Controls.Add(Me.DgvUsuarios)
-        Me.GroupBox3.Location = New System.Drawing.Point(13, 545)
+        Me.GroupBox3.Location = New System.Drawing.Point(13, 609)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(1257, 296)
+        Me.GroupBox3.Size = New System.Drawing.Size(1257, 232)
         Me.GroupBox3.TabIndex = 4
         Me.GroupBox3.TabStop = False
         '
         'DgvUsuarios
         '
         Me.DgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvUsuarios.Location = New System.Drawing.Point(6, 76)
+        Me.DgvUsuarios.Location = New System.Drawing.Point(6, 64)
         Me.DgvUsuarios.Name = "DgvUsuarios"
         Me.DgvUsuarios.RowHeadersWidth = 51
         Me.DgvUsuarios.RowTemplate.Height = 24
-        Me.DgvUsuarios.Size = New System.Drawing.Size(1245, 202)
+        Me.DgvUsuarios.Size = New System.Drawing.Size(1245, 162)
         Me.DgvUsuarios.TabIndex = 0
         '
         'GroupBox1
@@ -354,6 +366,54 @@ Partial Class FrmUsuarios
         Me.Label2.Size = New System.Drawing.Size(221, 27)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Registro de Usuarios"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(2, 262)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(62, 24)
+        Me.Label1.TabIndex = 20
+        Me.Label1.Text = "Email:"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(683, 262)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(91, 24)
+        Me.Label13.TabIndex = 21
+        Me.Label13.Text = "Telefono:"
+        '
+        'TextBox8
+        '
+        Me.TextBox8.Location = New System.Drawing.Point(130, 262)
+        Me.TextBox8.Name = "TextBox8"
+        Me.TextBox8.Size = New System.Drawing.Size(281, 30)
+        Me.TextBox8.TabIndex = 9
+        '
+        'TextBox9
+        '
+        Me.TextBox9.Location = New System.Drawing.Point(869, 262)
+        Me.TextBox9.Name = "TextBox9"
+        Me.TextBox9.Size = New System.Drawing.Size(294, 30)
+        Me.TextBox9.TabIndex = 10
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(2, 312)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(73, 24)
+        Me.Label14.TabIndex = 24
+        Me.Label14.Text = "Cedula:"
+        '
+        'TextBox10
+        '
+        Me.TextBox10.Location = New System.Drawing.Point(130, 312)
+        Me.TextBox10.Name = "TextBox10"
+        Me.TextBox10.Size = New System.Drawing.Size(281, 30)
+        Me.TextBox10.TabIndex = 11
         '
         'FrmUsuarios
         '
@@ -409,4 +469,10 @@ Partial Class FrmUsuarios
     Friend WithEvents DgvUsuarios As DataGridView
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents TextBox10 As TextBox
+    Friend WithEvents Label14 As Label
+    Friend WithEvents TextBox9 As TextBox
+    Friend WithEvents TextBox8 As TextBox
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label1 As Label
 End Class

@@ -25,7 +25,6 @@ Partial Class FrmEntrada
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmEntrada))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -44,19 +43,24 @@ Partial Class FrmEntrada
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.DgvEntrada = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.DgvEntrada, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.Info
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(13, 13)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(698, 134)
+        Me.GroupBox1.Size = New System.Drawing.Size(698, 98)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         '
@@ -64,29 +68,18 @@ Partial Class FrmEntrada
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 63)
+        Me.Label2.Location = New System.Drawing.Point(2, 18)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(220, 27)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Registro de Entradas"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.Info
-        Me.Label1.Font = New System.Drawing.Font("Montserrat", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 18)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(531, 28)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Bienvenido al sistema de registro Valyrian"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(717, 13)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(203, 134)
+        Me.PictureBox1.Size = New System.Drawing.Size(203, 98)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
@@ -94,11 +87,13 @@ Partial Class FrmEntrada
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Info
+        Me.GroupBox2.Controls.Add(Me.TextBox5)
+        Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Button3)
-        Me.GroupBox2.Controls.Add(Me.Button2)
-        Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.TextBox3)
+        Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Label9)
+        Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox2.Controls.Add(Me.ComboBox3)
         Me.GroupBox2.Controls.Add(Me.Label8)
@@ -111,7 +106,7 @@ Partial Class FrmEntrada
         Me.GroupBox2.Controls.Add(Me.TextBox1)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(13, 174)
+        Me.GroupBox2.Location = New System.Drawing.Point(13, 126)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(907, 467)
         Me.GroupBox2.TabIndex = 3
@@ -153,17 +148,17 @@ Partial Class FrmEntrada
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(583, 220)
+        Me.TextBox3.Location = New System.Drawing.Point(136, 210)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(258, 119)
+        Me.TextBox3.Size = New System.Drawing.Size(258, 31)
         Me.TextBox3.TabIndex = 6
         '
         'Label9
         '
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label9.Location = New System.Drawing.Point(448, 228)
+        Me.Label9.Location = New System.Drawing.Point(7, 285)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(123, 19)
         Me.Label9.TabIndex = 14
@@ -171,7 +166,7 @@ Partial Class FrmEntrada
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(111, 224)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(583, 205)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(258, 30)
         Me.DateTimePicker1.TabIndex = 5
@@ -179,7 +174,7 @@ Partial Class FrmEntrada
         'ComboBox3
         '
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(111, 132)
+        Me.ComboBox3.Location = New System.Drawing.Point(136, 132)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(258, 32)
         Me.ComboBox3.TabIndex = 3
@@ -187,7 +182,7 @@ Partial Class FrmEntrada
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(12, 229)
+        Me.Label8.Location = New System.Drawing.Point(478, 210)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(64, 24)
         Me.Label8.TabIndex = 11
@@ -195,7 +190,7 @@ Partial Class FrmEntrada
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(583, 134)
+        Me.TextBox4.Location = New System.Drawing.Point(583, 132)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(258, 30)
         Me.TextBox4.TabIndex = 4
@@ -203,7 +198,7 @@ Partial Class FrmEntrada
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(478, 128)
+        Me.Label6.Location = New System.Drawing.Point(477, 129)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(94, 24)
         Me.Label6.TabIndex = 7
@@ -244,7 +239,7 @@ Partial Class FrmEntrada
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(111, 35)
+        Me.TextBox1.Location = New System.Drawing.Point(136, 35)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(258, 30)
         Me.TextBox1.TabIndex = 1
@@ -258,12 +253,50 @@ Partial Class FrmEntrada
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Codigo:"
         '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(12, 211)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(68, 24)
+        Me.Label7.TabIndex = 12
+        Me.Label7.Text = "Precio:"
+        '
+        'TextBox5
+        '
+        Me.TextBox5.Location = New System.Drawing.Point(136, 279)
+        Me.TextBox5.Multiline = True
+        Me.TextBox5.Name = "TextBox5"
+        Me.TextBox5.Size = New System.Drawing.Size(705, 57)
+        Me.TextBox5.TabIndex = 13
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.BackColor = System.Drawing.SystemColors.Info
+        Me.GroupBox3.Controls.Add(Me.DgvEntrada)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 599)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(907, 242)
+        Me.GroupBox3.TabIndex = 4
+        Me.GroupBox3.TabStop = False
+        '
+        'DgvEntrada
+        '
+        Me.DgvEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvEntrada.Location = New System.Drawing.Point(8, 86)
+        Me.DgvEntrada.Name = "DgvEntrada"
+        Me.DgvEntrada.RowHeadersWidth = 51
+        Me.DgvEntrada.RowTemplate.Height = 24
+        Me.DgvEntrada.Size = New System.Drawing.Size(894, 150)
+        Me.DgvEntrada.TabIndex = 0
+        '
         'FrmEntrada
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlText
-        Me.ClientSize = New System.Drawing.Size(932, 653)
+        Me.ClientSize = New System.Drawing.Size(932, 853)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
@@ -275,12 +308,13 @@ Partial Class FrmEntrada
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        CType(Me.DgvEntrada, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox2 As GroupBox
@@ -300,4 +334,8 @@ Partial Class FrmEntrada
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button3 As Button
+    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents Label7 As Label
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents DgvEntrada As DataGridView
 End Class

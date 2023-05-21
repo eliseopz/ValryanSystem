@@ -73,14 +73,15 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BDValyrianDataSet.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>BDValyrianDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="dao\DCategoria.vb" />
     <Compile Include="dao\DUsuarios.vb" />
+    <Compile Include="DBValyrianDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DBValyrianDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Entidades\Categoria.vb" />
+    <Compile Include="Entidades\Producto.vb" />
     <Compile Include="Entidades\Usuarios.vb" />
     <Compile Include="formularios\FrmCategoria.Designer.vb">
       <DependentUpon>FrmCategoria.vb</DependentUpon>
@@ -163,16 +164,16 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="BDValyrianDataSet.xsc">
-      <DependentUpon>BDValyrianDataSet.xsd</DependentUpon>
+    <None Include="DBValyrianDataSet.xsc">
+      <DependentUpon>DBValyrianDataSet.xsd</DependentUpon>
     </None>
-    <None Include="BDValyrianDataSet.xsd">
+    <None Include="DBValyrianDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>BDValyrianDataSet.Designer.vb</LastGenOutput>
+      <LastGenOutput>DBValyrianDataSet.Designer.vb</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="BDValyrianDataSet.xss">
-      <DependentUpon>BDValyrianDataSet.xsd</DependentUpon>
+    <None Include="DBValyrianDataSet.xss">
+      <DependentUpon>DBValyrianDataSet.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

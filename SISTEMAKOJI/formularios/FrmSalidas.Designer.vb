@@ -25,7 +25,6 @@ Partial Class FrmSalidas
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmSalidas))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ComboBox2 = New System.Windows.Forms.ComboBox()
@@ -43,19 +42,24 @@ Partial Class FrmSalidas
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.DgvSalidas = New System.Windows.Forms.DataGridView()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.DgvSalidas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.Info
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(699, 134)
+        Me.GroupBox1.Size = New System.Drawing.Size(699, 103)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
@@ -63,29 +67,18 @@ Partial Class FrmSalidas
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 63)
+        Me.Label2.Location = New System.Drawing.Point(6, 18)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(204, 27)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Registro de Salidas"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.Info
-        Me.Label1.Font = New System.Drawing.Font("Montserrat", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 18)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(531, 28)
-        Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Bienvenido al sistema de registro Valyrian"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(717, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(203, 134)
+        Me.PictureBox1.Size = New System.Drawing.Size(203, 103)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
@@ -93,12 +86,14 @@ Partial Class FrmSalidas
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Info
+        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.Label8)
+        Me.GroupBox2.Controls.Add(Me.TextBox4)
+        Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.ComboBox2)
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
-        Me.GroupBox2.Controls.Add(Me.Label8)
         Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.TextBox3)
@@ -109,7 +104,7 @@ Partial Class FrmSalidas
         Me.GroupBox2.Controls.Add(Me.TextBox1)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 167)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 121)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(908, 474)
         Me.GroupBox2.TabIndex = 4
@@ -119,7 +114,7 @@ Partial Class FrmSalidas
         'ComboBox2
         '
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(111, 121)
+        Me.ComboBox2.Location = New System.Drawing.Point(136, 126)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(255, 32)
         Me.ComboBox2.TabIndex = 5
@@ -159,17 +154,17 @@ Partial Class FrmSalidas
         '
         'TextBox4
         '
-        Me.TextBox4.Location = New System.Drawing.Point(590, 218)
+        Me.TextBox4.Location = New System.Drawing.Point(136, 286)
         Me.TextBox4.Multiline = True
         Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(258, 117)
+        Me.TextBox4.Size = New System.Drawing.Size(712, 58)
         Me.TextBox4.TabIndex = 11
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(447, 220)
+        Me.Label8.Location = New System.Drawing.Point(7, 286)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(123, 19)
         Me.Label8.TabIndex = 10
@@ -177,15 +172,15 @@ Partial Class FrmSalidas
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(111, 219)
+        Me.DateTimePicker1.Location = New System.Drawing.Point(590, 214)
         Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(255, 30)
+        Me.DateTimePicker1.Size = New System.Drawing.Size(258, 30)
         Me.DateTimePicker1.TabIndex = 9
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(7, 218)
+        Me.Label7.Location = New System.Drawing.Point(476, 213)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(64, 24)
         Me.Label7.TabIndex = 8
@@ -235,7 +230,7 @@ Partial Class FrmSalidas
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(111, 35)
+        Me.TextBox1.Location = New System.Drawing.Point(136, 35)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(255, 30)
         Me.TextBox1.TabIndex = 1
@@ -249,12 +244,49 @@ Partial Class FrmSalidas
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Codigo:"
         '
+        'GroupBox3
+        '
+        Me.GroupBox3.BackColor = System.Drawing.SystemColors.Info
+        Me.GroupBox3.Controls.Add(Me.DgvSalidas)
+        Me.GroupBox3.Location = New System.Drawing.Point(13, 602)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(907, 239)
+        Me.GroupBox3.TabIndex = 5
+        Me.GroupBox3.TabStop = False
+        '
+        'DgvSalidas
+        '
+        Me.DgvSalidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvSalidas.Location = New System.Drawing.Point(6, 83)
+        Me.DgvSalidas.Name = "DgvSalidas"
+        Me.DgvSalidas.RowHeadersWidth = 51
+        Me.DgvSalidas.RowTemplate.Height = 24
+        Me.DgvSalidas.Size = New System.Drawing.Size(895, 150)
+        Me.DgvSalidas.TabIndex = 0
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(7, 213)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(68, 24)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "Precio:"
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Location = New System.Drawing.Point(136, 214)
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(248, 30)
+        Me.TextBox2.TabIndex = 16
+        '
         'FrmSalidas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlText
-        Me.ClientSize = New System.Drawing.Size(932, 653)
+        Me.ClientSize = New System.Drawing.Size(932, 853)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
@@ -265,13 +297,14 @@ Partial Class FrmSalidas
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        CType(Me.DgvSalidas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents TextBox1 As TextBox
@@ -289,4 +322,8 @@ Partial Class FrmSalidas
     Friend WithEvents Button1 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents DgvSalidas As DataGridView
 End Class

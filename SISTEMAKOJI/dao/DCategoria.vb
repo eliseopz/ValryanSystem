@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports System.Data.SqlClient
 Public Class DCategoria
-    Dim strConn As String = My.Settings.strConnection.ToString()
+    Dim strConn As String = My.Settings.strConnectionn.ToString()
 
     Public Function MostrarCategoria() As DataSet
         Dim ds As New DataSet
