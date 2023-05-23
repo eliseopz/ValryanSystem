@@ -94,4 +94,43 @@
         End If
         LlenarRegistros()
     End Sub
+
+    Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+        Try
+            Dim usuario As New Usuarios(CInt(txtCodigo.Text), txtUsername.Text, txtPrimerNom.Text, txtSegundoNom.Text, txtPrimerApe.Text, txtSegundoApe.Text, CDate(FechaNacPicker.Text), txtEmail.Text, txtTelefono.Text, txtCedula.Text, CBool(cbxRol.Text), CBool(cbxSexo.Text), True)
+            Dim dao As New DUsuarios
+            If (dao.EditarRegistros(usuario)) Then
+                MsgBox("Registro editado exitosamente",
+                       MsgBoxStyle.Information, "Ciudades")
+            End If
+        Catch ex As Exception
+            MsgBox("No se pudo editar el registro",
+                  MsgBoxStyle.Critical, "ERROR")
+        End Try
+        LlenarRegistros()
+    End Sub
+
+    Private Sub DgvUsuarios_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvUsuarios.CellClick
+        Dim fila As Integer = DgvUsuarios.CurrentRow.Index
+        txtCodigo.Text = DgvUsuarios.Rows(fila).Cells(0).Value
+        txtUsername.Text = DgvUsuarios.Rows(fila).Cells(1).Value
+        txtContra.Text = DgvUsuarios.Rows(fila).Cells(2).Value
+        txtPrimerNom.Text = DgvUsuarios.Rows(fila).Cells(3).Value
+        txtSegundoNom.Text = DgvUsuarios.Rows(fila).Cells(4).Value
+        txtPrimerApe.Text = DgvUsuarios.Rows(fila).Cells(5).Value
+        txtSegundoApe.Text = DgvUsuarios.Rows(fila).Cells(6).Value
+        FechaNacPicker.Text = DgvUsuarios.Rows(fila).Cells(7).Value
+        txtEmail.Text = DgvUsuarios.Rows(fila).Cells(8).Value
+        txtTelefono.Text = DgvUsuarios.Rows(fila).Cells(9).Value
+        txtCedula.Text = DgvUsuarios.Rows(fila).Cells(10).Value
+        cbxRol.Text = DgvUsuarios.Rows(fila).Cells(11).Value
+        cbxSexo.Text = DgvUsuarios.Rows(fila).Cells(12).Value
+
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Dim dao As New DUsuarios
+        DgvUsuarios.DataSource = dao.buscarRegistro(txtBuscar.Text.Trim).Tables(0)
+        DgvUsuarios.Refresh()
+    End Sub
 End Class

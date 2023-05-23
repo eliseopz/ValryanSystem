@@ -7,7 +7,7 @@ Public Class DUsuarios
         Dim ds As New DataSet
         Try
             Dim conn As New SqlConnection(strConn)
-            Dim tSql As String = "Select idUsuario as N'Codigo', username as N'Nombre de Usuario', primerNomUsuario as N'Primer Nombre', segundoNomUsuario as N'Segundo Nombre', primerApeUsuario as N'Primer Apellido', segundoApeUsuario as N'Segundo Apellido', fechaNacimiento as N'Fecha Nacimiento', telefonoUsuario as N'Telefono', emailUsuario as N'Nombre Usuario', cedula as N'DNI', rol as N'Rol Usuario', sexo as N'Genero' from Usuarios"
+            Dim tSql As String = "Select idUsuario as N'Codigo', username as N'Nombre de Usuario', passwordUsuario as N'Contraseña' ,primerNomUsuario as N'Primer Nombre', segundoNomUsuario as N'Segundo Nombre', primerApeUsuario as N'Primer Apellido', segundoApeUsuario as N'Segundo Apellido', fechaNacimiento as N'Fecha Nacimiento', emailUsuario as N'Correo Electronico' ,telefonoUsuario as N'Telefono', cedula as N'DNI', rol as N'Rol Usuario', sexo as N'Genero' from Usuarios"
             Dim da As New SqlDataAdapter(tSql, conn)
             da.Fill(ds)
         Catch ex As Exception
@@ -55,12 +55,22 @@ Public Class DUsuarios
     Public Function EditarRegistros(ByVal usuario As Usuarios) As Boolean
         Dim flag = False
         Try
-            Dim tSql = "UPDATE Usuarios SET username = @username, passwordUsuario = @passwordUsuario where idUsuario = @idUsuario"
-            Dim conn As New SqlConnection(My.Settings.strConnection)
+            Dim tSql = "UPDATE Usuarios SET username = @username, passwordUsuario = @passwordUsuario, primerNomUsuario = @primerNomUsuario, segundoNomUsuario = @segundoNomUsuario, primerApeUsuario = @primerApeUsuario, segundoApeUsuario = @segundoApeUsuario, fechaNacimiento = @fechaNacimiento, telefonoUsuario = @telefonoUsuario, emailUsuario = @emailUsuario, cedula = @cedula, rol = @rol, sexo = @sexo where idUsuario = @idUsuario"
+            Dim conn As New SqlConnection(My.Settings.strConnectionn)
             Dim cmd As New SqlCommand(tSql, conn)
+            cmd.Parameters.AddWithValue("@idUsuario", usuario.IdUsuario)
             cmd.Parameters.AddWithValue("@username", usuario.Username)
             cmd.Parameters.AddWithValue("@passwordUsuario", usuario.PasswordUsuario)
-            cmd.Parameters.AddWithValue("@idUsuario", usuario.IdUsuario)
+            cmd.Parameters.AddWithValue("@primerNomUsuario", usuario.PrimerNomUsuario)
+            cmd.Parameters.AddWithValue("@segundoNomUsuario", usuario.SegundoNomUsuario)
+            cmd.Parameters.AddWithValue("@primerApeUsuario", usuario.PrimerApeUsuario)
+            cmd.Parameters.AddWithValue("@segundoApeUsuario", usuario.SegundoApeUsuario)
+            cmd.Parameters.AddWithValue("@fechaNacimiento", usuario.FechaNacimiento)
+            cmd.Parameters.AddWithValue("@telefonoUsuario", usuario.TelefonoUsuario)
+            cmd.Parameters.AddWithValue("@emailUsuario", usuario.EmailUsuario)
+            cmd.Parameters.AddWithValue("@cedula", usuario.Cedula)
+            cmd.Parameters.AddWithValue("@rol", usuario.Rol)
+            cmd.Parameters.AddWithValue("@sexo", usuario.Sexo)
             cmd.Connection.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
                 flag = True
@@ -128,7 +138,7 @@ Public Class DUsuarios
         username = username + "%"
         Try
             Dim conn As New SqlConnection(strConn)
-            Dim tSql As String = "Select idUsuario as N'Codigo', username as N'Nombre Usuario' from Usuarios where username like @username"
+            Dim tSql As String = "Select idUsuario as N'Codigo', username as N'Nombre Usuario',  passwordUsuario as N'Contraseña' ,primerNomUsuario as N'Primer Nombre', segundoNomUsuario as N'Segundo Nombre', primerApeUsuario as N'Primer Apellido', segundoApeUsuario as N'Segundo Apellido', fechaNacimiento as N'Fecha Nacimiento', emailUsuario as N'Correo Electronico' ,telefonoUsuario as N'Telefono', cedula as N'DNI', rol as N'Rol Usuario', sexo as N'Genero' from Usuarios where username like @username"
             Dim da As New SqlDataAdapter(tSql, conn)
             da.SelectCommand.Parameters.AddWithValue("@username", username)
             da.Fill(ds)
