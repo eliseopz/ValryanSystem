@@ -1,6 +1,7 @@
 ﻿Public Class Usuarios
     'Atributos'
     Dim _idUsuario As Integer
+    Dim _username As String
     Dim _passwordUsuario As String
     Dim _primerNomUsuario As String
     Dim _segundoNomUsuario As String
@@ -8,6 +9,7 @@
     Dim _segundoApeUsuario As String
     Dim _fechaNacimiento As String
     Dim _telefonoUsuario As String
+    Dim _emailUsuario As String
     Dim _cedula As String
     Dim _rol As Boolean
     Dim _sexo As Boolean
@@ -19,8 +21,9 @@
     End Sub
 
     'Constructor'
-    Public Sub New(idUsuario As Integer, passwordUsuario As String, primerNomUsuario As String, segundoNomUsuario As String, primerApeUsuario As String, segundoApeUsuario As String, fechaNacimiento As String, telefonoUsuario As String, cedula As String, rol As Boolean, sexo As Boolean)
+    Public Sub New(idUsuario As Integer, username As String, passwordUsuario As String, primerNomUsuario As String, segundoNomUsuario As String, primerApeUsuario As String, segundoApeUsuario As String, fechaNacimiento As String, telefonoUsuario As String, emailUsuario As String, cedula As String, rol As Boolean, sexo As Boolean)
         _idUsuario = idUsuario
+        _username = username
         _passwordUsuario = passwordUsuario
         _primerNomUsuario = primerNomUsuario
         _segundoNomUsuario = segundoNomUsuario
@@ -28,6 +31,7 @@
         _segundoApeUsuario = segundoApeUsuario
         _fechaNacimiento = fechaNacimiento
         _telefonoUsuario = telefonoUsuario
+        _emailUsuario = emailUsuario
         _cedula = cedula
         _rol = rol
         _sexo = sexo
@@ -41,6 +45,15 @@
         Set(value As Integer)
             _idUsuario = value
 
+        End Set
+    End Property
+
+    Public Property Username As String
+        Get
+            Return _username
+        End Get
+        Set(value As String)
+            _username = value
         End Set
     End Property
 
@@ -106,6 +119,15 @@
         End Get
         Set(value As String)
             _telefonoUsuario = value
+        End Set
+    End Property
+
+    Public Property EmailUsuario As String
+        Get
+            Return _emailUsuario
+        End Get
+        Set(value As String)
+            _emailUsuario = value
         End Set
     End Property
 
