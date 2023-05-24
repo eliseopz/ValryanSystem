@@ -56,11 +56,11 @@ Partial Class FrmUsuarios
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.DgvUsuarios = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtBuscar = New System.Windows.Forms.TextBox()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -409,6 +409,24 @@ Partial Class FrmUsuarios
         Me.GroupBox3.TabIndex = 4
         Me.GroupBox3.TabStop = False
         '
+        'btnBuscar
+        '
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.Location = New System.Drawing.Point(985, 12)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(179, 39)
+        Me.btnBuscar.TabIndex = 2
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'txtBuscar
+        '
+        Me.txtBuscar.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuscar.Location = New System.Drawing.Point(415, 21)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(451, 30)
+        Me.txtBuscar.TabIndex = 1
+        '
         'DgvUsuarios
         '
         Me.DgvUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -441,23 +459,6 @@ Partial Class FrmUsuarios
         Me.Label2.Size = New System.Drawing.Size(221, 27)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Registro de Usuarios"
-        '
-        'txtBuscar
-        '
-        Me.txtBuscar.Location = New System.Drawing.Point(415, 21)
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(451, 22)
-        Me.txtBuscar.TabIndex = 1
-        '
-        'btnBuscar
-        '
-        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.Location = New System.Drawing.Point(985, 12)
-        Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(179, 39)
-        Me.btnBuscar.TabIndex = 2
-        Me.btnBuscar.Text = "Buscar"
-        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'FrmUsuarios
         '

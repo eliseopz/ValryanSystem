@@ -77,7 +77,7 @@
         End If
 
         Dim resp As VariantType
-        resp = (MsgBox("Desea eliminar este registro " & usuario.IdUsuario, MsgBoxStyle.Question +
+        resp = (MsgBox("Desea eliminar este registro: " & usuario.IdUsuario, MsgBoxStyle.Question +
                        MsgBoxStyle.YesNo, "ADVERTENCIA"))
         If (resp = vbNo) Then
             MsgBox("Operacion cancelada",
@@ -133,4 +133,6 @@
         DgvUsuarios.DataSource = dao.buscarRegistro(txtBuscar.Text.Trim).Tables(0)
         DgvUsuarios.Refresh()
     End Sub
+
+
 End Class
