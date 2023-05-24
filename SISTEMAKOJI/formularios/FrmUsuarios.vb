@@ -97,7 +97,34 @@
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         Try
-            Dim usuario As New Usuarios(CInt(txtCodigo.Text), txtUsername.Text, txtPrimerNom.Text, txtSegundoNom.Text, txtPrimerApe.Text, txtSegundoApe.Text, CDate(FechaNacPicker.Text), txtEmail.Text, txtTelefono.Text, txtCedula.Text, CBool(cbxRol.Text), CBool(cbxSexo.Text), True)
+            Dim usuario As New Usuarios()
+            usuario.IdUsuario = txtCodigo.Text.Trim
+            usuario.Username = txtUsername.Text.Trim
+            usuario.PasswordUsuario = txtContra.Text.Trim
+            usuario.PrimerNomUsuario = txtPrimerNom.Text.Trim
+            usuario.SegundoNomUsuario = txtSegundoNom.Text.Trim
+            usuario.PrimerApeUsuario = txtPrimerApe.Text.Trim
+            usuario.SegundoApeUsuario = txtSegundoApe.Text.Trim
+            usuario.TelefonoUsuario = txtTelefono.Text.Trim
+            usuario.EmailUsuario = txtEmail.Text.Trim
+            usuario.Cedula = txtCedula.Text.Trim
+            If cbxRol.Text = "Bodeguero" Then
+                Dim rol As Boolean = True
+                usuario.Rol = rol
+            End If
+            If cbxRol.Text = "Gerente" Then
+                Dim rol As Boolean = False
+                usuario.Rol = rol
+            End If
+            If cbxSexo.Text = "Hombre" Then
+                Dim sexo As Boolean = True
+                usuario.Sexo = sexo
+            End If
+            If cbxSexo.Text = "Mujer" Then
+                Dim sexo As Boolean = False
+                usuario.Sexo = sexo
+            End If
+            usuario.FechaNacimiento = FechaNacPicker.Value
             Dim dao As New DUsuarios
             If (dao.EditarRegistros(usuario)) Then
                 MsgBox("Registro editado exitosamente",
@@ -123,8 +150,18 @@
         txtEmail.Text = DgvUsuarios.Rows(fila).Cells(8).Value
         txtTelefono.Text = DgvUsuarios.Rows(fila).Cells(9).Value
         txtCedula.Text = DgvUsuarios.Rows(fila).Cells(10).Value
-        cbxRol.Text = DgvUsuarios.Rows(fila).Cells(11).Value
-        cbxSexo.Text = DgvUsuarios.Rows(fila).Cells(12).Value
+        If (DgvUsuarios.Rows(fila).Cells(11).Value = True) Then
+            cbxRol.Text = "Bodeguero"
+
+        ElseIf (DgvUsuarios.Rows(fila).Cells(11).Value = False) Then
+            cbxRol.Text = "Gerente"
+        End If
+        If (DgvUsuarios.Rows(fila).Cells(12).Value = True) Then
+            cbxSexo.Text = "Hombre"
+        ElseIf (DgvUsuarios.Rows(fila).Cells(12).Value = False) Then
+            cbxSexo.Text = "Mujer"
+
+        End If
 
     End Sub
 
