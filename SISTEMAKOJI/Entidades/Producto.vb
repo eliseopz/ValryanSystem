@@ -5,7 +5,7 @@
     Dim _unidadesProducto As Integer
     Dim _unidadMedidaProducto As String
     Dim _descripcionProducto As String
-    Dim _idCategoria As String
+    Dim _idCategoria As Integer
 
     Public Sub New()
 

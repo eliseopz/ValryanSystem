@@ -22,43 +22,56 @@ Partial Class FrmProductos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FrmProductos))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnNuevo = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
+        Me.txtDescripcion = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.cbxUnidadMedida = New System.Windows.Forms.ComboBox()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.txtUnidades = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbxCategoria = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.DgvProductos = New System.Windows.Forms.DataGridView()
+        Me.DBValyrianDataSet = New SISTEMAKOJI.DBValyrianDataSet()
+        Me.DBValyrianDataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CategoriaBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.CategoriaTableAdapter = New SISTEMAKOJI.DBValyrianDataSetTableAdapters.CategoriaTableAdapter()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        CType(Me.DgvProductos, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DBValyrianDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DBValyrianDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.Info
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(699, 134)
+        Me.GroupBox1.Size = New System.Drawing.Size(699, 88)
         Me.GroupBox1.TabIndex = 4
         Me.GroupBox1.TabStop = False
         '
@@ -66,29 +79,18 @@ Partial Class FrmProductos
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(11, 64)
+        Me.Label2.Location = New System.Drawing.Point(10, 18)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(234, 27)
         Me.Label2.TabIndex = 1
         Me.Label2.Text = "Registro de Productos"
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.BackColor = System.Drawing.SystemColors.Info
-        Me.Label1.Font = New System.Drawing.Font("Montserrat", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(6, 18)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(531, 28)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Bienvenido al sistema de registro Valyrian"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
         Me.PictureBox1.Location = New System.Drawing.Point(717, 12)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(203, 134)
+        Me.PictureBox1.Size = New System.Drawing.Size(203, 88)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
@@ -96,72 +98,84 @@ Partial Class FrmProductos
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Info
-        Me.GroupBox2.Controls.Add(Me.Button3)
-        Me.GroupBox2.Controls.Add(Me.Button2)
-        Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.TextBox5)
+        Me.GroupBox2.Controls.Add(Me.btnEditar)
+        Me.GroupBox2.Controls.Add(Me.btnEliminar)
+        Me.GroupBox2.Controls.Add(Me.btnNuevo)
+        Me.GroupBox2.Controls.Add(Me.btnGuardar)
+        Me.GroupBox2.Controls.Add(Me.txtDescripcion)
         Me.GroupBox2.Controls.Add(Me.Label10)
-        Me.GroupBox2.Controls.Add(Me.ComboBox2)
+        Me.GroupBox2.Controls.Add(Me.cbxUnidadMedida)
         Me.GroupBox2.Controls.Add(Me.Label9)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
+        Me.GroupBox2.Controls.Add(Me.txtUnidades)
         Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
+        Me.GroupBox2.Controls.Add(Me.txtPrecio)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.Label6)
-        Me.GroupBox2.Controls.Add(Me.ComboBox1)
+        Me.GroupBox2.Controls.Add(Me.cbxCategoria)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.txtNombre)
         Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.txtCodigo)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 166)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 106)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(908, 475)
+        Me.GroupBox2.Size = New System.Drawing.Size(908, 458)
         Me.GroupBox2.TabIndex = 5
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos del producto"
         '
-        'Button3
+        'btnEditar
         '
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(664, 392)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(205, 57)
-        Me.Button3.TabIndex = 17
-        Me.Button3.Text = "Eliminar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
+        Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditar.Location = New System.Drawing.Point(461, 374)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(178, 57)
+        Me.btnEditar.TabIndex = 10
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnEliminar
         '
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(363, 392)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(205, 57)
-        Me.Button2.TabIndex = 16
-        Me.Button2.Text = "Nuevo"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
+        Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEliminar.Location = New System.Drawing.Point(705, 374)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(174, 57)
+        Me.btnEliminar.TabIndex = 11
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnNuevo
         '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(40, 392)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(205, 57)
-        Me.Button1.TabIndex = 15
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
+        Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnNuevo.Location = New System.Drawing.Point(229, 374)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(178, 57)
+        Me.btnNuevo.TabIndex = 9
+        Me.btnNuevo.Text = "Nuevo"
+        Me.btnNuevo.UseVisualStyleBackColor = True
         '
-        'TextBox5
+        'btnGuardar
         '
-        Me.TextBox5.Location = New System.Drawing.Point(132, 259)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(747, 47)
-        Me.TextBox5.TabIndex = 14
+        Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
+        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuardar.Location = New System.Drawing.Point(15, 374)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(179, 57)
+        Me.btnGuardar.TabIndex = 8
+        Me.btnGuardar.Text = "Agregar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
+        '
+        'txtDescripcion
+        '
+        Me.txtDescripcion.Location = New System.Drawing.Point(132, 259)
+        Me.txtDescripcion.Multiline = True
+        Me.txtDescripcion.Name = "txtDescripcion"
+        Me.txtDescripcion.Size = New System.Drawing.Size(747, 76)
+        Me.txtDescripcion.TabIndex = 7
         '
         'Label10
         '
@@ -172,13 +186,14 @@ Partial Class FrmProductos
         Me.Label10.TabIndex = 13
         Me.Label10.Text = "Descripción:"
         '
-        'ComboBox2
+        'cbxUnidadMedida
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(586, 179)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(293, 32)
-        Me.ComboBox2.TabIndex = 12
+        Me.cbxUnidadMedida.FormattingEnabled = True
+        Me.cbxUnidadMedida.Items.AddRange(New Object() {"Unidad", "Docena"})
+        Me.cbxUnidadMedida.Location = New System.Drawing.Point(586, 179)
+        Me.cbxUnidadMedida.Name = "cbxUnidadMedida"
+        Me.cbxUnidadMedida.Size = New System.Drawing.Size(293, 32)
+        Me.cbxUnidadMedida.TabIndex = 6
         '
         'Label9
         '
@@ -189,12 +204,12 @@ Partial Class FrmProductos
         Me.Label9.TabIndex = 11
         Me.Label9.Text = "Tipo de" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "unidades:"
         '
-        'TextBox4
+        'txtUnidades
         '
-        Me.TextBox4.Location = New System.Drawing.Point(121, 184)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(286, 30)
-        Me.TextBox4.TabIndex = 10
+        Me.txtUnidades.Location = New System.Drawing.Point(121, 184)
+        Me.txtUnidades.Name = "txtUnidades"
+        Me.txtUnidades.Size = New System.Drawing.Size(286, 30)
+        Me.txtUnidades.TabIndex = 5
         '
         'Label8
         '
@@ -205,12 +220,12 @@ Partial Class FrmProductos
         Me.Label8.TabIndex = 9
         Me.Label8.Text = "Unidades:"
         '
-        'TextBox3
+        'txtPrecio
         '
-        Me.TextBox3.Location = New System.Drawing.Point(586, 107)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(293, 30)
-        Me.TextBox3.TabIndex = 8
+        Me.txtPrecio.Location = New System.Drawing.Point(586, 107)
+        Me.txtPrecio.Name = "txtPrecio"
+        Me.txtPrecio.Size = New System.Drawing.Size(293, 30)
+        Me.txtPrecio.TabIndex = 4
         '
         'Label7
         '
@@ -229,13 +244,13 @@ Partial Class FrmProductos
         Me.Label6.Size = New System.Drawing.Size(0, 24)
         Me.Label6.TabIndex = 6
         '
-        'ComboBox1
+        'cbxCategoria
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(121, 107)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(286, 32)
-        Me.ComboBox1.TabIndex = 5
+        Me.cbxCategoria.FormattingEnabled = True
+        Me.cbxCategoria.Location = New System.Drawing.Point(121, 107)
+        Me.cbxCategoria.Name = "cbxCategoria"
+        Me.cbxCategoria.Size = New System.Drawing.Size(286, 32)
+        Me.cbxCategoria.TabIndex = 3
         '
         'Label5
         '
@@ -246,12 +261,12 @@ Partial Class FrmProductos
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Categoría:"
         '
-        'TextBox2
+        'txtNombre
         '
-        Me.TextBox2.Location = New System.Drawing.Point(586, 36)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(293, 30)
-        Me.TextBox2.TabIndex = 3
+        Me.txtNombre.Location = New System.Drawing.Point(586, 36)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(293, 30)
+        Me.txtNombre.TabIndex = 2
         '
         'Label4
         '
@@ -262,12 +277,12 @@ Partial Class FrmProductos
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Nombre:"
         '
-        'TextBox1
+        'txtCodigo
         '
-        Me.TextBox1.Location = New System.Drawing.Point(121, 36)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(286, 30)
-        Me.TextBox1.TabIndex = 1
+        Me.txtCodigo.Location = New System.Drawing.Point(121, 36)
+        Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.Size = New System.Drawing.Size(286, 30)
+        Me.txtCodigo.TabIndex = 1
         '
         'Label3
         '
@@ -278,12 +293,72 @@ Partial Class FrmProductos
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Codigo:"
         '
+        'GroupBox3
+        '
+        Me.GroupBox3.BackColor = System.Drawing.SystemColors.Info
+        Me.GroupBox3.Controls.Add(Me.btnBuscar)
+        Me.GroupBox3.Controls.Add(Me.txtBuscar)
+        Me.GroupBox3.Controls.Add(Me.DgvProductos)
+        Me.GroupBox3.Location = New System.Drawing.Point(13, 570)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(907, 271)
+        Me.GroupBox3.TabIndex = 6
+        Me.GroupBox3.TabStop = False
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.Location = New System.Drawing.Point(704, 21)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(174, 57)
+        Me.btnBuscar.TabIndex = 13
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'txtBuscar
+        '
+        Me.txtBuscar.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuscar.Location = New System.Drawing.Point(228, 34)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(410, 30)
+        Me.txtBuscar.TabIndex = 12
+        '
+        'DgvProductos
+        '
+        Me.DgvProductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvProductos.Location = New System.Drawing.Point(6, 109)
+        Me.DgvProductos.Name = "DgvProductos"
+        Me.DgvProductos.RowHeadersWidth = 51
+        Me.DgvProductos.RowTemplate.Height = 24
+        Me.DgvProductos.Size = New System.Drawing.Size(894, 156)
+        Me.DgvProductos.TabIndex = 0
+        '
+        'DBValyrianDataSet
+        '
+        Me.DBValyrianDataSet.DataSetName = "DBValyrianDataSet"
+        Me.DBValyrianDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
+        '
+        'DBValyrianDataSetBindingSource
+        '
+        Me.DBValyrianDataSetBindingSource.DataSource = Me.DBValyrianDataSet
+        Me.DBValyrianDataSetBindingSource.Position = 0
+        '
+        'CategoriaBindingSource
+        '
+        Me.CategoriaBindingSource.DataMember = "Categoria"
+        Me.CategoriaBindingSource.DataSource = Me.DBValyrianDataSetBindingSource
+        '
+        'CategoriaTableAdapter
+        '
+        Me.CategoriaTableAdapter.ClearBeforeFill = True
+        '
         'FrmProductos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlText
-        Me.ClientSize = New System.Drawing.Size(932, 653)
+        Me.ClientSize = New System.Drawing.Size(932, 853)
+        Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox1)
@@ -294,31 +369,45 @@ Partial Class FrmProductos
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
+        CType(Me.DgvProductos, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DBValyrianDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DBValyrianDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.CategoriaBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents Label1 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtCodigo As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label6 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbxCategoria As ComboBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label7 As Label
-    Friend WithEvents ComboBox2 As ComboBox
+    Friend WithEvents cbxUnidadMedida As ComboBox
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtUnidades As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtPrecio As TextBox
+    Friend WithEvents btnNuevo As Button
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents txtDescripcion As TextBox
     Friend WithEvents Label10 As Label
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnEliminar As Button
+    Friend WithEvents btnEditar As Button
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents txtBuscar As TextBox
+    Friend WithEvents DgvProductos As DataGridView
+    Friend WithEvents DBValyrianDataSetBindingSource As BindingSource
+    Friend WithEvents DBValyrianDataSet As DBValyrianDataSet
+    Friend WithEvents CategoriaBindingSource As BindingSource
+    Friend WithEvents CategoriaTableAdapter As DBValyrianDataSetTableAdapters.CategoriaTableAdapter
 End Class
