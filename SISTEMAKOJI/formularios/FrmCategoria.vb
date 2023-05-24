@@ -86,4 +86,10 @@
         DgvCategoria.DataSource = dao.BuscarRegistroNombre(txtBuscar.Text.Trim).Tables(0)
         DgvCategoria.Refresh()
     End Sub
+
+    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        txtCodigo.Clear()
+        txtNombre.Clear()
+        txtDescripcion.Clear()
+    End Sub
 End Class
