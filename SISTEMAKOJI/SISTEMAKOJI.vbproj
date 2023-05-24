@@ -74,6 +74,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="dao\DCategoria.vb" />
+    <Compile Include="dao\DEntradas.vb" />
     <Compile Include="dao\DProductos.vb" />
     <Compile Include="dao\DUsuarios.vb" />
     <Compile Include="DBValyrianDataSet.Designer.vb">
@@ -82,6 +83,7 @@
       <DependentUpon>DBValyrianDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Entidades\Categoria.vb" />
+    <Compile Include="Entidades\Entrada.vb" />
     <Compile Include="Entidades\Producto.vb" />
     <Compile Include="Entidades\Usuarios.vb" />
     <Compile Include="formularios\FrmCategoria.Designer.vb">
