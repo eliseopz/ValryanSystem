@@ -104,7 +104,7 @@
                        MsgBoxStyle.Information, "Ciudades")
             Exit Sub
         End If
-        Dim eliminado = dProducto.EliminarProducto(producto.IdCategoria)
+        Dim eliminado = dProducto.EliminarProducto(producto.IdProducto)
         If (eliminado) Then
             MsgBox("Registro eliminado exitosamente",
                        MsgBoxStyle.Information, "Ciudades")
