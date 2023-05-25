@@ -65,7 +65,7 @@
             Dim dProductos As New DProductos
             If (dProductos.EditarProductos(producto)) Then
                 MsgBox("Registro editado exitosamente",
-                   MsgBoxStyle.Information, "Ciudades")
+                MsgBoxStyle.Information, "Ciudades")
             End If
 
         Catch ex As Exception
@@ -84,6 +84,7 @@
         txtUnidades.Text = DgvProductos.Rows(fila).Cells(3).Value
         cbxUnidadMedida.Text = DgvProductos.Rows(fila).Cells(4).Value
         txtDescripcion.Text = DgvProductos.Rows(fila).Cells(5).Value
+        cbxCategoria.SelectedValue = DgvProductos.Rows(fila).Cells(6).Value
     End Sub
 
     Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click

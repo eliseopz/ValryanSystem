@@ -27,6 +27,7 @@ Partial Class FrmEntrada
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnEditar = New System.Windows.Forms.Button()
         Me.txtObservaciones = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnNuevo = New System.Windows.Forms.Button()
@@ -46,10 +47,10 @@ Partial Class FrmEntrada
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.DgvEntrada = New System.Windows.Forms.DataGridView()
-        Me.btnEditar = New System.Windows.Forms.Button()
-        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.DgvEntrada = New System.Windows.Forms.DataGridView()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -90,6 +91,7 @@ Partial Class FrmEntrada
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Info
+        Me.GroupBox2.Controls.Add(Me.TextBox1)
         Me.GroupBox2.Controls.Add(Me.btnEditar)
         Me.GroupBox2.Controls.Add(Me.txtObservaciones)
         Me.GroupBox2.Controls.Add(Me.Label7)
@@ -116,6 +118,17 @@ Partial Class FrmEntrada
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos de la entrada"
+        '
+        'btnEditar
+        '
+        Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
+        Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditar.Location = New System.Drawing.Point(489, 318)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(182, 52)
+        Me.btnEditar.TabIndex = 10
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
         'txtObservaciones
         '
@@ -287,26 +300,12 @@ Partial Class FrmEntrada
         Me.GroupBox3.TabIndex = 4
         Me.GroupBox3.TabStop = False
         '
-        'DgvEntrada
+        'txtBuscar
         '
-        Me.DgvEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvEntrada.Location = New System.Drawing.Point(6, 120)
-        Me.DgvEntrada.Name = "DgvEntrada"
-        Me.DgvEntrada.RowHeadersWidth = 51
-        Me.DgvEntrada.RowTemplate.Height = 24
-        Me.DgvEntrada.Size = New System.Drawing.Size(894, 182)
-        Me.DgvEntrada.TabIndex = 0
-        '
-        'btnEditar
-        '
-        Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
-        Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEditar.Location = New System.Drawing.Point(489, 318)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(182, 52)
-        Me.btnEditar.TabIndex = 10
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
+        Me.txtBuscar.Location = New System.Drawing.Point(251, 54)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(421, 30)
+        Me.txtBuscar.TabIndex = 12
         '
         'btnBuscar
         '
@@ -318,12 +317,22 @@ Partial Class FrmEntrada
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
         '
-        'txtBuscar
+        'DgvEntrada
         '
-        Me.txtBuscar.Location = New System.Drawing.Point(251, 54)
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(421, 30)
-        Me.txtBuscar.TabIndex = 12
+        Me.DgvEntrada.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvEntrada.Location = New System.Drawing.Point(6, 120)
+        Me.DgvEntrada.Name = "DgvEntrada"
+        Me.DgvEntrada.RowHeadersWidth = 51
+        Me.DgvEntrada.RowTemplate.Height = 24
+        Me.DgvEntrada.Size = New System.Drawing.Size(894, 182)
+        Me.DgvEntrada.TabIndex = 0
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Location = New System.Drawing.Point(424, 194)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(100, 30)
+        Me.TextBox1.TabIndex = 15
         '
         'FrmEntrada
         '
@@ -377,4 +386,5 @@ Partial Class FrmEntrada
     Friend WithEvents btnEditar As Button
     Friend WithEvents txtBuscar As TextBox
     Friend WithEvents btnBuscar As Button
+    Friend WithEvents TextBox1 As TextBox
 End Class

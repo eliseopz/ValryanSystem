@@ -61,8 +61,8 @@ Public Class DProductos
             cmd.Parameters.AddWithValue("@unidadMedidaProducto", producto.UnidadMedidaProducto)
             cmd.Parameters.AddWithValue("@descripcionProducto", producto.DescripcionProducto)
             cmd.Parameters.AddWithValue("@idCategoria", producto.IdCategoria)
-            cmd.CommandText = tSql
-            cmd.Connection = conn
+            'cmd.CommandText = tSql'
+            'cmd.Connection = conn'
             cmd.Connection.Open()
             If (cmd.ExecuteNonQuery <> 0) Then
                 flag = True

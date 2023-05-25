@@ -44,4 +44,31 @@ Public Class DEntradas
         End Try
         Return resultado
     End Function
+
+    Public Function EditarRegistro(ByVal entrada As Entrada) As Boolean
+        Dim flag = False
+        Try
+            Dim tSql = "UPDATE Entradas SET unidades = @unidades, fechaEntrada = @fechaEntrada, precioEntrada = @precioEntrada, observacionesEntrada = @observacionesEntrada, idProducto = @idProducto, idCategoria = @idCategoria where idEntrada = @idEntrada"
+            Dim conn As New SqlConnection(My.Settings.strConnectionn)
+            Dim cmd As New SqlCommand(tSql, conn)
+            cmd.Parameters.AddWithValue("@idEntrada", entrada.IdEntrada)
+            cmd.Parameters.AddWithValue("@unidades", entrada.Unidades)
+            cmd.Parameters.AddWithValue("@fechaEntrada", entrada.FechaEntrada)
+            cmd.Parameters.AddWithValue("@precioEntrada", entrada.PrecioEntrada)
+            cmd.Parameters.AddWithValue("@observacionesEntrada", entrada.ObservacionesEntrada)
+            cmd.Parameters.AddWithValue("@idProducto", entrada.IdProducto)
+            cmd.Parameters.AddWithValue("@idUsuario", entrada.IdUsuario)
+            'cmd.CommandText = tSql'
+            'cmd.Connection = conn'
+            cmd.Connection.Open()
+            If (cmd.ExecuteNonQuery <> 0) Then
+                flag = True
+            End If
+            cmd.Connection.Close()
+        Catch ex As Exception
+            MsgBox("Error al intentar modificar los datos",
+                  MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return flag
+    End Function
 End Class
