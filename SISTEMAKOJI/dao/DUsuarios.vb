@@ -128,7 +128,8 @@ Public Class DUsuarios
             End If
 
         Catch ex As Exception
-
+            MsgBox("Ha ocurrido un error al obtener los registros " & ex.Message,
+                  MsgBoxStyle.Critical, "ERROR")
         End Try
         Return usuario
     End Function

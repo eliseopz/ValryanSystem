@@ -57,14 +57,17 @@
     End Sub
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
+
         Try
             Dim entrada As New Entrada()
             entrada.IdEntrada = txtCodigo.Text.Trim
             entrada.Unidades = txtUnidades.Text.Trim
             entrada.PrecioEntrada = txtPrecioEntrada.Text.Trim
             entrada.ObservacionesEntrada = txtObservaciones.Text.Trim
-            entrada.IdProducto = cbxProducto.SelectedValue
-            entrada.IdUsuario = cbxUsuario.SelectedValue
+            Dim fila As Integer = DgvEntrada.CurrentRow.Index
+
+            entrada.IdProducto = DgvEntrada.Rows(fila).Cells(5).Value
+            entrada.IdUsuario = DgvEntrada.Rows(fila).Cells(6).Value
             entrada.FechaEntrada = dtpFechaEntrada.Value
             Dim dEntrada As New DEntradas
             If (dEntrada.EditarRegistro(entrada)) Then
@@ -92,5 +95,65 @@
         cbxUsuario.SelectedValue = DgvEntrada.Rows(fila).Cells(6).Value
 
 
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TextBox1.TextChanged
+
+    End Sub
+
+    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        txtCodigo.Clear()
+        txtUnidades.Clear()
+        txtPrecioEntrada.Clear()
+        txtObservaciones.Clear()
+        dtpFechaEntrada.ResetText()
+        cbxProducto.ResetText()
+        cbxUsuario.ResetText()
+    End Sub
+
+    Private Sub cbxProducto_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cbxProducto.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Dim codigo As Integer = txtCodigo.Text
+        Dim dEntrada As New DEntradas()
+        Dim entrada As New Entrada
+        entrada = dEntrada.BuscarRegistro(codigo)
+        If (entrada.IdEntrada = 0) Then
+            MsgBox("El registro no existe",
+                   MsgBoxStyle.Exclamation, "ADVERTENCIA")
+            Exit Sub
+        End If
+
+        Dim resp As VariantType
+        resp = (MsgBox("Desea eliminar este registro: " & entrada.IdEntrada, MsgBoxStyle.Question +
+                       MsgBoxStyle.YesNo, "ADVERTENCIA"))
+        If (resp = vbNo) Then
+            MsgBox("Operacion cancelada",
+                       MsgBoxStyle.Information, "Entradas")
+            Exit Sub
+        End If
+
+        Dim eliminado = dEntrada.EliminarRegistro(entrada.IdEntrada)
+        If (eliminado) Then
+            MsgBox("Registro eliminado exitosamente",
+                      MsgBoxStyle.Information, "Entradas")
+        Else
+            MsgBox("No se pudo eliminar el registro",
+                   MsgBoxStyle.Critical, "ERROR")
+        End If
+        LlenarRegistroEntrada()
+        LlenarProductos()
+        LlenarUsuarios()
+    End Sub
+
+    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
+
+    End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Dim dao As New DEntradas
+        DgvEntrada.DataSource = dao.buscarRegistros(txtBuscar.Text.Trim).Tables(0)
     End Sub
 End Class

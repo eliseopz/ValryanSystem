@@ -81,13 +81,13 @@
                        MsgBoxStyle.YesNo, "ADVERTENCIA"))
         If (resp = vbNo) Then
             MsgBox("Operacion cancelada",
-                       MsgBoxStyle.Information, "Ciudades")
+                       MsgBoxStyle.Information, "Usuarios")
             Exit Sub
         End If
         Dim eliminado = dUsuario.EliminarRegistros(usuario.IdUsuario)
         If (eliminado) Then
             MsgBox("Registro eliminado exitosamente",
-                       MsgBoxStyle.Information, "Ciudades")
+                       MsgBoxStyle.Information, "Usuarios")
         Else
             MsgBox("No se pudo eliminar el registro",
                    MsgBoxStyle.Critical, "ERROR")
