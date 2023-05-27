@@ -57,7 +57,7 @@
         End Set
     End Property
 
-    Public Property ObservacionesEntrada As String
+    Public Property ObservacionesSalida As String
         Get
             Return _observacionesSalida
         End Get

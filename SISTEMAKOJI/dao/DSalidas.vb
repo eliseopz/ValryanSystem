@@ -15,4 +15,32 @@ Public Class DSalidas
         End Try
         Return ds
     End Function
+
+    Public Function GuardarSalidas(ByVal salida As Salidas) As Boolean
+        Dim resultado As Boolean = False
+        Try
+            Dim conn As New SqlConnection(strConn)
+            Dim cmd As New SqlCommand()
+            Dim tSql = "insert into Salida(idSalida, unidadesSalida, fechaSalida, precioSalida, observacionesSalida, idProducto, idUsuario) values(@idSalida, @unidadesSalida, @fechaSalida, @precioSalida, @observacionesSalida, @idProducto, @idUsuario)"
+            cmd.Parameters.AddWithValue("@idSalida", salida.IdSalida)
+            cmd.Parameters.AddWithValue("@unidadesSalida", salida.UnidadesSalida)
+            cmd.Parameters.AddWithValue("@fechaSalida", salida.FechaSalida)
+            cmd.Parameters.AddWithValue("@precioSalida", salida.PrecioSalida)
+            cmd.Parameters.AddWithValue("@observacionesSalida", salida.ObservacionesSalida)
+            cmd.Parameters.AddWithValue("@idProducto", salida.IdProducto)
+            cmd.Parameters.AddWithValue("@idUsuario", salida.IdUsuario)
+            cmd.CommandType = CommandType.Text
+            cmd.CommandText = tSql
+            cmd.Connection = conn
+            cmd.Connection.Open()
+            If (cmd.ExecuteNonQuery <> 0) Then
+                resultado = True
+            End If
+            cmd.Connection.Close()
+        Catch ex As Exception
+            MsgBox("Error al intentar guardar los datos",
+                  MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return resultado
+    End Function
 End Class

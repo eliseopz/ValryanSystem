@@ -33,9 +33,9 @@ Partial Class FrmSalidas
         Me.txtObservaciones = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.cbxUsuario = New System.Windows.Forms.ComboBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnEliminar = New System.Windows.Forms.Button()
+        Me.btnNuevo = New System.Windows.Forms.Button()
+        Me.btnGuardar = New System.Windows.Forms.Button()
         Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.txtUnidades = New System.Windows.Forms.TextBox()
@@ -95,9 +95,9 @@ Partial Class FrmSalidas
         Me.GroupBox2.Controls.Add(Me.txtObservaciones)
         Me.GroupBox2.Controls.Add(Me.Label1)
         Me.GroupBox2.Controls.Add(Me.cbxUsuario)
-        Me.GroupBox2.Controls.Add(Me.Button3)
-        Me.GroupBox2.Controls.Add(Me.Button2)
-        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.btnEliminar)
+        Me.GroupBox2.Controls.Add(Me.btnNuevo)
+        Me.GroupBox2.Controls.Add(Me.btnGuardar)
         Me.GroupBox2.Controls.Add(Me.dtpFecha)
         Me.GroupBox2.Controls.Add(Me.Label7)
         Me.GroupBox2.Controls.Add(Me.txtUnidades)
@@ -168,38 +168,38 @@ Partial Class FrmSalidas
         Me.cbxUsuario.Size = New System.Drawing.Size(255, 32)
         Me.cbxUsuario.TabIndex = 3
         '
-        'Button3
+        'btnEliminar
         '
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(693, 376)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(182, 53)
-        Me.Button3.TabIndex = 11
-        Me.Button3.Text = "Eliminar"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
+        Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEliminar.Location = New System.Drawing.Point(693, 376)
+        Me.btnEliminar.Name = "btnEliminar"
+        Me.btnEliminar.Size = New System.Drawing.Size(182, 53)
+        Me.btnEliminar.TabIndex = 11
+        Me.btnEliminar.Text = "Eliminar"
+        Me.btnEliminar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnNuevo
         '
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(231, 376)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(182, 53)
-        Me.Button2.TabIndex = 9
-        Me.Button2.Text = "Nuevo"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
+        Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnNuevo.Location = New System.Drawing.Point(231, 376)
+        Me.btnNuevo.Name = "btnNuevo"
+        Me.btnNuevo.Size = New System.Drawing.Size(182, 53)
+        Me.btnNuevo.TabIndex = 9
+        Me.btnNuevo.Text = "Nuevo"
+        Me.btnNuevo.UseVisualStyleBackColor = True
         '
-        'Button1
+        'btnGuardar
         '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(11, 376)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(182, 53)
-        Me.Button1.TabIndex = 8
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
+        Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnGuardar.Location = New System.Drawing.Point(11, 376)
+        Me.btnGuardar.Name = "btnGuardar"
+        Me.btnGuardar.Size = New System.Drawing.Size(182, 53)
+        Me.btnGuardar.TabIndex = 8
+        Me.btnGuardar.Text = "Agregar"
+        Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'dtpFecha
         '
@@ -355,9 +355,9 @@ Partial Class FrmSalidas
     Friend WithEvents Label7 As Label
     Friend WithEvents txtObservaciones As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnNuevo As Button
+    Friend WithEvents btnGuardar As Button
+    Friend WithEvents btnEliminar As Button
     Friend WithEvents cbxUsuario As ComboBox
     Friend WithEvents txtPrecio As TextBox
     Friend WithEvents Label1 As Label
