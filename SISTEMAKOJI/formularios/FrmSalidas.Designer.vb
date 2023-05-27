@@ -27,6 +27,7 @@ Partial Class FrmSalidas
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.btnEditar = New System.Windows.Forms.Button()
         Me.txtPrecio = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.txtObservaciones = New System.Windows.Forms.TextBox()
@@ -45,10 +46,9 @@ Partial Class FrmSalidas
         Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.DgvSalidas = New System.Windows.Forms.DataGridView()
-        Me.btnEditar = New System.Windows.Forms.Button()
-        Me.txtBuscar = New System.Windows.Forms.TextBox()
         Me.btnBuscar = New System.Windows.Forms.Button()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.DgvSalidas = New System.Windows.Forms.DataGridView()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -114,6 +114,17 @@ Partial Class FrmSalidas
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos de la salida"
+        '
+        'btnEditar
+        '
+        Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
+        Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditar.Location = New System.Drawing.Point(472, 376)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(182, 53)
+        Me.btnEditar.TabIndex = 10
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
         'txtPrecio
         '
@@ -277,35 +288,6 @@ Partial Class FrmSalidas
         Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
         '
-        'DgvSalidas
-        '
-        Me.DgvSalidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvSalidas.Location = New System.Drawing.Point(6, 83)
-        Me.DgvSalidas.Name = "DgvSalidas"
-        Me.DgvSalidas.RowHeadersWidth = 51
-        Me.DgvSalidas.RowTemplate.Height = 24
-        Me.DgvSalidas.Size = New System.Drawing.Size(895, 150)
-        Me.DgvSalidas.TabIndex = 0
-        '
-        'btnEditar
-        '
-        Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
-        Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEditar.Location = New System.Drawing.Point(472, 376)
-        Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(182, 53)
-        Me.btnEditar.TabIndex = 10
-        Me.btnEditar.Text = "Editar"
-        Me.btnEditar.UseVisualStyleBackColor = True
-        '
-        'txtBuscar
-        '
-        Me.txtBuscar.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBuscar.Location = New System.Drawing.Point(230, 24)
-        Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(423, 30)
-        Me.txtBuscar.TabIndex = 12
-        '
         'btnBuscar
         '
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -315,6 +297,24 @@ Partial Class FrmSalidas
         Me.btnBuscar.TabIndex = 13
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
+        '
+        'txtBuscar
+        '
+        Me.txtBuscar.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuscar.Location = New System.Drawing.Point(230, 24)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(423, 30)
+        Me.txtBuscar.TabIndex = 12
+        '
+        'DgvSalidas
+        '
+        Me.DgvSalidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DgvSalidas.Location = New System.Drawing.Point(6, 83)
+        Me.DgvSalidas.Name = "DgvSalidas"
+        Me.DgvSalidas.RowHeadersWidth = 51
+        Me.DgvSalidas.RowTemplate.Height = 24
+        Me.DgvSalidas.Size = New System.Drawing.Size(895, 150)
+        Me.DgvSalidas.TabIndex = 0
         '
         'FrmSalidas
         '
