@@ -43,4 +43,29 @@ Public Class DSalidas
         End Try
         Return resultado
     End Function
+
+    Public Function EditarSalidas(ByVal salida As Salidas) As Boolean
+        Dim flag = False
+        Try
+            Dim tSql = "UPDATE Salida set unidadesSalida = @unidadesSalida, fechaSalida = @fechaSalida, precioSalida = @precioSalida, observacionesSalida = @observacionesSalida, idProducto = @idProducto, idUsuario = @idUsuario where idSalida = @idSalida"
+            Dim conn As New SqlConnection(My.Settings.strConnectionn)
+            Dim cmd As New SqlCommand(tSql, conn)
+            cmd.Parameters.AddWithValue("@idSalida", salida.IdSalida)
+            cmd.Parameters.AddWithValue("@unidadesSalida", salida.UnidadesSalida)
+            cmd.Parameters.AddWithValue("@fechaSalida", salida.FechaSalida)
+            cmd.Parameters.AddWithValue("@precioSalida", salida.PrecioSalida)
+            cmd.Parameters.AddWithValue("@observacionesSalida", salida.ObservacionesSalida)
+            cmd.Parameters.AddWithValue("@idProducto", salida.IdProducto)
+            cmd.Parameters.AddWithValue("@idUsuario", salida.IdUsuario)
+            cmd.Connection.Open()
+            If (cmd.ExecuteNonQuery <> 0) Then
+                flag = True
+            End If
+            cmd.Connection.Close()
+        Catch ex As Exception
+            MsgBox("Error al intentar modificar los datos",
+                  MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return flag
+    End Function
 End Class
