@@ -8,7 +8,17 @@
         DgvSalidas.Refresh()
     End Sub
 
+    Sub LlenarUsuarios()
+        Dim ds As New DataSet
+        ds = usuario.MostrarRegistros()
+        cbxUsuario.DataSource = ds.Tables(0)
+        cbxUsuario.Refresh()
+        cbxUsuario.DisplayMember = "Nombre de Usuario"
+        cbxUsuario.ValueMember = "Codigo"
+    End Sub
+
     Private Sub FrmSalidas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LlenarRegistroSalidas()
+        LlenarUsuarios()
     End Sub
 End Class
