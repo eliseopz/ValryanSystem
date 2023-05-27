@@ -77,8 +77,6 @@
                   MsgBoxStyle.Critical, "ERROR")
         End Try
         LlenarRegistroSalidas()
-        LlenarUsuarios()
-        LLenarProductos()
     End Sub
 
     Private Sub DgvSalidas_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DgvSalidas.CellClick
@@ -90,5 +88,46 @@
         txtObservaciones.Text = DgvSalidas.Rows(fila).Cells(4).Value
         cbxProducto.SelectedValue = DgvSalidas.Rows(fila).Cells(5).Value
         cbxUsuario.SelectedValue = DgvSalidas.Rows(fila).Cells(6).Value
+    End Sub
+
+    Private Sub btnEliminar_Click(sender As Object, e As EventArgs) Handles btnEliminar.Click
+        Dim codigo As Integer = txtCodigo.Text
+        Dim dSalida As New DSalidas()
+        Dim salidas As New Salidas
+        salidas = dSalida.BuscarSalidaId(codigo)
+        If (salidas.IdSalida = 0) Then
+            MsgBox("El registro no existe",
+                  MsgBoxStyle.Exclamation, "ADVERTENCIA")
+            Exit Sub
+        End If
+
+        Dim resp As VariantType
+        resp = (MsgBox("Desea eliminar este registro: " & salidas.IdSalida, MsgBoxStyle.Question +
+                       MsgBoxStyle.YesNo, "ADVERTENCIA"))
+        If (resp = vbNo) Then
+            MsgBox("Operacion cancelada",
+                       MsgBoxStyle.Information, "Entradas")
+            Exit Sub
+        End If
+        Dim eliminado = dSalida.EliminarSalidas(salidas.IdSalida)
+        If (eliminado) Then
+            MsgBox("Registro eliminado exitosamente",
+                      MsgBoxStyle.Information, "Entradas")
+        Else
+            MsgBox("No se pudo eliminar el registro",
+                   MsgBoxStyle.Critical, "ERROR")
+        End If
+        LlenarRegistroSalidas()
+        LlenarUsuarios()
+        LLenarProductos()
+
+    End Sub
+
+    Private Sub btnNuevo_Click(sender As Object, e As EventArgs) Handles btnNuevo.Click
+        txtPrecio.Clear()
+        txtObservaciones.Clear()
+        txtUnidades.Clear()
+        txtCodigo.Clear()
+        dtpFecha.ResetText()
     End Sub
 End Class

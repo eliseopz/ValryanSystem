@@ -68,4 +68,49 @@ Public Class DSalidas
         End Try
         Return flag
     End Function
+
+    Public Function EliminarSalidas(ByVal idSalida As Integer) As Boolean
+        Dim resp As Boolean = False
+        Try
+            Dim tSql As String = "delete from Salida where idSalida = @idSalida"
+            Dim conn As New SqlConnection(strConn)
+            conn.Open()
+            Dim cmd As New SqlCommand(tSql, conn)
+            cmd.CommandType = CommandType.Text
+            cmd.Parameters.AddWithValue("@idSalida", idSalida)
+            If (cmd.ExecuteNonQuery <> 0) Then
+                resp = True
+            End If
+            conn.Close()
+        Catch ex As Exception
+            resp = False
+        End Try
+        Return resp
+    End Function
+
+    Public Function BuscarSalidaId(ByVal idSalida As Integer) As Salidas
+        Dim salida As New Salidas
+        Try
+            Dim tSql As String = "Select * from Salida where idSalida = @idSalida"
+            Dim conn As New SqlConnection(strConn)
+            Dim tbl As New DataTable
+            Dim da As New SqlDataAdapter(tSql, conn)
+            da.SelectCommand.Parameters.AddWithValue("@idSalida", idSalida)
+            da.Fill(tbl)
+            If tbl.Rows.Count > 0 Then
+                salida.IdSalida = tbl.Rows(0).Item("idSalida")
+                salida.UnidadesSalida = tbl.Rows(0).Item("unidadesSalida")
+                salida.FechaSalida = tbl.Rows(0).Item("fechaSalida")
+                salida.PrecioSalida = tbl.Rows(0).Item("precioSalida")
+                salida.ObservacionesSalida = tbl.Rows(0).Item("observacionesSalida")
+                salida.IdProducto = tbl.Rows(0).Item("idProducto")
+                salida.IdUsuario = tbl.Rows(0).Item("idUsuario")
+
+            End If
+        Catch ex As Exception
+            MsgBox("Error al intentar encontrar los datos",
+                  MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return salida
+    End Function
 End Class

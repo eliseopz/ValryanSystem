@@ -475,7 +475,6 @@ Partial Class FrmUsuarios
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "FrmUsuarios"
-        Me.Text = "Registro de Usuarios"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
