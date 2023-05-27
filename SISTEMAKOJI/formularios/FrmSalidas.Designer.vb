@@ -27,25 +27,28 @@ Partial Class FrmSalidas
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.txtPrecio = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.txtObservaciones = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.cbxUsuario = New System.Windows.Forms.ComboBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
+        Me.dtpFecha = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtUnidades = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.cbxProducto = New System.Windows.Forms.ComboBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtCodigo = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.DgvSalidas = New System.Windows.Forms.DataGridView()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.btnEditar = New System.Windows.Forms.Button()
+        Me.txtBuscar = New System.Windows.Forms.TextBox()
+        Me.btnBuscar = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -86,22 +89,23 @@ Partial Class FrmSalidas
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Info
-        Me.GroupBox2.Controls.Add(Me.TextBox2)
+        Me.GroupBox2.Controls.Add(Me.btnEditar)
+        Me.GroupBox2.Controls.Add(Me.txtPrecio)
         Me.GroupBox2.Controls.Add(Me.Label8)
-        Me.GroupBox2.Controls.Add(Me.TextBox4)
+        Me.GroupBox2.Controls.Add(Me.txtObservaciones)
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.ComboBox2)
+        Me.GroupBox2.Controls.Add(Me.cbxUsuario)
         Me.GroupBox2.Controls.Add(Me.Button3)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Button1)
-        Me.GroupBox2.Controls.Add(Me.DateTimePicker1)
+        Me.GroupBox2.Controls.Add(Me.dtpFecha)
         Me.GroupBox2.Controls.Add(Me.Label7)
-        Me.GroupBox2.Controls.Add(Me.TextBox3)
+        Me.GroupBox2.Controls.Add(Me.txtUnidades)
         Me.GroupBox2.Controls.Add(Me.Label6)
         Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.ComboBox1)
+        Me.GroupBox2.Controls.Add(Me.cbxProducto)
         Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
+        Me.GroupBox2.Controls.Add(Me.txtCodigo)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox2.Location = New System.Drawing.Point(12, 121)
@@ -111,54 +115,12 @@ Partial Class FrmSalidas
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos de la salida"
         '
-        'ComboBox2
+        'txtPrecio
         '
-        Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(136, 126)
-        Me.ComboBox2.Name = "ComboBox2"
-        Me.ComboBox2.Size = New System.Drawing.Size(255, 32)
-        Me.ComboBox2.TabIndex = 5
-        '
-        'Button3
-        '
-        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(613, 376)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(182, 53)
-        Me.Button3.TabIndex = 14
-        Me.Button3.Text = "Eliminar"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(362, 376)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(182, 53)
-        Me.Button2.TabIndex = 13
-        Me.Button2.Text = "Nuevo"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(118, 376)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(182, 53)
-        Me.Button1.TabIndex = 12
-        Me.Button1.Text = "Agregar"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(136, 286)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(712, 58)
-        Me.TextBox4.TabIndex = 11
+        Me.txtPrecio.Location = New System.Drawing.Point(136, 214)
+        Me.txtPrecio.Name = "txtPrecio"
+        Me.txtPrecio.Size = New System.Drawing.Size(248, 30)
+        Me.txtPrecio.TabIndex = 5
         '
         'Label8
         '
@@ -170,33 +132,91 @@ Partial Class FrmSalidas
         Me.Label8.TabIndex = 10
         Me.Label8.Text = "Observaciones:"
         '
-        'DateTimePicker1
+        'txtObservaciones
         '
-        Me.DateTimePicker1.Location = New System.Drawing.Point(590, 214)
-        Me.DateTimePicker1.Name = "DateTimePicker1"
-        Me.DateTimePicker1.Size = New System.Drawing.Size(258, 30)
-        Me.DateTimePicker1.TabIndex = 9
+        Me.txtObservaciones.Location = New System.Drawing.Point(136, 286)
+        Me.txtObservaciones.Multiline = True
+        Me.txtObservaciones.Name = "txtObservaciones"
+        Me.txtObservaciones.Size = New System.Drawing.Size(739, 58)
+        Me.txtObservaciones.TabIndex = 7
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(7, 213)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(68, 24)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "Precio:"
+        '
+        'cbxUsuario
+        '
+        Me.cbxUsuario.FormattingEnabled = True
+        Me.cbxUsuario.Location = New System.Drawing.Point(136, 126)
+        Me.cbxUsuario.Name = "cbxUsuario"
+        Me.cbxUsuario.Size = New System.Drawing.Size(255, 32)
+        Me.cbxUsuario.TabIndex = 3
+        '
+        'Button3
+        '
+        Me.Button3.Image = CType(resources.GetObject("Button3.Image"), System.Drawing.Image)
+        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button3.Location = New System.Drawing.Point(693, 376)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(182, 53)
+        Me.Button3.TabIndex = 11
+        Me.Button3.Text = "Eliminar"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Image = CType(resources.GetObject("Button2.Image"), System.Drawing.Image)
+        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button2.Location = New System.Drawing.Point(231, 376)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(182, 53)
+        Me.Button2.TabIndex = 9
+        Me.Button2.Text = "Nuevo"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Image = CType(resources.GetObject("Button1.Image"), System.Drawing.Image)
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.Button1.Location = New System.Drawing.Point(11, 376)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(182, 53)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "Agregar"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'dtpFecha
+        '
+        Me.dtpFecha.Location = New System.Drawing.Point(617, 214)
+        Me.dtpFecha.Name = "dtpFecha"
+        Me.dtpFecha.Size = New System.Drawing.Size(258, 30)
+        Me.dtpFecha.TabIndex = 6
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(476, 213)
+        Me.Label7.Location = New System.Drawing.Point(503, 213)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(64, 24)
         Me.Label7.TabIndex = 8
         Me.Label7.Text = "Fecha:"
         '
-        'TextBox3
+        'txtUnidades
         '
-        Me.TextBox3.Location = New System.Drawing.Point(590, 123)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(258, 30)
-        Me.TextBox3.TabIndex = 7
+        Me.txtUnidades.Location = New System.Drawing.Point(617, 123)
+        Me.txtUnidades.Name = "txtUnidades"
+        Me.txtUnidades.Size = New System.Drawing.Size(258, 30)
+        Me.txtUnidades.TabIndex = 4
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(476, 129)
+        Me.Label6.Location = New System.Drawing.Point(503, 129)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(94, 24)
         Me.Label6.TabIndex = 6
@@ -211,29 +231,29 @@ Partial Class FrmSalidas
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Usuario:"
         '
-        'ComboBox1
+        'cbxProducto
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(590, 33)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(258, 32)
-        Me.ComboBox1.TabIndex = 3
+        Me.cbxProducto.FormattingEnabled = True
+        Me.cbxProducto.Location = New System.Drawing.Point(617, 33)
+        Me.cbxProducto.Name = "cbxProducto"
+        Me.cbxProducto.Size = New System.Drawing.Size(258, 32)
+        Me.cbxProducto.TabIndex = 2
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(476, 37)
+        Me.Label4.Location = New System.Drawing.Point(503, 37)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(93, 24)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Producto:"
         '
-        'TextBox1
+        'txtCodigo
         '
-        Me.TextBox1.Location = New System.Drawing.Point(136, 35)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(255, 30)
-        Me.TextBox1.TabIndex = 1
+        Me.txtCodigo.Location = New System.Drawing.Point(136, 35)
+        Me.txtCodigo.Name = "txtCodigo"
+        Me.txtCodigo.Size = New System.Drawing.Size(255, 30)
+        Me.txtCodigo.TabIndex = 1
         '
         'Label3
         '
@@ -247,7 +267,10 @@ Partial Class FrmSalidas
         'GroupBox3
         '
         Me.GroupBox3.BackColor = System.Drawing.SystemColors.Info
+        Me.GroupBox3.Controls.Add(Me.btnBuscar)
+        Me.GroupBox3.Controls.Add(Me.txtBuscar)
         Me.GroupBox3.Controls.Add(Me.DgvSalidas)
+        Me.GroupBox3.Font = New System.Drawing.Font("Microsoft YaHei", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(13, 602)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(907, 239)
@@ -264,21 +287,34 @@ Partial Class FrmSalidas
         Me.DgvSalidas.Size = New System.Drawing.Size(895, 150)
         Me.DgvSalidas.TabIndex = 0
         '
-        'Label1
+        'btnEditar
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(7, 213)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(68, 24)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Precio:"
+        Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
+        Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEditar.Location = New System.Drawing.Point(472, 376)
+        Me.btnEditar.Name = "btnEditar"
+        Me.btnEditar.Size = New System.Drawing.Size(182, 53)
+        Me.btnEditar.TabIndex = 10
+        Me.btnEditar.Text = "Editar"
+        Me.btnEditar.UseVisualStyleBackColor = True
         '
-        'TextBox2
+        'txtBuscar
         '
-        Me.TextBox2.Location = New System.Drawing.Point(136, 214)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(248, 30)
-        Me.TextBox2.TabIndex = 16
+        Me.txtBuscar.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtBuscar.Location = New System.Drawing.Point(230, 24)
+        Me.txtBuscar.Name = "txtBuscar"
+        Me.txtBuscar.Size = New System.Drawing.Size(423, 30)
+        Me.txtBuscar.TabIndex = 12
+        '
+        'btnBuscar
+        '
+        Me.btnBuscar.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnBuscar.Location = New System.Drawing.Point(692, 13)
+        Me.btnBuscar.Name = "btnBuscar"
+        Me.btnBuscar.Size = New System.Drawing.Size(182, 53)
+        Me.btnBuscar.TabIndex = 13
+        Me.btnBuscar.Text = "Buscar"
+        Me.btnBuscar.UseVisualStyleBackColor = True
         '
         'FrmSalidas
         '
@@ -298,6 +334,7 @@ Partial Class FrmSalidas
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox3.PerformLayout()
         CType(Me.DgvSalidas, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
@@ -307,23 +344,26 @@ Partial Class FrmSalidas
     Friend WithEvents Label2 As Label
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtCodigo As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents ComboBox1 As ComboBox
+    Friend WithEvents cbxProducto As ComboBox
     Friend WithEvents Label4 As Label
     Friend WithEvents Label5 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtUnidades As TextBox
     Friend WithEvents Label6 As Label
-    Friend WithEvents DateTimePicker1 As DateTimePicker
+    Friend WithEvents dtpFecha As DateTimePicker
     Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents txtObservaciones As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents ComboBox2 As ComboBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents cbxUsuario As ComboBox
+    Friend WithEvents txtPrecio As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents DgvSalidas As DataGridView
+    Friend WithEvents btnEditar As Button
+    Friend WithEvents btnBuscar As Button
+    Friend WithEvents txtBuscar As TextBox
 End Class

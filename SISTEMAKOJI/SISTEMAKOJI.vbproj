@@ -85,6 +85,7 @@
     <Compile Include="Entidades\Categoria.vb" />
     <Compile Include="Entidades\Entrada.vb" />
     <Compile Include="Entidades\Producto.vb" />
+    <Compile Include="Entidades\Salidas.vb" />
     <Compile Include="Entidades\Usuarios.vb" />
     <Compile Include="formularios\FrmCategoria.Designer.vb">
       <DependentUpon>FrmCategoria.vb</DependentUpon>
