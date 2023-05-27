@@ -76,6 +76,7 @@
     <Compile Include="dao\DCategoria.vb" />
     <Compile Include="dao\DEntradas.vb" />
     <Compile Include="dao\DProductos.vb" />
+    <Compile Include="dao\DSalidas.vb" />
     <Compile Include="dao\DUsuarios.vb" />
     <Compile Include="DBValyrianDataSet.Designer.vb">
       <AutoGen>True</AutoGen>
