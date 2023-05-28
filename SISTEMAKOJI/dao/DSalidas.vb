@@ -113,4 +113,20 @@ Public Class DSalidas
         End Try
         Return salida
     End Function
+
+    Public Function BuscarRegistro(ByVal idSalida As Integer) As DataSet
+        Dim ds As New DataSet
+        idSalida = idSalida + 0
+        Try
+            Dim conn As New SqlConnection(strConn)
+            Dim tSql As String = "Select idSalida as N'Codigo', unidadesSalida as N'Unidades', fechaSalida as N'Fecha de Salida', precioSalida as N'Precio de Salida', observacionesSalida as N'Observaciones', idProducto as N'Producto', idUsuario as N'Usuario' from Salida where idSalida like @idSalida"
+            Dim da As New SqlDataAdapter(tSql, conn)
+            da.SelectCommand.Parameters.AddWithValue("@idSalida", idSalida)
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox("Ha ocurrido un error al obtener los registros " & ex.Message,
+                  MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return ds
+    End Function
 End Class

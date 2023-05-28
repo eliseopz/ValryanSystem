@@ -130,4 +130,9 @@
         txtCodigo.Clear()
         dtpFecha.ResetText()
     End Sub
+
+    Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
+        Dim dao As New DSalidas
+        DgvSalidas.DataSource = dao.BuscarRegistro(txtBuscar.Text.Trim).Tables(0)
+    End Sub
 End Class
