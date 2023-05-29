@@ -52,6 +52,11 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.DataTable1DataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSet.CategoriaRow">
 <summary>
 Represents strongly named DataRow class.
@@ -73,6 +78,11 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSet.UsuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.DataTable1Row">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -102,6 +112,11 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.DataTable1RowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSetTableAdapters.CategoriaTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -123,6 +138,11 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSetTableAdapters.UsuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSetTableAdapters.DataTable1TableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>

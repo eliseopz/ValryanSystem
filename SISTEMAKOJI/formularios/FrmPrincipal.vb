@@ -34,4 +34,10 @@
     Private Sub FrmPrincipal_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub ProductosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem1.Click
+        Dim frm As New frmRptProdCategoria
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class
