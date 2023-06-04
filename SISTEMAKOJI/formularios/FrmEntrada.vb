@@ -41,7 +41,9 @@
             entrada.ObservacionesEntrada = txtObservaciones.Text.Trim
             entrada.IdProducto = cbxProducto.SelectedValue
             entrada.IdUsuario = cbxUsuario.SelectedValue
-            entrada.FechaEntrada = dtpFechaEntrada.Value
+            Dim fechaseleccionada As DateTime = dtpFechaEntrada.Value
+            Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
+            entrada.FechaEntrada = fechaformateada
             Dim dEntrada As New DEntradas
             If (dEntrada.GuardarEntradas(entrada)) Then
                 MsgBox("Registro guardado exitosamente",
@@ -68,7 +70,9 @@
 
             entrada.IdProducto = DgvEntrada.Rows(fila).Cells(5).Value
             entrada.IdUsuario = DgvEntrada.Rows(fila).Cells(6).Value
-            entrada.FechaEntrada = dtpFechaEntrada.Value
+            Dim fechaseleccionada As DateTime = dtpFechaEntrada.Value
+            Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
+            entrada.FechaEntrada = fechaformateada
             Dim dEntrada As New DEntradas
             If (dEntrada.EditarRegistro(entrada)) Then
                 MsgBox("Registro editado exitosamente",
@@ -155,5 +159,10 @@
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         Dim dao As New DEntradas
         DgvEntrada.DataSource = dao.buscarRegistros(txtBuscar.Text.Trim).Tables(0)
+    End Sub
+
+    Private Sub dtpFechaEntrada_ValueChanged(sender As Object, e As EventArgs) Handles dtpFechaEntrada.ValueChanged
+        Dim fechaseleccionada As DateTime = dtpFechaEntrada.Value
+        Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
     End Sub
 End Class

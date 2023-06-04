@@ -52,7 +52,9 @@
                 Dim sexo As Boolean = False
                 usuario.Sexo = sexo
             End If
-            usuario.FechaNacimiento = FechaNacPicker.Value
+            Dim fechaseleccionada As DateTime = FechaNacPicker.Value
+            Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
+            usuario.FechaNacimiento = fechaformateada
             Dim dUsuario As New DUsuarios
             If (dUsuario.GuardarRegistros(usuario)) Then
                 MsgBox("Registro guardado exitosamente",
@@ -124,7 +126,9 @@
                 Dim sexo As Boolean = False
                 usuario.Sexo = sexo
             End If
-            usuario.FechaNacimiento = FechaNacPicker.Value
+            Dim fechaseleccionada As DateTime = FechaNacPicker.Value
+            Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
+            usuario.FechaNacimiento = fechaformateada
             Dim dao As New DUsuarios
             If (dao.EditarRegistros(usuario)) Then
                 MsgBox("Registro editado exitosamente",
@@ -171,5 +175,8 @@
         DgvUsuarios.Refresh()
     End Sub
 
-
+    Private Sub FechaNacPicker_ValueChanged(sender As Object, e As EventArgs) Handles FechaNacPicker.ValueChanged
+        Dim fechaseleccionada As DateTime = FechaNacPicker.Value
+        Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
+    End Sub
 End Class

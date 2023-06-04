@@ -60,9 +60,11 @@ Partial Class FrmSalidas
         '
         Me.GroupBox1.BackColor = System.Drawing.SystemColors.Info
         Me.GroupBox1.Controls.Add(Me.Label2)
-        Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
+        Me.GroupBox1.Location = New System.Drawing.Point(9, 10)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(699, 103)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Size = New System.Drawing.Size(524, 84)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         '
@@ -70,18 +72,20 @@ Partial Class FrmSalidas
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(6, 18)
+        Me.Label2.Location = New System.Drawing.Point(4, 15)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(204, 27)
+        Me.Label2.Size = New System.Drawing.Size(166, 22)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Registro de Salidas"
         '
         'PictureBox1
         '
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(717, 12)
+        Me.PictureBox1.Location = New System.Drawing.Point(538, 10)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(203, 103)
+        Me.PictureBox1.Size = New System.Drawing.Size(152, 84)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox1.TabIndex = 3
         Me.PictureBox1.TabStop = False
@@ -108,9 +112,11 @@ Partial Class FrmSalidas
         Me.GroupBox2.Controls.Add(Me.txtCodigo)
         Me.GroupBox2.Controls.Add(Me.Label3)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 121)
+        Me.GroupBox2.Location = New System.Drawing.Point(9, 98)
+        Me.GroupBox2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(908, 474)
+        Me.GroupBox2.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox2.Size = New System.Drawing.Size(681, 385)
         Me.GroupBox2.TabIndex = 4
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Datos de la salida"
@@ -119,62 +125,69 @@ Partial Class FrmSalidas
         '
         Me.btnEditar.Image = CType(resources.GetObject("btnEditar.Image"), System.Drawing.Image)
         Me.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEditar.Location = New System.Drawing.Point(472, 376)
+        Me.btnEditar.Location = New System.Drawing.Point(354, 306)
+        Me.btnEditar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnEditar.Name = "btnEditar"
-        Me.btnEditar.Size = New System.Drawing.Size(182, 53)
+        Me.btnEditar.Size = New System.Drawing.Size(136, 43)
         Me.btnEditar.TabIndex = 10
         Me.btnEditar.Text = "Editar"
         Me.btnEditar.UseVisualStyleBackColor = True
         '
         'txtPrecio
         '
-        Me.txtPrecio.Location = New System.Drawing.Point(136, 214)
+        Me.txtPrecio.Location = New System.Drawing.Point(102, 174)
+        Me.txtPrecio.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtPrecio.Name = "txtPrecio"
-        Me.txtPrecio.Size = New System.Drawing.Size(248, 30)
+        Me.txtPrecio.Size = New System.Drawing.Size(187, 25)
         Me.txtPrecio.TabIndex = 5
         '
         'Label8
         '
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.Location = New System.Drawing.Point(7, 286)
+        Me.Label8.Location = New System.Drawing.Point(5, 232)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(123, 19)
+        Me.Label8.Size = New System.Drawing.Size(100, 17)
         Me.Label8.TabIndex = 10
         Me.Label8.Text = "Observaciones:"
         '
         'txtObservaciones
         '
-        Me.txtObservaciones.Location = New System.Drawing.Point(136, 286)
+        Me.txtObservaciones.Location = New System.Drawing.Point(102, 232)
+        Me.txtObservaciones.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtObservaciones.Multiline = True
         Me.txtObservaciones.Name = "txtObservaciones"
-        Me.txtObservaciones.Size = New System.Drawing.Size(739, 58)
+        Me.txtObservaciones.Size = New System.Drawing.Size(555, 48)
         Me.txtObservaciones.TabIndex = 7
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(7, 213)
+        Me.Label1.Location = New System.Drawing.Point(5, 173)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(68, 24)
+        Me.Label1.Size = New System.Drawing.Size(56, 19)
         Me.Label1.TabIndex = 15
         Me.Label1.Text = "Precio:"
         '
         'cbxUsuario
         '
         Me.cbxUsuario.FormattingEnabled = True
-        Me.cbxUsuario.Location = New System.Drawing.Point(136, 126)
+        Me.cbxUsuario.Location = New System.Drawing.Point(102, 102)
+        Me.cbxUsuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cbxUsuario.Name = "cbxUsuario"
-        Me.cbxUsuario.Size = New System.Drawing.Size(255, 32)
+        Me.cbxUsuario.Size = New System.Drawing.Size(192, 27)
         Me.cbxUsuario.TabIndex = 3
         '
         'btnEliminar
         '
         Me.btnEliminar.Image = CType(resources.GetObject("btnEliminar.Image"), System.Drawing.Image)
         Me.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnEliminar.Location = New System.Drawing.Point(693, 376)
+        Me.btnEliminar.Location = New System.Drawing.Point(520, 306)
+        Me.btnEliminar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnEliminar.Name = "btnEliminar"
-        Me.btnEliminar.Size = New System.Drawing.Size(182, 53)
+        Me.btnEliminar.Size = New System.Drawing.Size(136, 43)
         Me.btnEliminar.TabIndex = 11
         Me.btnEliminar.Text = "Eliminar"
         Me.btnEliminar.UseVisualStyleBackColor = True
@@ -183,9 +196,10 @@ Partial Class FrmSalidas
         '
         Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
         Me.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnNuevo.Location = New System.Drawing.Point(231, 376)
+        Me.btnNuevo.Location = New System.Drawing.Point(173, 306)
+        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(182, 53)
+        Me.btnNuevo.Size = New System.Drawing.Size(136, 43)
         Me.btnNuevo.TabIndex = 9
         Me.btnNuevo.Text = "Nuevo"
         Me.btnNuevo.UseVisualStyleBackColor = True
@@ -194,84 +208,96 @@ Partial Class FrmSalidas
         '
         Me.btnGuardar.Image = CType(resources.GetObject("btnGuardar.Image"), System.Drawing.Image)
         Me.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.btnGuardar.Location = New System.Drawing.Point(11, 376)
+        Me.btnGuardar.Location = New System.Drawing.Point(8, 306)
+        Me.btnGuardar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnGuardar.Name = "btnGuardar"
-        Me.btnGuardar.Size = New System.Drawing.Size(182, 53)
+        Me.btnGuardar.Size = New System.Drawing.Size(136, 43)
         Me.btnGuardar.TabIndex = 8
         Me.btnGuardar.Text = "Agregar"
         Me.btnGuardar.UseVisualStyleBackColor = True
         '
         'dtpFecha
         '
-        Me.dtpFecha.Location = New System.Drawing.Point(617, 214)
+        Me.dtpFecha.Location = New System.Drawing.Point(463, 174)
+        Me.dtpFecha.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dtpFecha.MaxDate = New Date(2419, 12, 31, 0, 0, 0, 0)
         Me.dtpFecha.Name = "dtpFecha"
-        Me.dtpFecha.Size = New System.Drawing.Size(258, 30)
+        Me.dtpFecha.Size = New System.Drawing.Size(194, 25)
         Me.dtpFecha.TabIndex = 6
+        Me.dtpFecha.Value = New Date(2023, 6, 3, 0, 0, 0, 0)
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(503, 213)
+        Me.Label7.Location = New System.Drawing.Point(377, 173)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(64, 24)
+        Me.Label7.Size = New System.Drawing.Size(53, 19)
         Me.Label7.TabIndex = 8
         Me.Label7.Text = "Fecha:"
         '
         'txtUnidades
         '
-        Me.txtUnidades.Location = New System.Drawing.Point(617, 123)
+        Me.txtUnidades.Location = New System.Drawing.Point(463, 100)
+        Me.txtUnidades.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtUnidades.Name = "txtUnidades"
-        Me.txtUnidades.Size = New System.Drawing.Size(258, 30)
+        Me.txtUnidades.Size = New System.Drawing.Size(194, 25)
         Me.txtUnidades.TabIndex = 4
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(503, 129)
+        Me.Label6.Location = New System.Drawing.Point(377, 105)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(94, 24)
+        Me.Label6.Size = New System.Drawing.Size(78, 19)
         Me.Label6.TabIndex = 6
         Me.Label6.Text = "Unidades:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(7, 119)
+        Me.Label5.Location = New System.Drawing.Point(5, 97)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(80, 24)
+        Me.Label5.Size = New System.Drawing.Size(67, 19)
         Me.Label5.TabIndex = 4
         Me.Label5.Text = "Usuario:"
         '
         'cbxProducto
         '
         Me.cbxProducto.FormattingEnabled = True
-        Me.cbxProducto.Location = New System.Drawing.Point(617, 33)
+        Me.cbxProducto.Location = New System.Drawing.Point(463, 27)
+        Me.cbxProducto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.cbxProducto.Name = "cbxProducto"
-        Me.cbxProducto.Size = New System.Drawing.Size(258, 32)
+        Me.cbxProducto.Size = New System.Drawing.Size(194, 27)
         Me.cbxProducto.TabIndex = 2
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(503, 37)
+        Me.Label4.Location = New System.Drawing.Point(377, 30)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(93, 24)
+        Me.Label4.Size = New System.Drawing.Size(77, 19)
         Me.Label4.TabIndex = 2
         Me.Label4.Text = "Producto:"
         '
         'txtCodigo
         '
-        Me.txtCodigo.Location = New System.Drawing.Point(136, 35)
+        Me.txtCodigo.Location = New System.Drawing.Point(102, 28)
+        Me.txtCodigo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCodigo.Name = "txtCodigo"
-        Me.txtCodigo.Size = New System.Drawing.Size(255, 30)
+        Me.txtCodigo.Size = New System.Drawing.Size(192, 25)
         Me.txtCodigo.TabIndex = 1
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(7, 37)
+        Me.Label3.Location = New System.Drawing.Point(5, 30)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(75, 24)
+        Me.Label3.Size = New System.Drawing.Size(62, 19)
         Me.Label3.TabIndex = 0
         Me.Label3.Text = "Codigo:"
         '
@@ -282,18 +308,21 @@ Partial Class FrmSalidas
         Me.GroupBox3.Controls.Add(Me.txtBuscar)
         Me.GroupBox3.Controls.Add(Me.DgvSalidas)
         Me.GroupBox3.Font = New System.Drawing.Font("Microsoft YaHei", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox3.Location = New System.Drawing.Point(13, 602)
+        Me.GroupBox3.Location = New System.Drawing.Point(10, 489)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(907, 239)
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox3.Size = New System.Drawing.Size(680, 194)
         Me.GroupBox3.TabIndex = 5
         Me.GroupBox3.TabStop = False
         '
         'btnBuscar
         '
         Me.btnBuscar.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnBuscar.Location = New System.Drawing.Point(692, 13)
+        Me.btnBuscar.Location = New System.Drawing.Point(519, 11)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(182, 53)
+        Me.btnBuscar.Size = New System.Drawing.Size(136, 43)
         Me.btnBuscar.TabIndex = 13
         Me.btnBuscar.Text = "Buscar"
         Me.btnBuscar.UseVisualStyleBackColor = True
@@ -301,31 +330,34 @@ Partial Class FrmSalidas
         'txtBuscar
         '
         Me.txtBuscar.Font = New System.Drawing.Font("Microsoft YaHei", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtBuscar.Location = New System.Drawing.Point(230, 24)
+        Me.txtBuscar.Location = New System.Drawing.Point(172, 20)
+        Me.txtBuscar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtBuscar.Name = "txtBuscar"
-        Me.txtBuscar.Size = New System.Drawing.Size(423, 30)
+        Me.txtBuscar.Size = New System.Drawing.Size(318, 25)
         Me.txtBuscar.TabIndex = 12
         '
         'DgvSalidas
         '
         Me.DgvSalidas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DgvSalidas.Location = New System.Drawing.Point(6, 83)
+        Me.DgvSalidas.Location = New System.Drawing.Point(4, 67)
+        Me.DgvSalidas.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DgvSalidas.Name = "DgvSalidas"
         Me.DgvSalidas.RowHeadersWidth = 51
         Me.DgvSalidas.RowTemplate.Height = 24
-        Me.DgvSalidas.Size = New System.Drawing.Size(895, 150)
+        Me.DgvSalidas.Size = New System.Drawing.Size(671, 122)
         Me.DgvSalidas.TabIndex = 0
         '
         'FrmSalidas
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlText
-        Me.ClientSize = New System.Drawing.Size(932, 853)
+        Me.ClientSize = New System.Drawing.Size(699, 693)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.GroupBox1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "FrmSalidas"
         Me.Text = "Registro de Salidas"
         Me.GroupBox1.ResumeLayout(False)

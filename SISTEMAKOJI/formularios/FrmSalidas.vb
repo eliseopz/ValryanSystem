@@ -39,7 +39,9 @@
             salida.UnidadesSalida = txtUnidades.Text.Trim
             salida.PrecioSalida = txtPrecio.Text.Trim
             salida.ObservacionesSalida = txtObservaciones.Text.Trim
-            salida.FechaSalida = dtpFecha.Value
+            Dim fechaseleccionada As DateTime = dtpFecha.Value
+            Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
+            salida.FechaSalida = fechaformateada
             salida.IdProducto = cbxProducto.SelectedValue
             salida.IdUsuario = cbxUsuario.SelectedValue
             Dim dSalidas As New DSalidas
@@ -63,7 +65,9 @@
             salida.UnidadesSalida = txtUnidades.Text.Trim
             salida.PrecioSalida = txtPrecio.Text.Trim
             salida.ObservacionesSalida = txtObservaciones.Text.Trim
-            salida.FechaSalida = dtpFecha.Value
+            Dim fechaseleccionada As DateTime = dtpFecha.Value
+            Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
+            salida.FechaSalida = fechaformateada
             Dim fila As Integer = DgvSalidas.CurrentRow.Index
             salida.IdProducto = DgvSalidas.Rows(fila).Cells(5).Value
             salida.IdUsuario = DgvSalidas.Rows(fila).Cells(6).Value
@@ -134,5 +138,12 @@
     Private Sub btnBuscar_Click(sender As Object, e As EventArgs) Handles btnBuscar.Click
         Dim dao As New DSalidas
         DgvSalidas.DataSource = dao.BuscarRegistro(txtBuscar.Text.Trim).Tables(0)
+    End Sub
+
+    Private Sub dtpFecha_ValueChanged(sender As Object, e As EventArgs) Handles dtpFecha.ValueChanged
+        dtpFecha.Format = DateTimePickerFormat.Custom
+        dtpFecha.CustomFormat = "yyyy-MM-dd HH:mm:ss"
+        Dim fechaseleccionada As DateTime = dtpFecha.Value
+        Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
     End Sub
 End Class
