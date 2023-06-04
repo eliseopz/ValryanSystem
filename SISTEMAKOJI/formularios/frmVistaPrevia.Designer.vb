@@ -23,6 +23,7 @@ Partial Class frmVistaPrevia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
         Me.ProductoMaxSalidasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.DBValyrianDataSet = New SISTEMAKOJI.DBValyrianDataSet()
@@ -42,7 +43,10 @@ Partial Class frmVistaPrevia
         'ReportViewer1
         '
         Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "SISTEMAKOJI.rptUnidadesCategoria.rdlc"
+        ReportDataSource1.Name = "DataSet1"
+        ReportDataSource1.Value = Me.DataTable1BindingSource
+        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "SISTEMAKOJI.rptProductos.rdlc"
         Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
         Me.ReportViewer1.Name = "ReportViewer1"
         Me.ReportViewer1.ServerReport.BearerToken = Nothing

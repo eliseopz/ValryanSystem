@@ -1,4 +1,5 @@
-﻿Public Class FrmPrincipal
+﻿Imports SISTEMAKOJI.Module1
+Public Class FrmPrincipal
     Private Sub ProductosToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem.Click
         Dim frm As New FrmUsuarios
         frm.MdiParent = Me
@@ -42,14 +43,36 @@
     End Sub
 
     Private Sub ProductoConMasSalidasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductoConMasSalidasToolStripMenuItem.Click
-        Dim frm As New frmProdMaxSalidas
-        frm.MdiParent = Me
-        frm.Show()
+        Dim rptProdMaxSalidas As New DBValyrianDataSetTableAdapters.ProductoMaxSalidasTableAdapter
+        Dim tbl As New DataTable
+
+        tbl = rptProdMaxSalidas.GetData
+        VerReporte(tbl, "DsProducto", "reportes\rptProductoMaxSalidas.rdlc")
     End Sub
 
     Private Sub UnidadesPorCategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnidadesPorCategoriaToolStripMenuItem.Click
-        Dim frm As New rptUnidadesCategoria
-        frm.MdiParent = Me
-        frm.Show()
+        Dim tbl As New DataTable
+        Dim reporteUnidadesPorCategoria As New DBValyrianDataSetTableAdapters.UnidadesCategoriaTableAdapter
+
+
+        tbl = reporteUnidadesPorCategoria.GetData()
+        VerReporte(tbl, "DsUnidadesCategoria", "reportes\rptUnidadesCategoria.rdlc")
+
+    End Sub
+
+    Private Sub ProductosPorPrecioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosPorPrecioToolStripMenuItem.Click
+        Dim tbl As New DataTable
+        Dim reporte As New DBValyrianDataSetTableAdapters.ProductosMayorMenorTableAdapter
+
+        tbl = reporte.GetData
+        VerReporte(tbl, "DsProductoMayorMenor", "reportes\rptProdMayorMenor.rdlc")
+    End Sub
+
+    Private Sub ProductosPorSalidasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosPorSalidasToolStripMenuItem.Click
+        Dim tbl As New DataTable
+        Dim reporte As New DBValyrianDataSetTableAdapters.ProductosPorSalidaTableAdapter
+
+        tbl = reporte.GetData
+        VerReporte(tbl, "DsProductoPorSalidas", "reportes\rptProductoPorSalidas.rdlc")
     End Sub
 End Class

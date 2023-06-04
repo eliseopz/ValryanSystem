@@ -121,12 +121,6 @@
     <Compile Include="formularios\FrmPrincipal.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\frmProdMaxSalidas.Designer.vb">
-      <DependentUpon>frmProdMaxSalidas.vb</DependentUpon>
-    </Compile>
-    <Compile Include="formularios\frmProdMaxSalidas.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="formularios\FrmProductos.Designer.vb">
       <DependentUpon>FrmProductos.vb</DependentUpon>
     </Compile>
@@ -164,12 +158,6 @@
     <Compile Include="formularios\frmVistaPrevia.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="formularios\rptUnidadesCategoria.Designer.vb">
-      <DependentUpon>rptUnidadesCategoria.vb</DependentUpon>
-    </Compile>
-    <Compile Include="formularios\rptUnidadesCategoria.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="modulos\Module1.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -195,9 +183,6 @@
     <EmbeddedResource Include="formularios\FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\frmProdMaxSalidas.resx">
-      <DependentUpon>frmProdMaxSalidas.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="formularios\FrmProductos.resx">
       <DependentUpon>FrmProductos.vb</DependentUpon>
     </EmbeddedResource>
@@ -216,16 +201,15 @@
     <EmbeddedResource Include="formularios\frmVistaPrevia.resx">
       <DependentUpon>frmVistaPrevia.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="formularios\rptUnidadesCategoria.resx">
-      <DependentUpon>rptUnidadesCategoria.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rptProdMayorMenor.rdlc" />
     <EmbeddedResource Include="reportes\rptProductoMaxSalidas.rdlc" />
+    <EmbeddedResource Include="reportes\rptProductoPorSalidas.rdlc" />
     <EmbeddedResource Include="reportes\rptProductos.rdlc" />
     <EmbeddedResource Include="reportes\rptUnidadesCategoria.rdlc" />
   </ItemGroup>

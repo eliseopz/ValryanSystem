@@ -7,32 +7,36 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>61a4135e-34a1-441d-80f7-ee576ce2e1fd</rd:DataSourceID>
+      <rd:DataSourceID>08aa53ef-4398-4825-86f4-05285aa9df6e</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DsUnidadesCategoria">
+    <DataSet Name="DsProductoPorSalidas">
       <Query>
         <DataSourceName>DBValyrianDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="nombreCategoria">
-          <DataField>nombreCategoria</DataField>
+        <Field Name="idSalida">
+          <DataField>idSalida</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="nombreProducto">
+          <DataField>nombreProducto</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="unidadesProducto">
-          <DataField>unidadesProducto</DataField>
+        <Field Name="unidadesSalida">
+          <DataField>unidadesSalida</DataField>
           <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DBValyrianDataSet</rd:DataSetName>
         <rd:SchemaPath>C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\DBValyrianDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>UnidadesCategoria</rd:TableName>
+        <rd:TableName>ProductosPorSalida</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>UnidadesCategoriaTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>ProductosPorSalidaTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -44,10 +48,13 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>3.74883cm</Width>
+                  <Width>4.05222cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.74883cm</Width>
+                  <Width>4.05222cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>4.05222cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -63,7 +70,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Categoria</Value>
+                                  <Value>Codigo</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -93,7 +100,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Unidades</Value>
+                                  <Value>Producto</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -114,6 +121,36 @@
                         </Textbox>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox5">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Unidades</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
@@ -121,21 +158,21 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="nombreCategoria">
+                        <Textbox Name="idSalida">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!nombreCategoria.Value</Value>
+                                  <Value>=Fields!idSalida.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>nombreCategoria</rd:DefaultName>
+                          <rd:DefaultName>idSalida</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -151,21 +188,51 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="unidadesProducto">
+                        <Textbox Name="nombreProducto">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!unidadesProducto.Value</Value>
+                                  <Value>=Fields!nombreProducto.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>unidadesProducto</rd:DefaultName>
+                          <rd:DefaultName>nombreProducto</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="unidadesSalida">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!unidadesSalida.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>unidadesSalida</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -187,6 +254,7 @@
               <TablixMembers>
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -199,11 +267,11 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DsUnidadesCategoria</DataSetName>
-            <Top>0.75353cm</Top>
+            <DataSetName>DsProductoPorSalidas</DataSetName>
+            <Top>1.32503cm</Top>
             <Left>0.35137cm</Left>
             <Height>1.2cm</Height>
-            <Width>7.49766cm</Width>
+            <Width>12.15666cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -216,32 +284,32 @@
                 <ChartMember>
                   <Group Name="Chart1_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!nombreCategoria.Value</GroupExpression>
+                      <GroupExpression>=Fields!nombreProducto.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!nombreCategoria.Value</Value>
+                      <Value>=Fields!nombreProducto.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!nombreCategoria.Value</Label>
+                  <Label>=Fields!nombreProducto.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>unidades Producto</Label>
+                  <Label>unidades Salida</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="unidadesProducto">
+                <ChartSeries Name="unidadesSalida">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!unidadesProducto.Value)</Y>
+                        <Y>=Sum(Fields!unidadesSalida.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -253,7 +321,6 @@
                       <DataElementOutput>Output</DataElementOutput>
                     </ChartDataPoint>
                   </ChartDataPoints>
-                  <Type>Shape</Type>
                   <Style />
                   <ChartEmptyPoints>
                     <Style />
@@ -511,6 +578,7 @@
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>8pt</FontSize>
                 </Style>
+                <Position>TopLeft</Position>
                 <ChartLegendTitle>
                   <Caption />
                   <Style>
@@ -525,7 +593,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Unidades por Categoria</Caption>
+                <Caption>Título del gráfico</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -554,11 +622,11 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DsUnidadesCategoria</DataSetName>
-            <Top>0.75353cm</Top>
-            <Left>9.21553cm</Left>
-            <Height>4.19567cm</Height>
-            <Width>6.9285cm</Width>
+            <DataSetName>DsProductoPorSalidas</DataSetName>
+            <Top>0.17639cm</Top>
+            <Left>13.7287cm</Left>
+            <Height>6.35326cm</Height>
+            <Width>7.5cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -570,13 +638,13 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>2.29017in</Height>
+        <Height>2.64017in</Height>
         <Style />
       </Body>
-      <Width>6.49942in</Width>
+      <Width>8.50776in</Width>
       <Page>
         <PageHeader>
-          <Height>2.54cm</Height>
+          <Height>4.10633cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -595,8 +663,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>ExecutionTime</rd:DefaultName>
-              <Top>1.76361cm</Top>
-              <Left>13.64403cm</Left>
+              <Top>3.32994cm</Top>
+              <Left>18.7287cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <Style>
@@ -609,17 +677,17 @@
                 <PaddingBottom>2pt</PaddingBottom>
               </Style>
             </Textbox>
-            <Textbox Name="Textbox12">
+            <Textbox Name="Textbox10">
               <CanGrow>true</CanGrow>
               <KeepTogether>true</KeepTogether>
               <Paragraphs>
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Unidades por Categoria</Value>
+                      <Value>PRODUCTOS MAS VENDIDOS AL MENOS VENDIDO</Value>
                       <Style>
                         <FontFamily>Bahnschrift SemiLight</FontFamily>
-                        <FontSize>24pt</FontSize>
+                        <FontSize>22pt</FontSize>
                         <TextDecoration>Underline</TextDecoration>
                       </Style>
                     </TextRun>
@@ -629,11 +697,11 @@
                   </Style>
                 </Paragraph>
               </Paragraphs>
-              <rd:DefaultName>Textbox12</rd:DefaultName>
-              <Top>0.66887cm</Top>
+              <rd:DefaultName>Textbox10</rd:DefaultName>
+              <Top>0.6477cm</Top>
               <Left>0.35137cm</Left>
-              <Height>1.69474cm</Height>
-              <Width>13.1045cm</Width>
+              <Height>2.1875cm</Height>
+              <Width>20.87733cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -672,8 +740,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
-              <Top>0.54187cm</Top>
-              <Left>13.64403cm</Left>
+              <Top>0.6477cm</Top>
+              <Left>18.7287cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <Style>
@@ -701,7 +769,7 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>UserID</rd:DefaultName>
-              <Top>0.54187cm</Top>
+              <Top>0.6477cm</Top>
               <Left>0.35137cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
@@ -741,5 +809,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>79644e75-62a7-48a4-97d2-b65d36ebe1cc</rd:ReportID>
+  <rd:ReportID>5aaf0d4a-2cb4-47d7-861d-a72759c99910</rd:ReportID>
 </Report>

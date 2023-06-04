@@ -33,6 +33,8 @@ Partial Class FrmPrincipal
         Me.ProductosToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductoConMasSalidasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.UnidadesPorCategoriaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductosPorPrecioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductosPorSalidasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -85,7 +87,7 @@ Partial Class FrmPrincipal
         '
         'ReportesToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductosToolStripMenuItem1, Me.ProductoConMasSalidasToolStripMenuItem, Me.UnidadesPorCategoriaToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductosToolStripMenuItem1, Me.ProductoConMasSalidasToolStripMenuItem, Me.UnidadesPorCategoriaToolStripMenuItem, Me.ProductosPorPrecioToolStripMenuItem, Me.ProductosPorSalidasToolStripMenuItem})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
@@ -107,6 +109,18 @@ Partial Class FrmPrincipal
         Me.UnidadesPorCategoriaToolStripMenuItem.Name = "UnidadesPorCategoriaToolStripMenuItem"
         Me.UnidadesPorCategoriaToolStripMenuItem.Size = New System.Drawing.Size(260, 26)
         Me.UnidadesPorCategoriaToolStripMenuItem.Text = "Unidades por Categoria"
+        '
+        'ProductosPorPrecioToolStripMenuItem
+        '
+        Me.ProductosPorPrecioToolStripMenuItem.Name = "ProductosPorPrecioToolStripMenuItem"
+        Me.ProductosPorPrecioToolStripMenuItem.Size = New System.Drawing.Size(260, 26)
+        Me.ProductosPorPrecioToolStripMenuItem.Text = "Productos por precio"
+        '
+        'ProductosPorSalidasToolStripMenuItem
+        '
+        Me.ProductosPorSalidasToolStripMenuItem.Name = "ProductosPorSalidasToolStripMenuItem"
+        Me.ProductosPorSalidasToolStripMenuItem.Size = New System.Drawing.Size(260, 26)
+        Me.ProductosPorSalidasToolStripMenuItem.Text = "Productos por salidas"
         '
         'FrmPrincipal
         '
@@ -137,4 +151,6 @@ Partial Class FrmPrincipal
     Friend WithEvents ProductosToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ProductoConMasSalidasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents UnidadesPorCategoriaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProductosPorPrecioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProductosPorSalidasToolStripMenuItem As ToolStripMenuItem
 End Class

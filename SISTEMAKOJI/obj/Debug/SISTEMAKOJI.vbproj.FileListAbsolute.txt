@@ -122,5 +122,3 @@ C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\zh-CHT\Micr
 C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.frmVistaPrevia.resources
 C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbproj.CopyComplete
 C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.frmRptProdCategoria.resources
-C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.frmProdMaxSalidas.resources
-C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.rptUnidadesCategoria.resources

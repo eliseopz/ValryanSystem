@@ -67,6 +67,16 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.ProductosMayorMenorDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.ProductosPorSalidaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSet.CategoriaRow">
 <summary>
 Represents strongly named DataRow class.
@@ -103,6 +113,16 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSet.UnidadesCategoriaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.ProductosMayorMenorRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.ProductosPorSalidaRow">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -147,6 +167,16 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.ProductosMayorMenorRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.ProductosPorSalidaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSetTableAdapters.CategoriaTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -183,6 +213,16 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSetTableAdapters.UnidadesCategoriaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSetTableAdapters.ProductosMayorMenorTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSetTableAdapters.ProductosPorSalidaTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
