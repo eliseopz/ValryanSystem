@@ -83,9 +83,6 @@ Public Class frmRptProdCategoria
     End Sub
 
     Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
-        'VerReporte(tbl, "DSReporte", "C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\reportes\rptProductos.rdlc")'
-        'frmVistaPrevia.Show()'
-        'VerReporte(tbl, "DsReporte", "reportes\rptProductos.rdlc")'
         VerReporte(tbl, "DataSet1", "reportes\rptProductos.rdlc")
     End Sub
 End Class

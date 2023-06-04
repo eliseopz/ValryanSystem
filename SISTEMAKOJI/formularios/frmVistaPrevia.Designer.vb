@@ -23,45 +23,51 @@ Partial Class frmVistaPrevia
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ReportDataSource1 As Microsoft.Reporting.WinForms.ReportDataSource = New Microsoft.Reporting.WinForms.ReportDataSource()
-        Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.DBValyrianDataSet = New SISTEMAKOJI.DBValyrianDataSet()
-        Me.ProductosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ReportViewer1 = New Microsoft.Reporting.WinForms.ReportViewer()
+        Me.ProductoMaxSalidasBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.DBValyrianDataSet = New SISTEMAKOJI.DBValyrianDataSet()
+        Me.DataTable1BindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProductosBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.ProductosTableAdapter = New SISTEMAKOJI.DBValyrianDataSetTableAdapters.ProductosTableAdapter()
         Me.DataTable1TableAdapter = New SISTEMAKOJI.DBValyrianDataSetTableAdapters.DataTable1TableAdapter()
-        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ProductoMaxSalidasBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.ProductoMaxSalidasTableAdapter = New SISTEMAKOJI.DBValyrianDataSetTableAdapters.ProductoMaxSalidasTableAdapter()
+        CType(Me.ProductoMaxSalidasBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.DBValyrianDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ProductoMaxSalidasBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataTable1BindingSource
+        'ReportViewer1
         '
-        Me.DataTable1BindingSource.DataMember = "DataTable1"
-        Me.DataTable1BindingSource.DataSource = Me.DBValyrianDataSet
+        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "SISTEMAKOJI.rptUnidadesCategoria.rdlc"
+        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
+        Me.ReportViewer1.Name = "ReportViewer1"
+        Me.ReportViewer1.ServerReport.BearerToken = Nothing
+        Me.ReportViewer1.Size = New System.Drawing.Size(1062, 673)
+        Me.ReportViewer1.TabIndex = 0
+        '
+        'ProductoMaxSalidasBindingSource1
+        '
+        Me.ProductoMaxSalidasBindingSource1.DataMember = "ProductoMaxSalidas"
+        Me.ProductoMaxSalidasBindingSource1.DataSource = Me.DBValyrianDataSet
         '
         'DBValyrianDataSet
         '
         Me.DBValyrianDataSet.DataSetName = "DBValyrianDataSet"
         Me.DBValyrianDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema
         '
+        'DataTable1BindingSource
+        '
+        Me.DataTable1BindingSource.DataMember = "DataTable1"
+        Me.DataTable1BindingSource.DataSource = Me.DBValyrianDataSet
+        '
         'ProductosBindingSource
         '
         Me.ProductosBindingSource.DataMember = "Productos"
         Me.ProductosBindingSource.DataSource = Me.DBValyrianDataSet
-        '
-        'ReportViewer1
-        '
-        Me.ReportViewer1.Dock = System.Windows.Forms.DockStyle.Fill
-        ReportDataSource1.Name = "DataSet1"
-        ReportDataSource1.Value = Me.DataTable1BindingSource
-        Me.ReportViewer1.LocalReport.DataSources.Add(ReportDataSource1)
-        Me.ReportViewer1.LocalReport.ReportEmbeddedResource = "SISTEMAKOJI.rptProductos.rdlc"
-        Me.ReportViewer1.Location = New System.Drawing.Point(0, 0)
-        Me.ReportViewer1.Name = "ReportViewer1"
-        Me.ReportViewer1.ServerReport.BearerToken = Nothing
-        Me.ReportViewer1.Size = New System.Drawing.Size(1062, 673)
-        Me.ReportViewer1.TabIndex = 0
         '
         'ProductosTableAdapter
         '
@@ -71,6 +77,15 @@ Partial Class frmVistaPrevia
         '
         Me.DataTable1TableAdapter.ClearBeforeFill = True
         '
+        'ProductoMaxSalidasBindingSource
+        '
+        Me.ProductoMaxSalidasBindingSource.DataMember = "ProductoMaxSalidas"
+        Me.ProductoMaxSalidasBindingSource.DataSource = Me.DBValyrianDataSet
+        '
+        'ProductoMaxSalidasTableAdapter
+        '
+        Me.ProductoMaxSalidasTableAdapter.ClearBeforeFill = True
+        '
         'frmVistaPrevia
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -79,9 +94,11 @@ Partial Class frmVistaPrevia
         Me.Controls.Add(Me.ReportViewer1)
         Me.Name = "frmVistaPrevia"
         Me.Text = "frmVistaPrevia"
-        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductoMaxSalidasBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.DBValyrianDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataTable1BindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ProductosBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ProductoMaxSalidasBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -92,4 +109,7 @@ Partial Class frmVistaPrevia
     Friend WithEvents ProductosTableAdapter As DBValyrianDataSetTableAdapters.ProductosTableAdapter
     Friend WithEvents DataTable1BindingSource As BindingSource
     Friend WithEvents DataTable1TableAdapter As DBValyrianDataSetTableAdapters.DataTable1TableAdapter
+    Friend WithEvents ProductoMaxSalidasBindingSource As BindingSource
+    Friend WithEvents ProductoMaxSalidasBindingSource1 As BindingSource
+    Friend WithEvents ProductoMaxSalidasTableAdapter As DBValyrianDataSetTableAdapters.ProductoMaxSalidasTableAdapter
 End Class

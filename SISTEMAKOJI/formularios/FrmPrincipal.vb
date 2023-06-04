@@ -40,4 +40,16 @@
         frm.MdiParent = Me
         frm.Show()
     End Sub
+
+    Private Sub ProductoConMasSalidasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductoConMasSalidasToolStripMenuItem.Click
+        Dim frm As New frmProdMaxSalidas
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
+
+    Private Sub UnidadesPorCategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UnidadesPorCategoriaToolStripMenuItem.Click
+        Dim frm As New rptUnidadesCategoria
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class

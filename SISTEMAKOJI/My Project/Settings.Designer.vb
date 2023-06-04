@@ -73,6 +73,17 @@ Namespace My
                 Return CType(Me("strConnectionn"),String)
             End Get
         End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("Data Source=DBValyrian.mssql.somee.com;Initial Catalog=DBValyrian;User ID=eliseop"& _ 
+            "z_SQLLogin_1;Password=rbu5p246cq")>  _
+        Public ReadOnly Property strConnectionsomee() As String
+            Get
+                Return CType(Me("strConnectionsomee"),String)
+            End Get
+        End Property
     End Class
 End Namespace
 
