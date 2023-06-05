@@ -236,6 +236,7 @@
     <EmbeddedResource Include="reportes\rptProductoMaxSalidas.rdlc" />
     <EmbeddedResource Include="reportes\rptProductoPorSalidas.rdlc" />
     <EmbeddedResource Include="reportes\rptProductos.rdlc" />
+    <EmbeddedResource Include="reportes\rptSalidaPorMes.rdlc" />
     <EmbeddedResource Include="reportes\rptUnidadesCategoria.rdlc" />
   </ItemGroup>
   <ItemGroup>
