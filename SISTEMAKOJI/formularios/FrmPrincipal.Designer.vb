@@ -40,6 +40,7 @@ Partial Class FrmPrincipal
         Me.SalidasPorMesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ValorTotalDeSalidasPorUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ValorTotalDeEntradasPorUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EntradasPorUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -93,7 +94,7 @@ Partial Class FrmPrincipal
         '
         'ReportesToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductosToolStripMenuItem1, Me.ProductoConMasSalidasToolStripMenuItem, Me.UnidadesPorCategoriaToolStripMenuItem, Me.ProductosPorPrecioToolStripMenuItem, Me.ProductosPorSalidasToolStripMenuItem, Me.EntradasYSalidasPorUsuarioToolStripMenuItem, Me.EntradasPorMesToolStripMenuItem, Me.SalidasPorMesToolStripMenuItem, Me.ValorTotalDeSalidasPorUsuarioToolStripMenuItem, Me.ValorTotalDeEntradasPorUsuarioToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductosToolStripMenuItem1, Me.ProductoConMasSalidasToolStripMenuItem, Me.UnidadesPorCategoriaToolStripMenuItem, Me.ProductosPorPrecioToolStripMenuItem, Me.ProductosPorSalidasToolStripMenuItem, Me.EntradasYSalidasPorUsuarioToolStripMenuItem, Me.EntradasPorMesToolStripMenuItem, Me.SalidasPorMesToolStripMenuItem, Me.ValorTotalDeSalidasPorUsuarioToolStripMenuItem, Me.ValorTotalDeEntradasPorUsuarioToolStripMenuItem, Me.EntradasPorUsuarioToolStripMenuItem})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
@@ -158,6 +159,12 @@ Partial Class FrmPrincipal
         Me.ValorTotalDeEntradasPorUsuarioToolStripMenuItem.Size = New System.Drawing.Size(257, 22)
         Me.ValorTotalDeEntradasPorUsuarioToolStripMenuItem.Text = "Valor Total De Entradas Por Usuario"
         '
+        'EntradasPorUsuarioToolStripMenuItem
+        '
+        Me.EntradasPorUsuarioToolStripMenuItem.Name = "EntradasPorUsuarioToolStripMenuItem"
+        Me.EntradasPorUsuarioToolStripMenuItem.Size = New System.Drawing.Size(257, 22)
+        Me.EntradasPorUsuarioToolStripMenuItem.Text = "Entradas Por Usuario"
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -195,4 +202,5 @@ Partial Class FrmPrincipal
     Friend WithEvents SalidasPorMesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ValorTotalDeSalidasPorUsuarioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ValorTotalDeEntradasPorUsuarioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EntradasPorUsuarioToolStripMenuItem As ToolStripMenuItem
 End Class

@@ -232,6 +232,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="reportes\rptEntradasPorMes.rdlc" />
     <EmbeddedResource Include="reportes\rptEntradasSalidasUsuario.rdlc" />
+    <EmbeddedResource Include="reportes\rptEntradasUsuarios.rdlc" />
     <EmbeddedResource Include="reportes\rptProdMayorMenor.rdlc" />
     <EmbeddedResource Include="reportes\rptProductoMaxSalidas.rdlc" />
     <EmbeddedResource Include="reportes\rptProductoPorSalidas.rdlc" />

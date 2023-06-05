@@ -112,4 +112,11 @@ Public Class FrmPrincipal
         tbl = reporte.GetData
         VerReporte(tbl, "DsValorTotalEntradaUsuarios", "reportes\rptValorTotalEntradasUsuarios.rdlc")
     End Sub
+
+    Private Sub EntradasPorUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EntradasPorUsuarioToolStripMenuItem.Click
+        Dim tbl As New DataTable
+        Dim reporte As New DBValyrianDataSetTableAdapters.EntradasUsuariosTableAdapter
+        tbl = reporte.GetData
+        VerReporte(tbl, "DsEntradasUsuarios", "reportes\rptEntradasUsuarios.rdlc")
+    End Sub
 End Class
