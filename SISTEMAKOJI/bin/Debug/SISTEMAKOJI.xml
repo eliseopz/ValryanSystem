@@ -52,11 +52,6 @@ Represents the strongly named DataTable class.
 Represents the strongly named DataTable class.
 </summary>
 </member>
-<member name="T:SISTEMAKOJI.DBValyrianDataSet.DataTable1DataTable">
-<summary>
-Represents the strongly named DataTable class.
-</summary>
-</member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSet.ProductoMaxSalidasDataTable">
 <summary>
 Represents the strongly named DataTable class.
@@ -73,6 +68,16 @@ Represents the strongly named DataTable class.
 </summary>
 </member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSet.ProductosPorSalidaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.EntradasSalidasUsuarioDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.DataTable1DataTable">
 <summary>
 Represents the strongly named DataTable class.
 </summary>
@@ -102,11 +107,6 @@ Represents strongly named DataRow class.
 Represents strongly named DataRow class.
 </summary>
 </member>
-<member name="T:SISTEMAKOJI.DBValyrianDataSet.DataTable1Row">
-<summary>
-Represents strongly named DataRow class.
-</summary>
-</member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSet.ProductoMaxSalidasRow">
 <summary>
 Represents strongly named DataRow class.
@@ -123,6 +123,16 @@ Represents strongly named DataRow class.
 </summary>
 </member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSet.ProductosPorSalidaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.EntradasSalidasUsuarioRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.DataTable1Row">
 <summary>
 Represents strongly named DataRow class.
 </summary>
@@ -152,11 +162,6 @@ Row event argument class
 Row event argument class
 </summary>
 </member>
-<member name="T:SISTEMAKOJI.DBValyrianDataSet.DataTable1RowChangeEvent">
-<summary>
-Row event argument class
-</summary>
-</member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSet.ProductoMaxSalidasRowChangeEvent">
 <summary>
 Row event argument class
@@ -173,6 +178,16 @@ Row event argument class
 </summary>
 </member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSet.ProductosPorSalidaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.EntradasSalidasUsuarioRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSet.DataTable1RowChangeEvent">
 <summary>
 Row event argument class
 </summary>
@@ -202,11 +217,6 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
-<member name="T:SISTEMAKOJI.DBValyrianDataSetTableAdapters.DataTable1TableAdapter">
-<summary>
-Represents the connection and commands used to retrieve and save data.
-</summary>
-</member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSetTableAdapters.ProductoMaxSalidasTableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
@@ -223,6 +233,16 @@ Represents the connection and commands used to retrieve and save data.
 </summary>
 </member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSetTableAdapters.ProductosPorSalidaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSetTableAdapters.EntradasSalidasUsuarioTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DBValyrianDataSetTableAdapters.DataTable1TableAdapter">
 <summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
@@ -263,6 +283,71 @@ Update Order Option
 </summary>
 </member>
 <member name="T:SISTEMAKOJI.DBValyrianDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DsEntradaSalidaUsuario">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DsEntradaSalidaUsuario.UsuariosDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DsEntradaSalidaUsuario.UsuariosRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DsEntradaSalidaUsuario.UsuariosRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DsEntradaSalidaUsuarioTableAdapters.UsuariosTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DsEntradaSalidaUsuarioTableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:SISTEMAKOJI.DsEntradaSalidaUsuarioTableAdapters.TableAdapterManager.UpdateUpdatedRows(SISTEMAKOJI.DsEntradaSalidaUsuario,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:SISTEMAKOJI.DsEntradaSalidaUsuarioTableAdapters.TableAdapterManager.UpdateInsertedRows(SISTEMAKOJI.DsEntradaSalidaUsuario,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:SISTEMAKOJI.DsEntradaSalidaUsuarioTableAdapters.TableAdapterManager.UpdateDeletedRows(SISTEMAKOJI.DsEntradaSalidaUsuario,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:SISTEMAKOJI.DsEntradaSalidaUsuarioTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:SISTEMAKOJI.DsEntradaSalidaUsuarioTableAdapters.TableAdapterManager.UpdateAll(SISTEMAKOJI.DsEntradaSalidaUsuario)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DsEntradaSalidaUsuarioTableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:SISTEMAKOJI.DsEntradaSalidaUsuarioTableAdapters.TableAdapterManager.SelfReferenceComparer">
 <summary>
 Used to sort self-referenced table's rows
 </summary>

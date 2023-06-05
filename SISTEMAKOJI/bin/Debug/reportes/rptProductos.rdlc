@@ -446,7 +446,7 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
+        <DataSetName>DsReporteProductos</DataSetName>
         <Top>2.1717cm</Top>
         <Left>2.032cm</Left>
         <Height>1.2cm</Height>
@@ -603,7 +603,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="DsReporteProductos">
       <Query>
         <DataSourceName>DBValyrianDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -636,7 +636,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DBValyrianDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\DBValyrianDataSet.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\DBValyrianDataSet.xsd</rd:SchemaPath>
         <rd:TableName>DataTable1</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

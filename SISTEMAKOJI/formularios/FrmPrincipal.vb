@@ -37,9 +37,11 @@ Public Class FrmPrincipal
     End Sub
 
     Private Sub ProductosToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles ProductosToolStripMenuItem1.Click
-        Dim frm As New frmRptProdCategoria
-        frm.MdiParent = Me
-        frm.Show()
+        Dim tbl As New DataTable
+        Dim reporteProductos As New DBValyrianDataSetTableAdapters.DataTable1TableAdapter
+
+        tbl = reporteProductos.GetData
+        VerReporte(tbl, "DsReporteProductos", "reportes\rptProductos.rdlc")
     End Sub
 
     Private Sub ProductoConMasSalidasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductoConMasSalidasToolStripMenuItem.Click
@@ -74,5 +76,12 @@ Public Class FrmPrincipal
 
         tbl = reporte.GetData
         VerReporte(tbl, "DsProductoPorSalidas", "reportes\rptProductoPorSalidas.rdlc")
+    End Sub
+
+    Private Sub EntradasYSalidasPorUsuarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EntradasYSalidasPorUsuarioToolStripMenuItem.Click
+        Dim tbl As New DataTable
+        Dim reporte As New DBValyrianDataSetTableAdapters.EntradasSalidasUsuarioTableAdapter
+        tbl = reporte.GetData
+        VerReporte(tbl, "DsEntradaSalidaUsuario", "reportes\rptEntradasSalidasUsuario.rdlc")
     End Sub
 End Class

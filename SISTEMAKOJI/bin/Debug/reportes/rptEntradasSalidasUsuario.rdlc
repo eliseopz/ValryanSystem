@@ -2,41 +2,41 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="DBValyrianDataSet">
+    <DataSource Name="DsEntradaSalidaUsuario">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>a518f7e8-4fc3-40eb-a8da-26c824bb8375</rd:DataSourceID>
+      <rd:DataSourceID>a34ba46c-daca-4ee5-b8f3-1be196a2353d</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DsProductoMayorMenor">
+    <DataSet Name="DsEntradaSalidaUsuario">
       <Query>
-        <DataSourceName>DBValyrianDataSet</DataSourceName>
+        <DataSourceName>DsEntradaSalidaUsuario</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="idProducto">
-          <DataField>idProducto</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="nombreProducto">
-          <DataField>nombreProducto</DataField>
+        <Field Name="username">
+          <DataField>username</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="precioProducto">
-          <DataField>precioProducto</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+        <Field Name="CantidadSalidas">
+          <DataField>CantidadSalidas</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="CantidadEntradas">
+          <DataField>CantidadEntradas</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>DBValyrianDataSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\DBValyrianDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>ProductosMayorMenor</rd:TableName>
+        <rd:DataSetName>DsEntradaSalidaUsuario</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\My Project\DsEntradaSalidaUsuario.xsd</rd:SchemaPath>
+        <rd:TableName>Usuarios</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>ProductosMayorMenorTableAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>UsuariosTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -44,40 +44,72 @@
     <ReportSection>
       <Body>
         <ReportItems>
+          <Textbox Name="Textbox1">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Cantidas de Entras y Salidas Por Usuario</Value>
+                    <Style>
+                      <FontSize>18pt</FontSize>
+                      <TextDecoration>Underline</TextDecoration>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox1</rd:DefaultName>
+            <Top>0.36724cm</Top>
+            <Left>6.16162cm</Left>
+            <Height>1.07625cm</Height>
+            <Width>12.70317cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
           <Tablix Name="Tablix1">
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>4.17767cm</Width>
+                  <Width>3.20556cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.17767cm</Width>
+                  <Width>3.20556cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.17767cm</Width>
+                  <Width>3.20556cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>0.77992cm</Height>
+                  <Height>1.1424cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox1">
+                        <Textbox Name="Textbox2">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Codigo</Value>
+                                  <Value>username</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <rd:DefaultName>Textbox2</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -93,21 +125,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox3">
+                        <Textbox Name="Textbox4">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Producto</Value>
+                                  <Value>CantidadSalidas</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <rd:DefaultName>Textbox4</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -123,21 +155,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Textbox5">
+                        <Textbox Name="Textbox6">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Precio</Value>
+                                  <Value>CantidadEntradas</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Textbox5</rd:DefaultName>
+                          <rd:DefaultName>Textbox6</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -154,25 +186,25 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.77992cm</Height>
+                  <Height>1.1424cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="idProducto">
+                        <Textbox Name="username">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!idProducto.Value</Value>
+                                  <Value>=Fields!username.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>idProducto</rd:DefaultName>
+                          <rd:DefaultName>username</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -188,21 +220,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="nombreProducto">
+                        <Textbox Name="CantidadSalidas">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!nombreProducto.Value</Value>
+                                  <Value>=Fields!CantidadSalidas.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>nombreProducto</rd:DefaultName>
+                          <rd:DefaultName>CantidadSalidas</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -218,21 +250,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="precioProducto">
+                        <Textbox Name="CantidadEntradas">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!precioProducto.Value</Value>
+                                  <Value>=Fields!CantidadEntradas.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>precioProducto</rd:DefaultName>
+                          <rd:DefaultName>CantidadEntradas</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -263,53 +295,90 @@
                   <KeepWithGroup>After</KeepWithGroup>
                 </TablixMember>
                 <TablixMember>
-                  <Group Name="Detalles" />
+                  <Group Name="Details" />
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DsProductoMayorMenor</DataSetName>
-            <Top>0.49953cm</Top>
-            <Left>0.3302cm</Left>
-            <Height>1.55984cm</Height>
-            <Width>12.53301cm</Width>
+            <DataSetName>DsEntradaSalidaUsuario</DataSetName>
+            <Top>7.25551cm</Top>
+            <Left>4.99745cm</Left>
+            <Height>2.28479cm</Height>
+            <Width>9.61667cm</Width>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
-          <Chart Name="Chart1">
+          <Chart Name="Chart2">
             <ChartCategoryHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Group Name="Chart1_CategoryGroup">
+                  <Group Name="Chart2_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!nombreProducto.Value</GroupExpression>
+                      <GroupExpression>=Fields!username.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!nombreProducto.Value</Value>
+                      <Value>=Fields!username.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!nombreProducto.Value</Label>
+                  <Label>=Fields!username.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>precio Producto</Label>
+                  <Label>Cantidad Salidas</Label>
+                </ChartMember>
+                <ChartMember>
+                  <Label>Cantidad Entradas</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="precioProducto">
+                <ChartSeries Name="CantidadSalidas">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!precioProducto.Value)</Y>
+                        <Y>=Sum(Fields!CantidadSalidas.Value)</Y>
+                      </ChartDataPointValues>
+                      <ChartDataLabel>
+                        <Style />
+                      </ChartDataLabel>
+                      <Style />
+                      <ChartMarker>
+                        <Style />
+                      </ChartMarker>
+                      <DataElementOutput>Output</DataElementOutput>
+                    </ChartDataPoint>
+                  </ChartDataPoints>
+                  <Style />
+                  <ChartEmptyPoints>
+                    <Style />
+                    <ChartMarker>
+                      <Style />
+                    </ChartMarker>
+                    <ChartDataLabel>
+                      <Style />
+                    </ChartDataLabel>
+                  </ChartEmptyPoints>
+                  <ValueAxisName>Primary</ValueAxisName>
+                  <CategoryAxisName>Primary</CategoryAxisName>
+                  <ChartSmartLabel>
+                    <CalloutLineColor>Black</CalloutLineColor>
+                    <MinMovingDistance>0pt</MinMovingDistance>
+                  </ChartSmartLabel>
+                </ChartSeries>
+                <ChartSeries Name="CantidadEntradas">
+                  <ChartDataPoints>
+                    <ChartDataPoint>
+                      <ChartDataPointValues>
+                        <Y>=Sum(Fields!CantidadEntradas.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -569,6 +638,7 @@
                 <Style>
                   <BackgroundColor>#00ffffff</BackgroundColor>
                   <BackgroundGradientType>None</BackgroundGradientType>
+                  <ShadowOffset>0pt</ShadowOffset>
                 </Style>
               </ChartArea>
             </ChartAreas>
@@ -593,7 +663,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Precio Mayor a Menor</Caption>
+                <Caption>Entradas y Salidas Por Usuario</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -622,12 +692,12 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DsProductoMayorMenor</DataSetName>
-            <Top>0.49953cm</Top>
-            <Left>13.51703cm</Left>
+            <DataSetName>DsEntradaSalidaUsuario</DataSetName>
+            <Top>1.80571cm</Top>
+            <Left>4.99745cm</Left>
             <Height>5cm</Height>
-            <Width>10.96604cm</Width>
-            <ZIndex>1</ZIndex>
+            <Width>15.755cm</Width>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Color>LightGrey</Color>
@@ -638,159 +708,11 @@
             </Style>
           </Chart>
         </ReportItems>
-        <Height>2.72767in</Height>
+        <Height>3.92708in</Height>
         <Style />
       </Body>
-      <Width>11.07651in</Width>
+      <Width>9.39583in</Width>
       <Page>
-        <PageHeader>
-          <Height>2.54cm</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="Textbox9">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>PRODUCTOS DE MAYOR A MENOR PRECIO</Value>
-                      <Style>
-                        <FontFamily>Bahnschrift SemiLight</FontFamily>
-                        <FontSize>20pt</FontSize>
-                        <TextDecoration>Underline</TextDecoration>
-                      </Style>
-                    </TextRun>
-                  </TextRuns>
-                  <Style>
-                    <TextAlign>Center</TextAlign>
-                  </Style>
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>Textbox9</rd:DefaultName>
-              <Top>0.49953cm</Top>
-              <Left>0.3302cm</Left>
-              <Height>1.86408cm</Height>
-              <Width>8.35533cm</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="ExecutionTime">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Globals!ExecutionTime</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>ExecutionTime</rd:DefaultName>
-              <Top>1.76953cm</Top>
-              <Left>10.3632cm</Left>
-              <Height>0.6cm</Height>
-              <Width>2.5cm</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageHeader>
-        <PageFooter>
-          <Height>5.95312cm</Height>
-          <PrintOnFirstPage>true</PrintOnFirstPage>
-          <PrintOnLastPage>true</PrintOnLastPage>
-          <ReportItems>
-            <Textbox Name="PageNumber">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=Globals!PageNumber</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>PageNumber</rd:DefaultName>
-              <Top>0.7747cm</Top>
-              <Left>10.3632cm</Left>
-              <Height>0.6cm</Height>
-              <Width>2.5cm</Width>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-            <Textbox Name="UserID">
-              <CanGrow>true</CanGrow>
-              <KeepTogether>true</KeepTogether>
-              <Paragraphs>
-                <Paragraph>
-                  <TextRuns>
-                    <TextRun>
-                      <Value>=User!UserID</Value>
-                      <Style />
-                    </TextRun>
-                  </TextRuns>
-                  <Style />
-                </Paragraph>
-              </Paragraphs>
-              <rd:DefaultName>UserID</rd:DefaultName>
-              <Top>0.7747cm</Top>
-              <Left>0.3302cm</Left>
-              <Height>0.6cm</Height>
-              <Width>2.5cm</Width>
-              <ZIndex>1</ZIndex>
-              <Style>
-                <Border>
-                  <Style>None</Style>
-                </Border>
-                <PaddingLeft>2pt</PaddingLeft>
-                <PaddingRight>2pt</PaddingRight>
-                <PaddingTop>2pt</PaddingTop>
-                <PaddingBottom>2pt</PaddingBottom>
-              </Style>
-            </Textbox>
-          </ReportItems>
-          <Style>
-            <Border>
-              <Style>None</Style>
-            </Border>
-          </Style>
-        </PageFooter>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
         <LeftMargin>2cm</LeftMargin>
@@ -809,5 +731,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>629bff97-c7c8-47c0-b5f3-c6964411c59c</rd:ReportID>
+  <rd:ReportID>14010970-337f-4f97-9078-b8b271ee4f82</rd:ReportID>
 </Report>
