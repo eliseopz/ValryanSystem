@@ -1,6 +1,9 @@
-﻿Public Class FrmSalidas
+﻿Imports System.ComponentModel
+Imports System.Data.SqlClient
+Public Class FrmSalidas
     Dim producto As New DProductos
     Dim usuario As New DUsuarios
+    Dim strConn As String = My.Settings.strConnectionn.ToString()
 
     Sub LlenarRegistroSalidas()
         Dim dSalidas As New DSalidas
@@ -34,21 +37,48 @@
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
-            Dim salida As New Salidas()
-            salida.IdSalida = txtCodigo.Text.Trim
-            salida.UnidadesSalida = txtUnidades.Text.Trim
-            salida.PrecioSalida = txtPrecio.Text.Trim
-            salida.ObservacionesSalida = txtObservaciones.Text.Trim
-            Dim fechaseleccionada As DateTime = dtpFecha.Value
-            Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
-            salida.FechaSalida = fechaformateada
-            salida.IdProducto = cbxProducto.SelectedValue
-            salida.IdUsuario = cbxUsuario.SelectedValue
-            Dim dSalidas As New DSalidas
-            If (dSalidas.GuardarSalidas(salida)) Then
-                MsgBox("Registro guardado exitosamente",
-                   MsgBoxStyle.Information, "Salidas")
-            End If
+            Dim idProducto As Integer = Integer.Parse(cbxProducto.SelectedValue)
+            Dim unidadesSalida As Integer = Integer.Parse(txtUnidades.Text)
+            Using connection As New SqlConnection(strConn)
+                connection.Open()
+                Dim query As String = "SELECT unidadesProducto FROM Productos WHERE idProducto = @idProducto"
+                Using command As New SqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@idProducto", idProducto)
+                    Dim unidadesProductos As Integer = Convert.ToInt32(command.ExecuteScalar())
+                    Dim nuevasUnidadesProductos As Integer
+                    If unidadesSalida >= unidadesProductos Then
+                        MsgBox("Error al restar Stock, La Cantidad que selecciono es mayor o igual a la que hay en Stock",
+                  MsgBoxStyle.Critical, "ERROR")
+                        nuevasUnidadesProductos = unidadesProductos
+                    ElseIf unidadesSalida < unidadesProductos Then
+                        nuevasUnidadesProductos = unidadesProductos - unidadesSalida
+                        Dim salida As New Salidas()
+                        salida.IdSalida = txtCodigo.Text.Trim
+                        salida.UnidadesSalida = txtUnidades.Text.Trim
+                        salida.PrecioSalida = txtPrecio.Text.Trim
+                        salida.ObservacionesSalida = txtObservaciones.Text.Trim
+                        Dim fechaseleccionada As DateTime = dtpFecha.Value
+                        Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
+                        salida.FechaSalida = fechaformateada
+                        salida.IdProducto = cbxProducto.SelectedValue
+                        salida.IdUsuario = cbxUsuario.SelectedValue
+                        Dim dSalidas As New DSalidas
+                        If (dSalidas.GuardarSalidas(salida)) Then
+                            MsgBox("Registro guardado exitosamente",
+                            MsgBoxStyle.Information, "Salidas")
+                        End If
+
+                    End If
+                    query = "UPDATE Productos SET unidadesProducto = @nuevasUnidadesProductos WHERE idProducto = @idProducto"
+                    Using updateCommand As New SqlCommand(query, connection)
+                        updateCommand.Parameters.AddWithValue("@nuevasUnidadesProductos", nuevasUnidadesProductos)
+                        updateCommand.Parameters.AddWithValue("@idProducto", idProducto)
+                        updateCommand.ExecuteNonQuery()
+                    End Using
+                End Using
+                connection.Close()
+            End Using
+
         Catch ex As Exception
             MsgBox("No se pudo guardar el registro",
                  MsgBoxStyle.Critical, "ERROR")
@@ -60,22 +90,48 @@
 
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         Try
-            Dim salida As New Salidas()
-            salida.IdSalida = txtCodigo.Text.Trim
-            salida.UnidadesSalida = txtUnidades.Text.Trim
-            salida.PrecioSalida = txtPrecio.Text.Trim
-            salida.ObservacionesSalida = txtObservaciones.Text.Trim
-            Dim fechaseleccionada As DateTime = dtpFecha.Value
-            Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
-            salida.FechaSalida = fechaformateada
-            Dim fila As Integer = DgvSalidas.CurrentRow.Index
-            salida.IdProducto = DgvSalidas.Rows(fila).Cells(5).Value
-            salida.IdUsuario = DgvSalidas.Rows(fila).Cells(6).Value
-            Dim dSalidas As New DSalidas
-            If (dSalidas.EditarSalidas(salida)) Then
-                MsgBox("Registro editado exitosamente",
-                   MsgBoxStyle.Information, "Entradas")
-            End If
+            Dim idProducto As Integer = Integer.Parse(cbxProducto.SelectedValue)
+            Dim unidadesSalida As Integer = Integer.Parse(txtUnidades.Text)
+            Using connection As New SqlConnection(strConn)
+                connection.Open()
+                Dim query As String = "SELECT unidadesProducto FROM Productos WHERE idProducto = @idProducto"
+                Using command As New SqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@idProducto", idProducto)
+                    Dim unidadesProductos As Integer = Convert.ToInt32(command.ExecuteScalar())
+                    Dim nuevasUnidadesProductos As Integer
+                    If unidadesSalida >= unidadesProductos Then
+                        MsgBox("Error al restar Stock, La Cantidad que selecciono es mayor o igual a la que hay en Stock",
+                  MsgBoxStyle.Critical, "ERROR")
+                        nuevasUnidadesProductos = unidadesProductos
+                    ElseIf unidadesSalida < unidadesProductos Then
+                        nuevasUnidadesProductos = unidadesProductos - unidadesSalida
+                        Dim salida As New Salidas()
+                        salida.IdSalida = txtCodigo.Text.Trim
+                        salida.UnidadesSalida = txtUnidades.Text.Trim
+                        salida.PrecioSalida = txtPrecio.Text.Trim
+                        salida.ObservacionesSalida = txtObservaciones.Text.Trim
+                        Dim fechaseleccionada As DateTime = dtpFecha.Value
+                        Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
+                        salida.FechaSalida = fechaformateada
+                        Dim fila As Integer = DgvSalidas.CurrentRow.Index
+                        salida.IdProducto = DgvSalidas.Rows(fila).Cells(5).Value
+                        salida.IdUsuario = DgvSalidas.Rows(fila).Cells(6).Value
+                        Dim dSalidas As New DSalidas
+                        If (dSalidas.EditarSalidas(salida)) Then
+                            MsgBox("Registro editado exitosamente",
+                            MsgBoxStyle.Information, "Entradas")
+                        End If
+
+                    End If
+                    query = "UPDATE Productos SET unidadesProducto = @nuevasUnidadesProductos WHERE idProducto = @idProducto"
+                    Using updateCommand As New SqlCommand(query, connection)
+                        updateCommand.Parameters.AddWithValue("@nuevasUnidadesProductos", nuevasUnidadesProductos)
+                        updateCommand.Parameters.AddWithValue("@idProducto", idProducto)
+                        updateCommand.ExecuteNonQuery()
+                    End Using
+                End Using
+                connection.Close()
+            End Using
         Catch ex As Exception
             MsgBox("No se pudo editar el registro",
                   MsgBoxStyle.Critical, "ERROR")
