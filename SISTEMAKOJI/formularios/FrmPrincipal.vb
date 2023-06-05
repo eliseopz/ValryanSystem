@@ -126,4 +126,10 @@ Public Class FrmPrincipal
         tbl = reporte.GetData
         VerReporte(tbl, "DsSalidasUsuarios", "reportes\rptSalidasUsuarios.rdlc")
     End Sub
+
+    Private Sub ProductosPorCategoriaToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ProductosPorCategoriaToolStripMenuItem.Click
+        Dim frm As New frmRptProdCategoria
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class

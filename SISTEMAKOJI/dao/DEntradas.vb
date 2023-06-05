@@ -20,6 +20,7 @@ Public Class DEntradas
     Public Function GuardarEntradas(ByVal entrada As Entrada) As Boolean
         Dim resultado As Boolean = False
         Try
+
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
             Dim tSql = "insert into Entradas(idEntrada, unidades, fechaEntrada, precioEntrada, observacionesEntrada, idProducto, idUsuario) values(@idEntrada, @unidades, @fechaEntrada, @precioEntrada, @observacionesEntrada, @idProducto, @idUsuario)"

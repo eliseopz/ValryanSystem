@@ -83,6 +83,6 @@ Public Class frmRptProdCategoria
     End Sub
 
     Private Sub btnImprimir_Click(sender As Object, e As EventArgs) Handles btnImprimir.Click
-        VerReporte(tbl, "DataSet1", "reportes\rptProductos.rdlc")
+        VerReporte(tbl, "DsReporteProductos", "reportes\rptProductos.rdlc")
     End Sub
 End Class

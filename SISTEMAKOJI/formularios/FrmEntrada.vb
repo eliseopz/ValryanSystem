@@ -1,6 +1,9 @@
-﻿Public Class FrmEntrada
+﻿Imports System.ComponentModel
+Imports System.Data.SqlClient
+Public Class FrmEntrada
     Dim producto As New DProductos
     Dim usuario As New DUsuarios
+    Dim strConn As String = My.Settings.strConnectionn.ToString()
 
     Sub LlenarRegistroEntrada()
         Dim dEntrada As New DEntradas
@@ -34,7 +37,27 @@
 
     Private Sub btnGuardar_Click(sender As Object, e As EventArgs) Handles btnGuardar.Click
         Try
-            Dim entrada As New Entrada()
+            Dim idProducto As Integer = Integer.Parse(cbxProducto.SelectedValue)
+            Dim unidadesEntrada As Integer = Integer.Parse(txtUnidades.Text)
+            Using connection As New SqlConnection(strConn)
+                connection.Open()
+                Dim query As String = "SELECT unidadesProducto FROM Productos WHERE idProducto = @idProducto"
+                Using command As New SqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@idProducto", idProducto)
+                    Dim unidadesProductos As Integer = Convert.ToInt32(command.ExecuteScalar())
+                    Dim nuevasUnidadesProductos As Integer = unidadesProductos + unidadesEntrada
+                    query = "UPDATE Productos SET unidadesProducto = @nuevasUnidadesProductos WHERE idProducto = @idProducto"
+                    Using updateCommand As New SqlCommand(query, connection)
+                        updateCommand.Parameters.AddWithValue("@nuevasUnidadesProductos", nuevasUnidadesProductos)
+                        updateCommand.Parameters.AddWithValue("@idProducto", idProducto)
+                        updateCommand.ExecuteNonQuery()
+                    End Using
+                End Using
+                connection.Close()
+            End Using
+
+
+                Dim entrada As New Entrada()
             entrada.IdEntrada = txtCodigo.Text.Trim
             entrada.Unidades = txtUnidades.Text.Trim
             entrada.PrecioEntrada = txtPrecioEntrada.Text.Trim
@@ -61,6 +84,25 @@
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
 
         Try
+            Dim idProducto As Integer = Integer.Parse(cbxProducto.SelectedValue)
+            Dim unidadesEntrada As Integer = Integer.Parse(txtUnidades.Text)
+            Using connection As New SqlConnection(strConn)
+                connection.Open()
+                Dim query As String = "SELECT unidadesProducto FROM Productos WHERE idProducto = @idProducto"
+                Using command As New SqlCommand(query, connection)
+                    command.Parameters.AddWithValue("@idProducto", idProducto)
+                    Dim unidadesProductos As Integer = Convert.ToInt32(command.ExecuteScalar())
+                    Dim nuevasUnidadesProductos As Integer = unidadesProductos + unidadesEntrada
+                    query = "UPDATE Productos SET unidadesProducto = @nuevasUnidadesProductos WHERE idProducto = @idProducto"
+                    Using updateCommand As New SqlCommand(query, connection)
+                        updateCommand.Parameters.AddWithValue("@nuevasUnidadesProductos", nuevasUnidadesProductos)
+                        updateCommand.Parameters.AddWithValue("@idProducto", idProducto)
+                        updateCommand.ExecuteNonQuery()
+                    End Using
+                End Using
+                connection.Close()
+            End Using
+
             Dim entrada As New Entrada()
             entrada.IdEntrada = txtCodigo.Text.Trim
             entrada.Unidades = txtUnidades.Text.Trim
