@@ -7,32 +7,32 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>8b4547a6-343c-49ce-9a0f-a7bfba9dcaaf</rd:DataSourceID>
+      <rd:DataSourceID>fb8d37f7-0e0c-4c06-8b4c-45d46ca332eb</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DsSalidaPorMes">
+    <DataSet Name="DsTotalSalidasUsuarios">
       <Query>
         <DataSourceName>DBValyrianDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="Mes">
-          <DataField>Mes</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="Usuario">
+          <DataField>Usuario</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="TotalSalidas">
-          <DataField>TotalSalidas</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+        <Field Name="PrecioTotal">
+          <DataField>PrecioTotal</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DBValyrianDataSet</rd:DataSetName>
         <rd:SchemaPath>C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\DBValyrianDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>SalidasPorMes</rd:TableName>
+        <rd:TableName>ValorTotalSalidasUsuarios</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>SalidasPorMesDataAdapter</rd:TableAdapterName>
+        <rd:TableAdapterName>TotalSalidasUsuarioTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -47,7 +47,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>REPORTE SALIDAS POR MES</Value>
+                    <Value>REPORTE VALOR TOTAL DE SALIDAS POR USUARIO</Value>
                     <Style>
                       <FontSize>18pt</FontSize>
                       <TextDecoration>Underline</TextDecoration>
@@ -58,10 +58,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.31432cm</Top>
-            <Left>10.60662cm</Left>
-            <Height>1.02333cm</Height>
-            <Width>9.43208cm</Width>
+            <Top>0.3937cm</Top>
+            <Left>8.43703cm</Left>
+            <Height>0.99688cm</Height>
+            <Width>16.33771cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -78,32 +78,32 @@
                 <ChartMember>
                   <Group Name="Chart1_CategoryGroup">
                     <GroupExpressions>
-                      <GroupExpression>=Fields!Mes.Value</GroupExpression>
+                      <GroupExpression>=Fields!Usuario.Value</GroupExpression>
                     </GroupExpressions>
                   </Group>
                   <SortExpressions>
                     <SortExpression>
-                      <Value>=Fields!Mes.Value</Value>
+                      <Value>=Fields!Usuario.Value</Value>
                     </SortExpression>
                   </SortExpressions>
-                  <Label>=Fields!Mes.Value</Label>
+                  <Label>=Fields!Usuario.Value</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartCategoryHierarchy>
             <ChartSeriesHierarchy>
               <ChartMembers>
                 <ChartMember>
-                  <Label>Total Salidas</Label>
+                  <Label>Precio Total</Label>
                 </ChartMember>
               </ChartMembers>
             </ChartSeriesHierarchy>
             <ChartData>
               <ChartSeriesCollection>
-                <ChartSeries Name="TotalSalidas">
+                <ChartSeries Name="PrecioTotal">
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=Sum(Fields!TotalSalidas.Value)</Y>
+                        <Y>=Sum(Fields!PrecioTotal.Value)</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
@@ -387,7 +387,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Salidas Por Mes</Caption>
+                <Caption>Valor Total Salidas Por Usuario</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -416,11 +416,11 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DsSalidaPorMes</DataSetName>
-            <Top>1.79599cm</Top>
-            <Left>3.85974cm</Left>
+            <DataSetName>DsTotalSalidasUsuarios</DataSetName>
+            <Top>1.74308cm</Top>
+            <Left>8.43703cm</Left>
             <Height>5cm</Height>
-            <Width>22.15854cm</Width>
+            <Width>16.33771cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -454,7 +454,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Mes</Value>
+                                  <Value>Usuario</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -484,7 +484,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Total Salidas</Value>
+                                  <Value>Precio Total</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -512,21 +512,21 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="Mes">
+                        <Textbox Name="Usuario">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Mes.Value</Value>
+                                  <Value>=Fields!Usuario.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>Mes</rd:DefaultName>
+                          <rd:DefaultName>Usuario</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -542,21 +542,21 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Textbox Name="TotalSalidas">
+                        <Textbox Name="PrecioTotal">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
                           <Paragraphs>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!TotalSalidas.Value</Value>
+                                  <Value>=Fields!PrecioTotal.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
                               <Style />
                             </Paragraph>
                           </Paragraphs>
-                          <rd:DefaultName>TotalSalidas</rd:DefaultName>
+                          <rd:DefaultName>PrecioTotal</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -590,9 +590,9 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DsSalidaPorMes</DataSetName>
-            <Top>7.32578cm</Top>
-            <Left>3.85974cm</Left>
+            <DataSetName>DsTotalSalidasUsuarios</DataSetName>
+            <Top>7.56391cm</Top>
+            <Left>8.43703cm</Left>
             <Height>1.2cm</Height>
             <Width>5cm</Width>
             <ZIndex>2</ZIndex>
@@ -603,10 +603,10 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>4.64583in</Height>
+        <Height>4.16667in</Height>
         <Style />
       </Body>
-      <Width>12.4375in</Width>
+      <Width>13.67708in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
@@ -626,5 +626,5 @@
     </GridLayoutDefinition>
   </ReportParametersLayout>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>9db66e25-5857-4505-89e9-9dfedd5ea677</rd:ReportID>
+  <rd:ReportID>45d0b102-47ff-4ee9-aad2-0c3f4eac43fa</rd:ReportID>
 </Report>

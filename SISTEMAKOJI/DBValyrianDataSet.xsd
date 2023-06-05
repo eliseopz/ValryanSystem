@@ -630,6 +630,27 @@ ORDER BY Mes;</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TotalSalidasUsuarioTableAdapter" GeneratorDataComponentClassName="TotalSalidasUsuarioTableAdapter" Name="ValorTotalSalidasUsuarios" UserDataComponentName="TotalSalidasUsuarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="strConnectionn (MySettings)" DbObjectName="DBValyrian.dbo.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT u.username As Usuario, SUM(s.precioSalida) AS PrecioTotal
+FROM Usuarios u
+INNER JOIN Salida s ON u.idUsuario = s.idUsuario
+GROUP BY u.idUsuario, u.username
+ORDER BY PrecioTotal DESC;</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
+              <Mapping SourceColumn="PrecioTotal" DataSetColumn="PrecioTotal" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -845,7 +866,7 @@ ORDER BY Mes;</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ProductosPorSalida" msprop:Generator_TableClassName="ProductosPorSalidaDataTable" msprop:Generator_RowEvArgName="ProductosPorSalidaRowChangeEvent" msprop:Generator_TableVarName="tableProductosPorSalida" msprop:Generator_TablePropName="ProductosPorSalida" msprop:Generator_RowDeletingName="ProductosPorSalidaRowDeleting" msprop:Generator_RowChangingName="ProductosPorSalidaRowChanging" msprop:Generator_RowDeletedName="ProductosPorSalidaRowDeleted" msprop:Generator_RowClassName="ProductosPorSalidaRow" msprop:Generator_RowEvHandlerName="ProductosPorSalidaRowChangeEventHandler" msprop:Generator_RowChangedName="ProductosPorSalidaRowChanged" msprop:Generator_UserTableName="ProductosPorSalida">
+        <xs:element name="ProductosPorSalida" msprop:Generator_TableClassName="ProductosPorSalidaDataTable" msprop:Generator_RowEvArgName="ProductosPorSalidaRowChangeEvent" msprop:Generator_TableVarName="tableProductosPorSalida" msprop:Generator_TablePropName="ProductosPorSalida" msprop:Generator_RowDeletingName="ProductosPorSalidaRowDeleting" msprop:Generator_RowChangingName="ProductosPorSalidaRowChanging" msprop:Generator_RowDeletedName="ProductosPorSalidaRowDeleted" msprop:Generator_RowEvHandlerName="ProductosPorSalidaRowChangeEventHandler" msprop:Generator_UserTableName="ProductosPorSalida" msprop:Generator_RowChangedName="ProductosPorSalidaRowChanged" msprop:Generator_RowClassName="ProductosPorSalidaRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idSalida" msprop:Generator_ColumnVarNameInTable="columnidSalida" msprop:Generator_ColumnPropNameInRow="idSalida" msprop:Generator_ColumnPropNameInTable="idSalidaColumn" msprop:Generator_UserColumnName="idSalida" type="xs:int" />
@@ -860,7 +881,7 @@ ORDER BY Mes;</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EntradasSalidasUsuario" msprop:Generator_TableClassName="EntradasSalidasUsuarioDataTable" msprop:Generator_TableVarName="tableEntradasSalidasUsuario" msprop:Generator_TablePropName="EntradasSalidasUsuario" msprop:Generator_RowDeletingName="EntradasSalidasUsuarioRowDeleting" msprop:Generator_RowChangingName="EntradasSalidasUsuarioRowChanging" msprop:Generator_RowEvHandlerName="EntradasSalidasUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="EntradasSalidasUsuarioRowDeleted" msprop:Generator_UserTableName="EntradasSalidasUsuario" msprop:Generator_RowChangedName="EntradasSalidasUsuarioRowChanged" msprop:Generator_RowEvArgName="EntradasSalidasUsuarioRowChangeEvent" msprop:Generator_RowClassName="EntradasSalidasUsuarioRow">
+        <xs:element name="EntradasSalidasUsuario" msprop:Generator_TableClassName="EntradasSalidasUsuarioDataTable" msprop:Generator_TableVarName="tableEntradasSalidasUsuario" msprop:Generator_RowChangedName="EntradasSalidasUsuarioRowChanged" msprop:Generator_TablePropName="EntradasSalidasUsuario" msprop:Generator_RowDeletingName="EntradasSalidasUsuarioRowDeleting" msprop:Generator_RowChangingName="EntradasSalidasUsuarioRowChanging" msprop:Generator_RowEvHandlerName="EntradasSalidasUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="EntradasSalidasUsuarioRowDeleted" msprop:Generator_RowClassName="EntradasSalidasUsuarioRow" msprop:Generator_UserTableName="EntradasSalidasUsuario" msprop:Generator_RowEvArgName="EntradasSalidasUsuarioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="username" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_UserColumnName="username">
@@ -875,7 +896,7 @@ ORDER BY Mes;</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nombreProducto" msprop:Generator_ColumnVarNameInTable="columnnombreProducto" msprop:Generator_ColumnPropNameInRow="nombreProducto" msprop:Generator_ColumnPropNameInTable="nombreProductoColumn" msprop:Generator_UserColumnName="nombreProducto">
@@ -911,7 +932,7 @@ ORDER BY Mes;</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="EntradasPorMes" msprop:Generator_TableClassName="EntradasPorMesDataTable" msprop:Generator_TableVarName="tableEntradasPorMes" msprop:Generator_RowChangedName="EntradasPorMesRowChanged" msprop:Generator_TablePropName="EntradasPorMes" msprop:Generator_RowDeletingName="EntradasPorMesRowDeleting" msprop:Generator_RowChangingName="EntradasPorMesRowChanging" msprop:Generator_RowEvHandlerName="EntradasPorMesRowChangeEventHandler" msprop:Generator_RowDeletedName="EntradasPorMesRowDeleted" msprop:Generator_RowClassName="EntradasPorMesRow" msprop:Generator_UserTableName="EntradasPorMes" msprop:Generator_RowEvArgName="EntradasPorMesRowChangeEvent">
+        <xs:element name="EntradasPorMes" msprop:Generator_TableClassName="EntradasPorMesDataTable" msprop:Generator_TableVarName="tableEntradasPorMes" msprop:Generator_TablePropName="EntradasPorMes" msprop:Generator_RowDeletingName="EntradasPorMesRowDeleting" msprop:Generator_RowChangingName="EntradasPorMesRowChanging" msprop:Generator_RowEvHandlerName="EntradasPorMesRowChangeEventHandler" msprop:Generator_RowDeletedName="EntradasPorMesRowDeleted" msprop:Generator_UserTableName="EntradasPorMes" msprop:Generator_RowChangedName="EntradasPorMesRowChanged" msprop:Generator_RowEvArgName="EntradasPorMesRowChangeEvent" msprop:Generator_RowClassName="EntradasPorMesRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Mes" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" type="xs:int" minOccurs="0" />
@@ -919,11 +940,25 @@ ORDER BY Mes;</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SalidasPorMes" msprop:Generator_TableClassName="SalidasPorMesDataTable" msprop:Generator_TableVarName="tableSalidasPorMes" msprop:Generator_TablePropName="SalidasPorMes" msprop:Generator_RowDeletingName="SalidasPorMesRowDeleting" msprop:Generator_RowChangingName="SalidasPorMesRowChanging" msprop:Generator_RowEvHandlerName="SalidasPorMesRowChangeEventHandler" msprop:Generator_RowDeletedName="SalidasPorMesRowDeleted" msprop:Generator_UserTableName="SalidasPorMes" msprop:Generator_RowChangedName="SalidasPorMesRowChanged" msprop:Generator_RowEvArgName="SalidasPorMesRowChangeEvent" msprop:Generator_RowClassName="SalidasPorMesRow">
+        <xs:element name="SalidasPorMes" msprop:Generator_TableClassName="SalidasPorMesDataTable" msprop:Generator_TableVarName="tableSalidasPorMes" msprop:Generator_RowChangedName="SalidasPorMesRowChanged" msprop:Generator_TablePropName="SalidasPorMes" msprop:Generator_RowDeletingName="SalidasPorMesRowDeleting" msprop:Generator_RowChangingName="SalidasPorMesRowChanging" msprop:Generator_RowEvHandlerName="SalidasPorMesRowChangeEventHandler" msprop:Generator_RowDeletedName="SalidasPorMesRowDeleted" msprop:Generator_RowClassName="SalidasPorMesRow" msprop:Generator_UserTableName="SalidasPorMes" msprop:Generator_RowEvArgName="SalidasPorMesRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Mes" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" type="xs:int" minOccurs="0" />
               <xs:element name="TotalSalidas" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnTotalSalidas" msprop:Generator_ColumnPropNameInRow="TotalSalidas" msprop:Generator_ColumnPropNameInTable="TotalSalidasColumn" msprop:Generator_UserColumnName="TotalSalidas" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ValorTotalSalidasUsuarios" msprop:Generator_TableClassName="ValorTotalSalidasUsuariosDataTable" msprop:Generator_TableVarName="tableValorTotalSalidasUsuarios" msprop:Generator_TablePropName="ValorTotalSalidasUsuarios" msprop:Generator_RowDeletingName="ValorTotalSalidasUsuariosRowDeleting" msprop:Generator_RowChangingName="ValorTotalSalidasUsuariosRowChanging" msprop:Generator_RowEvHandlerName="ValorTotalSalidasUsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="ValorTotalSalidasUsuariosRowDeleted" msprop:Generator_UserTableName="ValorTotalSalidasUsuarios" msprop:Generator_RowChangedName="ValorTotalSalidasUsuariosRowChanged" msprop:Generator_RowEvArgName="ValorTotalSalidasUsuariosRowChangeEvent" msprop:Generator_RowClassName="ValorTotalSalidasUsuariosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_UserColumnName="Usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrecioTotal" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPrecioTotal" msprop:Generator_ColumnPropNameInRow="PrecioTotal" msprop:Generator_ColumnPropNameInTable="PrecioTotalColumn" msprop:Generator_UserColumnName="PrecioTotal" type="xs:double" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -964,13 +999,13 @@ ORDER BY Mes;</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="RefProductos2" msdata:parent="Productos" msdata:child="Entradas" msdata:parentkey="idProducto" msdata:childkey="idProducto" msprop:Generator_UserChildTable="Entradas" msprop:Generator_ChildPropName="GetEntradasRows" msprop:Generator_UserRelationName="RefProductos2" msprop:Generator_RelationVarName="relationRefProductos2" msprop:Generator_UserParentTable="Productos" msprop:Generator_ParentPropName="ProductosRow" />
-      <msdata:Relationship name="RefUsuarios10" msdata:parent="Usuarios" msdata:child="Entradas" msdata:parentkey="idUsuario" msdata:childkey="idUsuario" msprop:Generator_UserChildTable="Entradas" msprop:Generator_ChildPropName="GetEntradasRows" msprop:Generator_UserRelationName="RefUsuarios10" msprop:Generator_RelationVarName="relationRefUsuarios10" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_ParentPropName="UsuariosRow" />
-      <msdata:Relationship name="RefCategoria8" msdata:parent="Categoria" msdata:child="Productos" msdata:parentkey="idCategoria" msdata:childkey="idCategoria" msprop:Generator_UserChildTable="Productos" msprop:Generator_ChildPropName="GetProductosRows" msprop:Generator_UserRelationName="RefCategoria8" msprop:Generator_ParentPropName="CategoriaRow" msprop:Generator_RelationVarName="relationRefCategoria8" msprop:Generator_UserParentTable="Categoria" />
-      <msdata:Relationship name="RefProductos3" msdata:parent="Productos" msdata:child="Salida" msdata:parentkey="idProducto" msdata:childkey="idProducto" msprop:Generator_UserChildTable="Salida" msprop:Generator_ChildPropName="GetSalidaRows" msprop:Generator_UserRelationName="RefProductos3" msprop:Generator_ParentPropName="ProductosRow" msprop:Generator_RelationVarName="relationRefProductos3" msprop:Generator_UserParentTable="Productos" />
-      <msdata:Relationship name="RefUsuarios11" msdata:parent="Usuarios" msdata:child="Salida" msdata:parentkey="idUsuario" msdata:childkey="idUsuario" msprop:Generator_UserChildTable="Salida" msprop:Generator_ChildPropName="GetSalidaRows" msprop:Generator_UserRelationName="RefUsuarios11" msprop:Generator_RelationVarName="relationRefUsuarios11" msprop:Generator_UserParentTable="Usuarios" msprop:Generator_ParentPropName="UsuariosRow" />
-      <msdata:Relationship name="RefProductos21" msdata:parent="ProductosMayorMenor" msdata:child="Entradas" msdata:parentkey="idProducto" msdata:childkey="idProducto" msprop:Generator_UserChildTable="Entradas" msprop:Generator_ChildPropName="GetEntradasRows" msprop:Generator_UserRelationName="RefProductos21" msprop:Generator_RelationVarName="relationRefProductos21" msprop:Generator_UserParentTable="ProductosMayorMenor" msprop:Generator_ParentPropName="ProductosMayorMenorRow" />
-      <msdata:Relationship name="RefProductos31" msdata:parent="ProductosMayorMenor" msdata:child="Salida" msdata:parentkey="idProducto" msdata:childkey="idProducto" msprop:Generator_UserChildTable="Salida" msprop:Generator_ChildPropName="GetSalidaRows" msprop:Generator_UserRelationName="RefProductos31" msprop:Generator_RelationVarName="relationRefProductos31" msprop:Generator_UserParentTable="ProductosMayorMenor" msprop:Generator_ParentPropName="ProductosMayorMenorRow" />
+      <msdata:Relationship name="RefProductos2" msdata:parent="Productos" msdata:child="Entradas" msdata:parentkey="idProducto" msdata:childkey="idProducto" msprop:Generator_UserChildTable="Entradas" msprop:Generator_ChildPropName="GetEntradasRows" msprop:Generator_UserRelationName="RefProductos2" msprop:Generator_ParentPropName="ProductosRow" msprop:Generator_RelationVarName="relationRefProductos2" msprop:Generator_UserParentTable="Productos" />
+      <msdata:Relationship name="RefUsuarios10" msdata:parent="Usuarios" msdata:child="Entradas" msdata:parentkey="idUsuario" msdata:childkey="idUsuario" msprop:Generator_UserChildTable="Entradas" msprop:Generator_ChildPropName="GetEntradasRows" msprop:Generator_UserRelationName="RefUsuarios10" msprop:Generator_ParentPropName="UsuariosRow" msprop:Generator_RelationVarName="relationRefUsuarios10" msprop:Generator_UserParentTable="Usuarios" />
+      <msdata:Relationship name="RefCategoria8" msdata:parent="Categoria" msdata:child="Productos" msdata:parentkey="idCategoria" msdata:childkey="idCategoria" msprop:Generator_UserChildTable="Productos" msprop:Generator_ChildPropName="GetProductosRows" msprop:Generator_UserRelationName="RefCategoria8" msprop:Generator_RelationVarName="relationRefCategoria8" msprop:Generator_UserParentTable="Categoria" msprop:Generator_ParentPropName="CategoriaRow" />
+      <msdata:Relationship name="RefProductos3" msdata:parent="Productos" msdata:child="Salida" msdata:parentkey="idProducto" msdata:childkey="idProducto" msprop:Generator_UserChildTable="Salida" msprop:Generator_ChildPropName="GetSalidaRows" msprop:Generator_UserRelationName="RefProductos3" msprop:Generator_RelationVarName="relationRefProductos3" msprop:Generator_UserParentTable="Productos" msprop:Generator_ParentPropName="ProductosRow" />
+      <msdata:Relationship name="RefUsuarios11" msdata:parent="Usuarios" msdata:child="Salida" msdata:parentkey="idUsuario" msdata:childkey="idUsuario" msprop:Generator_UserChildTable="Salida" msprop:Generator_ChildPropName="GetSalidaRows" msprop:Generator_UserRelationName="RefUsuarios11" msprop:Generator_ParentPropName="UsuariosRow" msprop:Generator_RelationVarName="relationRefUsuarios11" msprop:Generator_UserParentTable="Usuarios" />
+      <msdata:Relationship name="RefProductos21" msdata:parent="ProductosMayorMenor" msdata:child="Entradas" msdata:parentkey="idProducto" msdata:childkey="idProducto" msprop:Generator_UserChildTable="Entradas" msprop:Generator_ChildPropName="GetEntradasRows" msprop:Generator_UserRelationName="RefProductos21" msprop:Generator_ParentPropName="ProductosMayorMenorRow" msprop:Generator_RelationVarName="relationRefProductos21" msprop:Generator_UserParentTable="ProductosMayorMenor" />
+      <msdata:Relationship name="RefProductos31" msdata:parent="ProductosMayorMenor" msdata:child="Salida" msdata:parentkey="idProducto" msdata:childkey="idProducto" msprop:Generator_UserChildTable="Salida" msprop:Generator_ChildPropName="GetSalidaRows" msprop:Generator_UserRelationName="RefProductos31" msprop:Generator_ParentPropName="ProductosMayorMenorRow" msprop:Generator_RelationVarName="relationRefProductos31" msprop:Generator_UserParentTable="ProductosMayorMenor" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

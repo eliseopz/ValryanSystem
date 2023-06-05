@@ -387,7 +387,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Chart Title</Caption>
+                <Caption>Entradas Por Mes</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
@@ -594,7 +594,7 @@
             <Top>7.21078cm</Top>
             <Left>4.67995cm</Left>
             <Height>1.78208cm</Height>
-            <Width>6.16417cm</Width>
+            <Width>6.16416cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
