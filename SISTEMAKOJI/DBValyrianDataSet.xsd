@@ -651,6 +651,27 @@ ORDER BY PrecioTotal DESC;</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="TotalEntradasUsuarioTableAdapter" GeneratorDataComponentClassName="TotalEntradasUsuarioTableAdapter" Name="ValorTotalEntradasUsuarios" UserDataComponentName="TotalEntradasUsuarioTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="strConnectionn (MySettings)" DbObjectName="DBValyrian.dbo.Usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT u.username AS Usuario, COALESCE(SUM(e.precioEntrada), 0) AS PrecioTotal
+FROM Usuarios u
+LEFT JOIN Entradas e ON u.idUsuario = e.idUsuario
+GROUP BY u.username
+ORDER BY PrecioTotal DESC;</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Usuario" DataSetColumn="Usuario" />
+              <Mapping SourceColumn="PrecioTotal" DataSetColumn="PrecioTotal" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -949,6 +970,20 @@ ORDER BY PrecioTotal DESC;</CommandText>
           </xs:complexType>
         </xs:element>
         <xs:element name="ValorTotalSalidasUsuarios" msprop:Generator_TableClassName="ValorTotalSalidasUsuariosDataTable" msprop:Generator_TableVarName="tableValorTotalSalidasUsuarios" msprop:Generator_TablePropName="ValorTotalSalidasUsuarios" msprop:Generator_RowDeletingName="ValorTotalSalidasUsuariosRowDeleting" msprop:Generator_RowChangingName="ValorTotalSalidasUsuariosRowChanging" msprop:Generator_RowEvHandlerName="ValorTotalSalidasUsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="ValorTotalSalidasUsuariosRowDeleted" msprop:Generator_UserTableName="ValorTotalSalidasUsuarios" msprop:Generator_RowChangedName="ValorTotalSalidasUsuariosRowChanged" msprop:Generator_RowEvArgName="ValorTotalSalidasUsuariosRowChangeEvent" msprop:Generator_RowClassName="ValorTotalSalidasUsuariosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_UserColumnName="Usuario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrecioTotal" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnPrecioTotal" msprop:Generator_ColumnPropNameInRow="PrecioTotal" msprop:Generator_ColumnPropNameInTable="PrecioTotalColumn" msprop:Generator_UserColumnName="PrecioTotal" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ValorTotalEntradasUsuarios" msprop:Generator_TableClassName="ValorTotalEntradasUsuariosDataTable" msprop:Generator_TableVarName="tableValorTotalEntradasUsuarios" msprop:Generator_TablePropName="ValorTotalEntradasUsuarios" msprop:Generator_RowDeletingName="ValorTotalEntradasUsuariosRowDeleting" msprop:Generator_RowChangingName="ValorTotalEntradasUsuariosRowChanging" msprop:Generator_RowEvHandlerName="ValorTotalEntradasUsuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="ValorTotalEntradasUsuariosRowDeleted" msprop:Generator_UserTableName="ValorTotalEntradasUsuarios" msprop:Generator_RowChangedName="ValorTotalEntradasUsuariosRowChanged" msprop:Generator_RowEvArgName="ValorTotalEntradasUsuariosRowChangeEvent" msprop:Generator_RowClassName="ValorTotalEntradasUsuariosRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="Usuario" msprop:Generator_ColumnVarNameInTable="columnUsuario" msprop:Generator_ColumnPropNameInRow="Usuario" msprop:Generator_ColumnPropNameInTable="UsuarioColumn" msprop:Generator_UserColumnName="Usuario">
