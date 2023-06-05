@@ -36,6 +36,7 @@ Partial Class FrmPrincipal
         Me.ProductosPorPrecioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ProductosPorSalidasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.EntradasYSalidasPorUsuarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EntradasPorMesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -89,7 +90,7 @@ Partial Class FrmPrincipal
         '
         'ReportesToolStripMenuItem
         '
-        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductosToolStripMenuItem1, Me.ProductoConMasSalidasToolStripMenuItem, Me.UnidadesPorCategoriaToolStripMenuItem, Me.ProductosPorPrecioToolStripMenuItem, Me.ProductosPorSalidasToolStripMenuItem, Me.EntradasYSalidasPorUsuarioToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductosToolStripMenuItem1, Me.ProductoConMasSalidasToolStripMenuItem, Me.UnidadesPorCategoriaToolStripMenuItem, Me.ProductosPorPrecioToolStripMenuItem, Me.ProductosPorSalidasToolStripMenuItem, Me.EntradasYSalidasPorUsuarioToolStripMenuItem, Me.EntradasPorMesToolStripMenuItem})
         Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
         Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(65, 20)
         Me.ReportesToolStripMenuItem.Text = "Reportes"
@@ -130,6 +131,12 @@ Partial Class FrmPrincipal
         Me.EntradasYSalidasPorUsuarioToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.EntradasYSalidasPorUsuarioToolStripMenuItem.Text = "Entradas y Salidas Por Usuario"
         '
+        'EntradasPorMesToolStripMenuItem
+        '
+        Me.EntradasPorMesToolStripMenuItem.Name = "EntradasPorMesToolStripMenuItem"
+        Me.EntradasPorMesToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.EntradasPorMesToolStripMenuItem.Text = "EntradasPorMes"
+        '
         'FrmPrincipal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -138,7 +145,7 @@ Partial Class FrmPrincipal
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmPrincipal"
         Me.Text = "Menú Principal"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
@@ -163,4 +170,5 @@ Partial Class FrmPrincipal
     Friend WithEvents ProductosPorPrecioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ProductosPorSalidasToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents EntradasYSalidasPorUsuarioToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EntradasPorMesToolStripMenuItem As ToolStripMenuItem
 End Class

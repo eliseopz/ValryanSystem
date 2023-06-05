@@ -230,6 +230,7 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="reportes\rptEntradasPorMes.rdlc" />
     <EmbeddedResource Include="reportes\rptEntradasSalidasUsuario.rdlc" />
     <EmbeddedResource Include="reportes\rptProdMayorMenor.rdlc" />
     <EmbeddedResource Include="reportes\rptProductoMaxSalidas.rdlc" />
