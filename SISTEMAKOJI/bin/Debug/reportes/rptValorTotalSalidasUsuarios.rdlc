@@ -387,7 +387,7 @@
             </ChartLegends>
             <ChartTitles>
               <ChartTitle Name="Default">
-                <Caption>Valor Total Salidas Por Usuario</Caption>
+                <Caption>Total Salidas Por Usuario</Caption>
                 <Style>
                   <BackgroundGradientType>None</BackgroundGradientType>
                   <FontSize>9pt</FontSize>
