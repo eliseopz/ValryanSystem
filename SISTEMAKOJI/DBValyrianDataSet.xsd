@@ -692,6 +692,27 @@ where Usuarios.idUsuario = Entradas.idUsuario</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SalidasUsuariosTableAdapter" GeneratorDataComponentClassName="SalidasUsuariosTableAdapter" Name="SalidasUsuario" UserDataComponentName="SalidasUsuariosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="strConnectionn (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select idSalida, unidadesSalida, username
+from Salida, Usuarios
+where Salida.idUsuario = Usuarios.idUsuario
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="idSalida" DataSetColumn="idSalida" />
+              <Mapping SourceColumn="unidadesSalida" DataSetColumn="unidadesSalida" />
+              <Mapping SourceColumn="username" DataSetColumn="username" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
@@ -1032,6 +1053,21 @@ where Usuarios.idUsuario = Entradas.idUsuario</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="SalidasUsuario" msprop:Generator_TableClassName="SalidasUsuarioDataTable" msprop:Generator_TableVarName="tableSalidasUsuario" msprop:Generator_TablePropName="SalidasUsuario" msprop:Generator_RowDeletingName="SalidasUsuarioRowDeleting" msprop:Generator_RowChangingName="SalidasUsuarioRowChanging" msprop:Generator_RowEvHandlerName="SalidasUsuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="SalidasUsuarioRowDeleted" msprop:Generator_UserTableName="SalidasUsuario" msprop:Generator_RowChangedName="SalidasUsuarioRowChanged" msprop:Generator_RowEvArgName="SalidasUsuarioRowChangeEvent" msprop:Generator_RowClassName="SalidasUsuarioRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="idSalida" msprop:Generator_ColumnVarNameInTable="columnidSalida" msprop:Generator_ColumnPropNameInRow="idSalida" msprop:Generator_ColumnPropNameInTable="idSalidaColumn" msprop:Generator_UserColumnName="idSalida" type="xs:int" />
+              <xs:element name="unidadesSalida" msprop:Generator_ColumnVarNameInTable="columnunidadesSalida" msprop:Generator_ColumnPropNameInRow="unidadesSalida" msprop:Generator_ColumnPropNameInTable="unidadesSalidaColumn" msprop:Generator_UserColumnName="unidadesSalida" type="xs:int" />
+              <xs:element name="username" msprop:Generator_ColumnVarNameInTable="columnusername" msprop:Generator_ColumnPropNameInRow="username" msprop:Generator_ColumnPropNameInTable="usernameColumn" msprop:Generator_UserColumnName="username">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -1069,6 +1105,10 @@ where Usuarios.idUsuario = Entradas.idUsuario</CommandText>
     <xs:unique name="EntradasUsuarios_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:EntradasUsuarios" />
       <xs:field xpath="mstns:idEntrada" />
+    </xs:unique>
+    <xs:unique name="SalidasUsuario_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:SalidasUsuario" />
+      <xs:field xpath="mstns:idSalida" />
     </xs:unique>
   </xs:element>
   <xs:annotation>

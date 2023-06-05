@@ -238,6 +238,7 @@
     <EmbeddedResource Include="reportes\rptProductoPorSalidas.rdlc" />
     <EmbeddedResource Include="reportes\rptProductos.rdlc" />
     <EmbeddedResource Include="reportes\rptSalidaPorMes.rdlc" />
+    <EmbeddedResource Include="reportes\rptSalidasUsuarios.rdlc" />
     <EmbeddedResource Include="reportes\rptUnidadesCategoria.rdlc" />
     <EmbeddedResource Include="reportes\rptValorTotalEntradasUsuarios.rdlc" />
     <EmbeddedResource Include="reportes\rptValorTotalSalidasUsuarios.rdlc" />
