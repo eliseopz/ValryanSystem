@@ -185,3 +185,9 @@ C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.frmVis
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\RdlCompile.cache
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\RdlCompile.compiled
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbproj.CopyComplete
+C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.MSXML.dll
