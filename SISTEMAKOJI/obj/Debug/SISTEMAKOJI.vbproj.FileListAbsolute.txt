@@ -32,23 +32,6 @@ C:\Users\Isi11\Desktop\DBD\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.exe
 C:\Users\Isi11\Desktop\DBD\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.xml
 C:\Users\Isi11\Desktop\DBD\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.pdb
 C:\Users\MSI DRAGON\source\repos\SISTEMAKOJI\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmPrincipal.resources
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.exe.config
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.exe
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.pdb
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.xml
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbproj.AssemblyReference.cache
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmCategoria.resources
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmPrincipal.resources
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmProductos.resources
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmUsuarios.resources
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmEntrada.resources
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmSalidas.resources
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.Resources.resources
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbproj.GenerateResource.cache
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbproj.CoreCompileInputs.cache
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.exe
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.xml
-C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.pdb
 C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.exe.config
 C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.exe
 C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.pdb
@@ -122,10 +105,20 @@ C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\zh-CHT\Micr
 C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.frmVistaPrevia.resources
 C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbproj.CopyComplete
 C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.frmRptProdCategoria.resources
+C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
+C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
+C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
+C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
+C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.MSXML.dll
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\SqlServerTypes\x64\msvcr120.dll
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\SqlServerTypes\x86\msvcr120.dll
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.exe.config
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.exe
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.pdb
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\SISTEMAKOJI.xml
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\Microsoft.ReportViewer.Common.dll
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\Microsoft.ReportViewer.DataVisualization.dll
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\Microsoft.ReportViewer.Design.dll
@@ -180,14 +173,20 @@ C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\pt\Microsoft.Repor
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\ru\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dll
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmCategoria.resources
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmPrincipal.resources
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmProductos.resources
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.frmRptProdCategoria.resources
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmUsuarios.resources
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmEntrada.resources
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.FrmSalidas.resources
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.frmVistaPrevia.resources
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.Resources.resources
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbproj.GenerateResource.cache
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\RdlCompile.cache
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\RdlCompile.compiled
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbproj.CoreCompileInputs.cache
 C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.vbproj.CopyComplete
-C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.Shell.Interop.dll
-C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.Shell.Interop.8.0.dll
-C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.OLE.Interop.dll
-C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.dll
-C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.VisualStudio.TextManager.Interop.8.0.dll
-C:\Users\MSI DRAGON\source\repos\ValryanSystem\SISTEMAKOJI\bin\Debug\Microsoft.MSXML.dll
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.exe
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.xml
+C:\Users\josea\Documents\ValyrianSystem\SISTEMAKOJI\obj\Debug\SISTEMAKOJI.pdb

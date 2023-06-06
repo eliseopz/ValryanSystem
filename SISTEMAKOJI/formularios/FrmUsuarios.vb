@@ -179,4 +179,8 @@
         Dim fechaseleccionada As DateTime = FechaNacPicker.Value
         Dim fechaformateada As String = fechaseleccionada.ToString("yyyy-MM-dd HH:mm:ss")
     End Sub
+
+    Private Sub txtContra_TextChanged(sender As Object, e As EventArgs) Handles txtContra.TextChanged
+
+    End Sub
 End Class
