@@ -116,7 +116,7 @@ Public Class DUsuarios
                 usuario.IdUsuario = tbl.Rows(0).Item("idUsuario")
                 usuario.PasswordUsuario = tbl.Rows(0).Item("passwordUsuario")
                 usuario.PrimerNomUsuario = tbl.Rows(0).Item("primerNomUsuario")
-                usuario.SegundoNomUsuario = tbl.Rows(0).ItemArray("segundoNomUsuario")
+                usuario.SegundoNomUsuario = tbl.Rows(0).Item("segundoNomUsuario")
                 usuario.PrimerApeUsuario = tbl.Rows(0).Item("primerApeUsuario")
                 usuario.SegundoApeUsuario = tbl.Rows(0).Item("segundoApeUsuario")
                 usuario.FechaNacimiento = tbl.Rows(0).Item("fechaNacimiento")

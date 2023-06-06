@@ -63,9 +63,9 @@
             producto.UnidadMedidaProducto = cbxUnidadMedida.SelectedItem.ToString()
             producto.IdCategoria = cbxCategoria.SelectedValue
             Dim dProductos As New DProductos
-            If (dProductos.EditarProductos(producto)) Then
+            If (dProductos.EditarProductos(producto) = True) Then
                 MsgBox("Registro editado exitosamente",
-                MsgBoxStyle.Information, "Ciudades")
+                    MsgBoxStyle.Information, "Productos")
             End If
 
         Catch ex As Exception
